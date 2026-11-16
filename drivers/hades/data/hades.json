@@ -1,0 +1,1378 @@
+{
+ "source": "Hades' own scripts, identifiers only (tools/extract.py)",
+ "weapons": [
+  {
+   "id": "SwordWeapon",
+   "aspects": [
+    {
+     "trait": "SwordBaseUpgradeTrait",
+     "max": 5,
+     "startsUnlocked": true,
+     "revealedBy": null
+    },
+    {
+     "trait": "SwordCriticalParryTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "DislodgeAmmoTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "SwordConsecrationTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": "NyxRevealsArthurAspect01"
+    }
+   ]
+  },
+  {
+   "id": "SpearWeapon",
+   "aspects": [
+    {
+     "trait": "SpearBaseUpgradeTrait",
+     "max": 5,
+     "startsUnlocked": true,
+     "revealedBy": null
+    },
+    {
+     "trait": "SpearTeleportTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "SpearWeaveTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "SpearSpinTravel",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": "AchillesRevealsGuanYuAspect01"
+    }
+   ]
+  },
+  {
+   "id": "GunWeapon",
+   "aspects": [
+    {
+     "trait": "GunBaseUpgradeTrait",
+     "max": 5,
+     "startsUnlocked": true,
+     "revealedBy": null
+    },
+    {
+     "trait": "GunGrenadeSelfEmpowerTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "GunManualReloadTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "GunLoadedGrenadeTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": "ZeusRevealsLuciferAspect01"
+    }
+   ]
+  },
+  {
+   "id": "BowWeapon",
+   "aspects": [
+    {
+     "trait": "BowBaseUpgradeTrait",
+     "max": 5,
+     "startsUnlocked": true,
+     "revealedBy": null
+    },
+    {
+     "trait": "BowMarkHomingTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "BowLoadAmmoTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "BowBondTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": "ArtemisRevealsRamaAspect01"
+    }
+   ]
+  },
+  {
+   "id": "ShieldWeapon",
+   "aspects": [
+    {
+     "trait": "ShieldBaseUpgradeTrait",
+     "max": 5,
+     "startsUnlocked": true,
+     "revealedBy": null
+    },
+    {
+     "trait": "ShieldRushBonusProjectileTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "ShieldTwoShieldTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "ShieldLoadAmmoTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": "ChaosRevealsBeowulfAspect01"
+    }
+   ]
+  },
+  {
+   "id": "FistWeapon",
+   "aspects": [
+    {
+     "trait": "FistBaseUpgradeTrait",
+     "max": 5,
+     "startsUnlocked": true,
+     "revealedBy": null
+    },
+    {
+     "trait": "FistVacuumTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "FistWeaveTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": null
+    },
+    {
+     "trait": "FistDetonateTrait",
+     "max": 5,
+     "startsUnlocked": false,
+     "revealedBy": "MinotaurRevealsGilgameshAspect01"
+    }
+   ]
+  }
+ ],
+ "quests": [
+  "OlympianReunion",
+  "EpilogueSetUp",
+  "FirstClear",
+  "MeetOlympians",
+  "MeetChthonicGods",
+  "NyxChaosReunion",
+  "AchillesPatroclusReunion_A",
+  "AchillesPatroclusReunion_B",
+  "AchillesPatroclusReunion_C",
+  "OrpheusRelease",
+  "OrpheusEurydiceReunion",
+  "SisyphusLiberation",
+  "SkellyTrueDeath",
+  "SkellyTrueDeath_B",
+  "DusaLoungeRenovation",
+  "ChaosKeepsakeEscape",
+  "PoseidonBeatTheseus",
+  "AresEarnKills",
+  "HermesBeatCharon",
+  "AthenaUpgrades",
+  "ZeusUpgrades",
+  "PoseidonUpgrades",
+  "AphroditeUpgrades",
+  "AresUpgrades",
+  "ArtemisUpgrades",
+  "DionysusUpgrades",
+  "HermesUpgrades",
+  "DemeterUpgrades",
+  "LegendaryUpgrades",
+  "SynergyUpgrades",
+  "ChaosBlessings",
+  "ChaosCurses",
+  "WeaponUnlocks",
+  "SwordHammerUpgrades",
+  "ArthurAspectEscape",
+  "RamaAspectEscape",
+  "BeowulfAspectEscape",
+  "GilgameshAspectEscape",
+  "LuciferAspectEscape",
+  "BowHammerUpgrades",
+  "ShieldHammerUpgrades",
+  "SpearHammerUpgrades",
+  "GuanYuAspectEscape",
+  "FistHammerUpgrades",
+  "GunHammerUpgrades",
+  "WeaponClears",
+  "WeaponAspects",
+  "PactUpgrades",
+  "EliteAttributeKills",
+  "MiniBossKills",
+  "CosmeticsSmall",
+  "CodexSmall",
+  "WellShopItems",
+  "MirrorUpgrades",
+  "KeepsakesQuest",
+  "PoseidonFish",
+  "MusicLessons",
+  "FirstSkellyStatue"
+ ],
+ "gifts": {
+  "NPC_Achilles_01": {
+   "maximum": 9,
+   "locked": 7,
+   "keepsake": "DirectionalArmorTrait",
+   "keepsakeAt": 1,
+   "companion": "AchillesPatroclusAssistTrait",
+   "companionAt": 7
+  },
+  "NPC_Orpheus_01": {
+   "maximum": 8,
+   "locked": 7,
+   "keepsake": "DistanceDamageTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Eurydice_01": {
+   "maximum": 8,
+   "locked": 7,
+   "keepsake": "ShieldBossTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Patroclus_01": {
+   "maximum": 8,
+   "locked": 7,
+   "keepsake": "ShieldAfterHitTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Hades_01": {
+   "maximum": 5,
+   "locked": 2,
+   "keepsake": "HadesShoutKeepsake",
+   "keepsakeAt": 2,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Persephone_Home_01": {
+   "maximum": 9,
+   "locked": 7,
+   "keepsake": "ChamberStackTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Nyx_01": {
+   "maximum": 9,
+   "locked": 7,
+   "keepsake": "BackstabAlphaStrikeTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Hypnos_01": {
+   "maximum": 8,
+   "locked": 7,
+   "keepsake": "BonusMoneyTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_FurySister_01": {
+   "maximum": 10,
+   "locked": 7,
+   "keepsake": "LowHealthDamageTrait",
+   "keepsakeAt": 1,
+   "companion": "FuryAssistTrait",
+   "companionAt": 7
+  },
+  "NPC_Thanatos_01": {
+   "maximum": 10,
+   "locked": 7,
+   "keepsake": "PerfectClearDamageBonusTrait",
+   "keepsakeAt": 1,
+   "companion": "ThanatosAssistTrait",
+   "companionAt": 7
+  },
+  "NPC_Dusa_01": {
+   "maximum": 10,
+   "locked": 7,
+   "keepsake": "LifeOnUrnTrait",
+   "keepsakeAt": 1,
+   "companion": "DusaAssistTrait",
+   "companionAt": 7
+  },
+  "NPC_Skelly_01": {
+   "maximum": 9,
+   "locked": 7,
+   "keepsake": "ReincarnationTrait",
+   "keepsakeAt": 1,
+   "companion": "SkellyAssistTrait",
+   "companionAt": 7
+  },
+  "NPC_Sisyphus_01": {
+   "maximum": 9,
+   "locked": 7,
+   "keepsake": "VanillaTrait",
+   "keepsakeAt": 1,
+   "companion": "SisyphusAssistTrait",
+   "companionAt": 7
+  },
+  "NPC_Bouldy_01": {
+   "maximum": 8,
+   "locked": 11,
+   "keepsake": null,
+   "keepsakeAt": null,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Charon_01": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ShopDurationTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "NPC_Cerberus_01": {
+   "maximum": 9,
+   "locked": 7,
+   "keepsake": "MaxHealthKeepsakeTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "ZeusUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceZeusBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "PoseidonUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForcePoseidonBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "AthenaUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceAthenaBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "AresUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceAresBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "DionysusUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceDionysusBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "AphroditeUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceAphroditeBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "ArtemisUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceArtemisBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "DemeterUpgrade": {
+   "maximum": 7,
+   "locked": 7,
+   "keepsake": "ForceDemeterBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "HermesUpgrade": {
+   "maximum": 8,
+   "locked": 7,
+   "keepsake": "FastClearDodgeBonusTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  },
+  "TrialUpgrade": {
+   "maximum": 8,
+   "locked": 7,
+   "keepsake": "ChaosBoonTrait",
+   "keepsakeAt": 1,
+   "companion": null,
+   "companionAt": null
+  }
+ },
+ "giftOrdering": [
+  "MaxHealthKeepsakeTrait",
+  "DirectionalArmorTrait",
+  "BackstabAlphaStrikeTrait",
+  "PerfectClearDamageBonusTrait",
+  "ShopDurationTrait",
+  "BonusMoneyTrait",
+  "LowHealthDamageTrait",
+  "DistanceDamageTrait",
+  "LifeOnUrnTrait",
+  "ReincarnationTrait",
+  "ForceZeusBoonTrait",
+  "ForcePoseidonBoonTrait",
+  "ForceAthenaBoonTrait",
+  "ForceAphroditeBoonTrait",
+  "ForceAresBoonTrait",
+  "ForceArtemisBoonTrait",
+  "ForceDionysusBoonTrait",
+  "FastClearDodgeBonusTrait",
+  "ForceDemeterBoonTrait",
+  "ChaosBoonTrait",
+  "VanillaTrait",
+  "ShieldBossTrait",
+  "ShieldAfterHitTrait",
+  "ChamberStackTrait",
+  "HadesShoutKeepsake",
+  "FuryAssistTrait",
+  "ThanatosAssistTrait",
+  "SisyphusAssistTrait",
+  "SkellyAssistTrait",
+  "DusaAssistTrait",
+  "AchillesPatroclusAssistTrait"
+ ],
+ "mirror": [
+  [
+   {
+    "id": "BackstabMetaUpgrade",
+    "icon": "SneakAttack",
+    "max": 5
+   },
+   {
+    "id": "FirstStrikeMetaUpgrade",
+    "icon": "FirstStrike",
+    "max": 5
+   }
+  ],
+  [
+   {
+    "id": "DoorHealMetaUpgrade",
+    "icon": "DoorHeal",
+    "max": 3
+   },
+   {
+    "id": "DarknessHealMetaUpgrade",
+    "icon": "DarknessHeal",
+    "max": 2
+   }
+  ],
+  [
+   {
+    "id": "ExtraChanceMetaUpgrade",
+    "icon": "ExtraChance",
+    "max": 3
+   },
+   {
+    "id": "ExtraChanceReplenishMetaUpgrade",
+    "icon": "ExtraChanceReplenish",
+    "max": 1
+   }
+  ],
+  [
+   {
+    "id": "StaminaMetaUpgrade",
+    "icon": "DashCharges",
+    "max": 1
+   },
+   {
+    "id": "PerfectDashMetaUpgrade",
+    "icon": "PerfectDash",
+    "max": 1
+   }
+  ],
+  [
+   {
+    "id": "StoredAmmoVulnerabilityMetaUpgrade",
+    "icon": "AmmoVulnerability",
+    "max": 5
+   },
+   {
+    "id": "StoredAmmoSlowMetaUpgrade",
+    "icon": "UnstoredAmmoVulnerability",
+    "max": 5
+   }
+  ],
+  [
+   {
+    "id": "AmmoMetaUpgrade",
+    "icon": "AmmoSupply",
+    "max": 2
+   },
+   {
+    "id": "ReloadAmmoMetaUpgrade",
+    "icon": "ReloadAmmo",
+    "max": 2
+   }
+  ],
+  [
+   {
+    "id": "MoneyMetaUpgrade",
+    "icon": "StartingMoney",
+    "max": 10
+   },
+   {
+    "id": "InterestMetaUpgrade",
+    "icon": "Interest",
+    "max": 3
+   }
+  ],
+  [
+   {
+    "id": "HealthMetaUpgrade",
+    "icon": "StartingHealth",
+    "max": 10
+   },
+   {
+    "id": "HighHealthDamageMetaUpgrade",
+    "icon": "HighHealthDamage",
+    "max": 5
+   }
+  ],
+  [
+   {
+    "id": "VulnerabilityEffectBonusMetaUpgrade",
+    "icon": "EffectVulnerability",
+    "max": 2
+   },
+   {
+    "id": "GodEnhancementMetaUpgrade",
+    "icon": "GodEnhancement",
+    "max": 2
+   }
+  ],
+  [
+   {
+    "id": "RareBoonDropMetaUpgrade",
+    "icon": "RareBoonChance",
+    "max": 40
+   },
+   {
+    "id": "RunProgressRewardMetaUpgrade",
+    "icon": "EpicHeroicBoon",
+    "max": 10
+   }
+  ],
+  [
+   {
+    "id": "EpicBoonDropMetaUpgrade",
+    "icon": "EpicBoonChance",
+    "max": 20
+   },
+   {
+    "id": "DuoRarityBoonDropMetaUpgrade",
+    "icon": "DuoRarityBoon",
+    "max": 10
+   }
+  ],
+  [
+   {
+    "id": "RerollMetaUpgrade",
+    "icon": "Reroll",
+    "max": 10
+   },
+   {
+    "id": "RerollPanelMetaUpgrade",
+    "icon": "RerollPanel",
+    "max": 4
+   }
+  ]
+ ],
+ "contractor": [
+  {
+   "id": "LoungeItem",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "NorthHallItem",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "GhostAdminDesk",
+   "slot": "Critical"
+  },
+  {
+   "id": "TartarusReprieve",
+   "slot": "Critical"
+  },
+  {
+   "id": "CodexBoonList",
+   "slot": "Critical"
+  },
+  {
+   "id": "HadesEMFight",
+   "slot": "Critical"
+  },
+  {
+   "id": "HealthFountainHeal1",
+   "slot": "Critical"
+  },
+  {
+   "id": "HealthFountainHeal2",
+   "slot": "Critical"
+  },
+  {
+   "id": "AsphodelReprieve",
+   "slot": "Critical"
+  },
+  {
+   "id": "AsphodelStory",
+   "slot": "Critical"
+  },
+  {
+   "id": "ElysiumReprieve",
+   "slot": "Critical"
+  },
+  {
+   "id": "ElysiumStory",
+   "slot": "Critical"
+  },
+  {
+   "id": "ChallengeSwitches1",
+   "slot": "Critical"
+  },
+  {
+   "id": "ChallengeSwitches2",
+   "slot": "Critical"
+  },
+  {
+   "id": "ChallengeSwitches3",
+   "slot": "Critical"
+  },
+  {
+   "id": "BreakableValue1",
+   "slot": "Critical"
+  },
+  {
+   "id": "BreakableValue2",
+   "slot": "Critical"
+  },
+  {
+   "id": "BreakableValue3",
+   "slot": "Critical"
+  },
+  {
+   "id": "PostBossGiftRack",
+   "slot": "Critical"
+  },
+  {
+   "id": "RoomRewardMetaPointDropRunProgress",
+   "slot": "Critical"
+  },
+  {
+   "id": "LockKeyDropRunProgress",
+   "slot": "Critical"
+  },
+  {
+   "id": "GemDropRunProgress",
+   "slot": "Critical"
+  },
+  {
+   "id": "GiftDropRunProgress",
+   "slot": "Critical"
+  },
+  {
+   "id": "UnusedWeaponBonusAddGems",
+   "slot": "Critical"
+  },
+  {
+   "id": "BossAddGems",
+   "slot": "Critical"
+  },
+  {
+   "id": "ShrinePointGates",
+   "slot": "Critical"
+  },
+  {
+   "id": "QuestLog",
+   "slot": "Critical"
+  },
+  {
+   "id": "FishingUnlockItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "OfficeDoorUnlockItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "OrpheusUnlockItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "SisyphusQuestItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "OrpheusEurydiceQuestItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "AchillesPatroclusQuestItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "NyxQuestItem",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_MusicPlayer",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinDefault",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinArtemis",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinChthonic",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinHades",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinHeat",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinStone",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinLove",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinChaos",
+   "slot": "Critical"
+  },
+  {
+   "id": "Cosmetic_UISkinOrphic",
+   "slot": "Critical"
+  },
+  {
+   "id": "HousePoster01",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HousePoster02",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HousePoster05",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseDagger01",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseWaterBowl01",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseLyre01",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseBed01a",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "Cosmetic_HousePillars",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_HousePillarsA",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_HousePillarsB",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallMirror",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallCouch",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallRug",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallRugA",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallRugB",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallRugC",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingZagreus",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingHades",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingFury",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingMysteryWoman",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingMysteryGirl",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingTots",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingTheseus",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingTartarus",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingAsphodel",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPaintingElysium",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPedestalMechanism",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPedestalHammer",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPedestalBust",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPedestalArtifact",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPedestalSphere",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallSundial",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallPedestalA",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "CosmeticAchillesRug",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_ThanatosCouch",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_ThanatosRug",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_ThanatosTable",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_ThanatosBrazier",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_ThanatosChair",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallFountain",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallWarriorStatue",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallFountain",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SeatCushions",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeChairsA",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeTablesA",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_Aquarium",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_HangingFood",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_KitchenIsland",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_SpiceRack",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_Knives",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_ClearFur",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_ClearScratches",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeRug",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeRugA",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeRugB",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeRugC",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeAdditionalSeating",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeBrokerRug",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeDiscoBall",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeDiscoBallA",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_BatCage",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeCakeDisplay",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeTreatJar",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeClayOven",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeFireplace",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungePaintingSkelly",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_CerberusBed",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_CerberusBedA",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_CerberusBall",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_CerberusToy",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallCouch",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallTowels",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_NorthHallBust",
+   "slot": "CosmeticNorthHall"
+  },
+  {
+   "id": "Cosmetic_MainHallPetals",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallFlowers",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallBones",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallPetalFlyers",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallTikiTorches",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallFireplace",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallFireplaceA",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_CharonPillars",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallCenterpieceA",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallThroneA",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_MainHallSarcophagi",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallTrimBrown",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallTrimPurple",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallTrimGrey",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallTrimBlue",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallTrimRed",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallTrimGreen",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallFlowers",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallFlowersA",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallMosaic",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SouthHallMosaicB",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_SkullFloorTiles",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_KitchenStoveFlame",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_KitchenStoveCauldron",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeLiquor",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_LoungeShortcut",
+   "slot": "CosmeticLounge"
+  },
+  {
+   "id": "Cosmetic_DrapesBlue",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_DrapesGreen",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_DrapesRed",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_DrapesGrey",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_LaurelsRed",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_LaurelsBlue",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_LaurelsSkulls",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_WallWeaponBident",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_WallWeaponSword",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_WallWeaponAxe",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "HouseCouch02A",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseRug03B",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseWeights01",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "HouseGamingTable01",
+   "slot": "CosmeticBedroom"
+  },
+  {
+   "id": "Cosmetic_HouseCandles01",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "Cosmetic_HouseCandles02",
+   "slot": "CosmeticMainHall"
+  },
+  {
+   "id": "/Music/MusicPlayer/MainThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicExploration4MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/HadesThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicHadesResetMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicHadesReset2MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicHadesReset3MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicTartarus4MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicAsphodel1MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicAsphodel2MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicAsphodel3MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicElysium1MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicElysium2MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicElysium3MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicStyx1MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/BossFightMusicMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/CharonShopThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/CharonFightThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/ChaosThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/ThanatosThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicExploration1MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicExploration2MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/MusicExploration3MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/OrpheusSong1MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/OrpheusSong2MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/EurydiceSong1MusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/PersephoneThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/EndThemeMusicPlayer",
+   "slot": "Music"
+  },
+  {
+   "id": "/Music/MusicPlayer/TheUnseenOnesMusicPlayer",
+   "slot": "Music"
+  }
+ ]
+}

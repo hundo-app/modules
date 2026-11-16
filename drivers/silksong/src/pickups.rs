@@ -40,7 +40,7 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Abyss_03", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.865, y: 0.156 },
     P { scene: "Abyss_03", id: "Shell Shard Fossil Tiny Front", kind: Kind::Fossil, gives: "", text: "", x: 0.892, y: 0.173 },
     P { scene: "Abyss_03", id: "Shell Shard Fossil Tiny Front (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.938, y: 0.164 },
-    P { scene: "Abyss_04", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Ancient Egg Abyss Middle", text: "", x: 0.854, y: 0.621 },
+    P { scene: "Abyss_04", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Ancient Egg Abyss Middle", text: "INV_NAME_R_ANCIENT_EGG", x: 0.854, y: 0.621 },
     P { scene: "Abyss_05", id: "Shell Shard Fossil Mid Variant", kind: Kind::Fossil, gives: "", text: "", x: 0.272, y: 0.532 },
     P { scene: "Abyss_05", id: "Shell Shard Fossil Tiny Bumpy", kind: Kind::Fossil, gives: "", text: "", x: 0.731, y: 0.474 },
     P { scene: "Abyss_05", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.722, y: 0.487 },
@@ -58,7 +58,7 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Aqueduct_01", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Frayed", text: "INV_NAME_COIN_SET_F", x: 0.967, y: 0.349 },
     P { scene: "Aqueduct_01", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.802, y: 0.403 },
     P { scene: "Aqueduct_01", id: "Shell Shard Fossil Tiny Front", kind: Kind::Fossil, gives: "", text: "", x: 0.802, y: 0.468 },
-    P { scene: "Aqueduct_04", id: "Collectable Item Pickup Slab Key", kind: Kind::Item, gives: "Slab Key C", text: "", x: 0.041, y: 0.644 },
+    P { scene: "Aqueduct_04", id: "Collectable Item Pickup Slab Key", kind: Kind::Item, gives: "Slab Key C", text: "INV_NAME_SLAB_KEY_C", x: 0.041, y: 0.644 },
     P { scene: "Aqueduct_04", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.428, y: 0.905 },
     P { scene: "Aqueduct_04", id: "Shell Shard Fossil Tiny Egg (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.085, y: 0.285 },
     P { scene: "Aqueduct_04", id: "Shell Shard Fossil Tiny Egg (2)", kind: Kind::Fossil, gives: "", text: "", x: 0.068, y: 0.25 },
@@ -82,9 +82,9 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Arborium_07", id: "Collectable Item Pickup Battle", kind: Kind::Tool, gives: "Lightning Rod", text: "LIGHTNING_ROD_NAME", x: 0.857, y: 0.479 },
     P { scene: "Arborium_07", id: "Collectable Item Pickup Materium", kind: Kind::Item, gives: "Materium", text: "INV_NAME_MATERIUM", x: 0.574, y: 0.505 },
     P { scene: "Arborium_09", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.288, y: 0.295 },
-    P { scene: "Arborium_10", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cog Heart Pieces", text: "", x: 0.457, y: 0.204 },
+    P { scene: "Arborium_10", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cog Heart Pieces", text: "INV_NAME_COG_HEART_PIECE", x: 0.457, y: 0.204 },
     P { scene: "Arborium_11", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Shard Pouch", text: "INV_NAME_SHARD_POUCH", x: 0.951, y: 0.168 },
-    P { scene: "Aspid_01", id: "Collectable Item Pickup (2)", kind: Kind::Item, gives: "Seal Chit Aspid_01", text: "", x: 0.791, y: 0.239 },
+    P { scene: "Aspid_01", id: "Collectable Item Pickup (2)", kind: Kind::Item, gives: "Seal Chit Aspid_01", text: "INV_NAME_R_SEAL_CHIT", x: 0.791, y: 0.239 },
     P { scene: "Aspid_01", id: "Geo Rock 2", kind: Kind::Rock, gives: "", text: "", x: 0.111, y: 0.027 },
     P { scene: "Aspid_01", id: "Geo Small Persistent", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.218, y: 0.023 },
     P { scene: "Aspid_01", id: "Geo Small Persistent (1)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.19, y: 0.023 },
@@ -156,7 +156,7 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Bone_East_13", id: "Shell Shard Fossil Dock (3)", kind: Kind::Fossil, gives: "", text: "", x: 0.596, y: 0.129 },
     P { scene: "Bone_East_13", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.326, y: 0.76 },
     P { scene: "Bone_East_14", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Small", text: "INV_NAME_COIN_SET_S", x: 0.099, y: 0.093 },
-    P { scene: "Bone_East_14", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Bone Record Bone_East_14", text: "", x: 0.301, y: 0.507 },
+    P { scene: "Bone_East_14", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Bone Record Bone_East_14", text: "INV_NAME_R_BONE_RECORD", x: 0.301, y: 0.507 },
     P { scene: "Bone_East_15", id: "Geo Rock 1", kind: Kind::Rock, gives: "", text: "", x: 0.263, y: 0.073 },
     P { scene: "Bone_East_15", id: "Geo Rock 2", kind: Kind::Rock, gives: "", text: "", x: 0.28, y: 0.075 },
     P { scene: "Bone_East_18b", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Ant Trapper Item", text: "INV_NAME_ANT_TRAPPER_ITEM", x: 0.329, y: 0.178 },
@@ -170,14 +170,14 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Bone_East_25", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Crest Socket Unlocker", text: "INV_NAME_CREST_SOCKET", x: 0.968, y: 0.235 },
     P { scene: "Bone_East_Lavachallenge", id: "Heart Piece (1)", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.809, y: 0.961 },
     P { scene: "Bone_East_Lavachallenge", id: "Shell Shard Fossil Mid", kind: Kind::Fossil, gives: "", text: "", x: 0.505, y: 0.668 },
-    P { scene: "Bone_East_Weavehome", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Record Sprint_Challenge", text: "", x: 0.25, y: 0.528 },
+    P { scene: "Bone_East_Weavehome", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Record Sprint_Challenge", text: "INV_NAME_R_WEAVER_RECORD", x: 0.25, y: 0.528 },
     P { scene: "Bonegrave", id: "Geo Small Persistent", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.87, y: 0.87 },
     P { scene: "Bonegrave", id: "Geo Small Persistent (1)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.865, y: 0.87 },
     P { scene: "Bonegrave", id: "Geo Small Persistent (2)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.708, y: 0.077 },
     P { scene: "Bonegrave", id: "Geo Small Persistent (3)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.686, y: 0.077 },
     P { scene: "Bonegrave", id: "Geo Small Persistent (4)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.705, y: 0.077 },
     P { scene: "Bonegrave", id: "Geo Small Persistent (5)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.718, y: 0.077 },
-    P { scene: "Bonetown", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Totem Bonetown_upper_room", text: "", x: 0.421, y: 0.695 },
+    P { scene: "Bonetown", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Totem Bonetown_upper_room", text: "INV_NAME_R_WEAVER_TOTEM", x: 0.421, y: 0.695 },
     P { scene: "Bonetown", id: "Geo Small Persistent (1)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.686, y: 0.88 },
     P { scene: "Bonetown", id: "Geo Small Persistent (2)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.682, y: 0.88 },
     P { scene: "Bonetown", id: "Geo Small Persistent (3)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.718, y: 0.881 },
@@ -187,11 +187,11 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Chapel_Wanderer", id: "Geo Small Persistent (2)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.411, y: 0.873 },
     P { scene: "Chapel_Wanderer", id: "Geo Small Persistent (3)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.333, y: 0.837 },
     P { scene: "Clover_01", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Clover Heart", text: "INV_NAME_HEART_CLOVER", x: 0.678, y: 0.327 },
-    P { scene: "Clover_20", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Clover Map", text: "", x: 0.89, y: 0.35 },
+    P { scene: "Clover_20", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Clover Map", text: "CLOVER_MAP_GET_MSG", x: 0.89, y: 0.35 },
     P { scene: "Cog_07", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Pristine Core", text: "INV_NAME_PRISTINE_CORE", x: 0.0, y: 0.0 },
     P { scene: "Cog_07", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.929, y: 0.187 },
     P { scene: "Cog_10", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Shard Pouch", text: "INV_NAME_SHARD_POUCH", x: 0.095, y: 0.744 },
-    P { scene: "Cog_Bench", id: "Collectable Item Pickup Child", kind: Kind::Item, gives: "Cog Map", text: "", x: 0.584, y: 0.726 },
+    P { scene: "Cog_Bench", id: "Collectable Item Pickup Child", kind: Kind::Item, gives: "Cog Map", text: "COG_MAP_GET_MSG", x: 0.584, y: 0.726 },
     P { scene: "Coral_02", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Crest Socket Unlocker", text: "INV_NAME_CREST_SOCKET", x: 0.826, y: 0.545 },
     P { scene: "Coral_02", id: "Shell Shard Fossil Tiny Bumpy", kind: Kind::Fossil, gives: "", text: "", x: 0.223, y: 0.156 },
     P { scene: "Coral_02", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.23, y: 0.138 },
@@ -297,7 +297,7 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Greymoor_17", id: "Shell Shard Fossil Tiny Front", kind: Kind::Fossil, gives: "", text: "", x: 0.737, y: 0.448 },
     P { scene: "Greymoor_17", id: "Shell Shard Fossil Tiny Front (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.565, y: 0.374 },
     P { scene: "Greymoor_17", id: "Shell Shard Fossil Tiny Front (2)", kind: Kind::Fossil, gives: "", text: "", x: 0.529, y: 0.471 },
-    P { scene: "Greymoor_21", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Bone Record Greymoor_flooded_corridor", text: "", x: 0.902, y: 0.331 },
+    P { scene: "Greymoor_21", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Bone Record Greymoor_flooded_corridor", text: "INV_NAME_R_BONE_RECORD", x: 0.902, y: 0.331 },
     P { scene: "Halfway_01", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Crest Socket Unlocker", text: "INV_NAME_CREST_SOCKET", x: 0.148, y: 0.406 },
     P { scene: "Hang_03_top", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.493, y: 0.945 },
     P { scene: "Hang_06_Bank", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Huge_White", text: "INV_NAME_COIN_SET_L", x: 0.569, y: 0.59 },
@@ -310,18 +310,18 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Hang_06_Bank", id: "Geo Small Persistent (5)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.282, y: 0.211 },
     P { scene: "Hang_06_Bank", id: "Geo Small Persistent (6)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.603, y: 0.404 },
     P { scene: "Hang_06_Bank", id: "Geo Small Persistent (7)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.609, y: 0.404 },
-    P { scene: "Hang_10", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Psalm Cylinder Hang", text: "", x: 0.79, y: 0.317 },
-    P { scene: "Hang_12", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Record Conductor", text: "", x: 0.238, y: 0.258 },
+    P { scene: "Hang_10", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Psalm Cylinder Hang", text: "INV_NAME_R_PSALM_CYL", x: 0.79, y: 0.317 },
+    P { scene: "Hang_12", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Record Conductor", text: "INV_NAME_R_WEAVER_RECORD", x: 0.238, y: 0.258 },
     P { scene: "Hang_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Frayed", text: "INV_NAME_COIN_SET_F", x: 0.655, y: 0.213 },
     P { scene: "Hang_17b", id: "Collectable Item Pickup", kind: Kind::Tool, gives: "Reserve Bind", text: "RESERVE_BIND_NAME", x: 0.779, y: 0.214 },
     P { scene: "Library_02", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Large", text: "INV_NAME_COIN_SET_M2", x: 0.637, y: 0.75 },
     P { scene: "Library_03", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Pale_Oil", text: "INV_NAME_PLINNEY_TOOLS", x: 0.07, y: 0.649 },
     P { scene: "Library_05", id: "Heart Piece", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.344, y: 0.902 },
     P { scene: "Library_08", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Crest Socket Unlocker", text: "INV_NAME_CREST_SOCKET", x: 0.916, y: 0.837 },
-    P { scene: "Library_08", id: "Collectable Item Pickup Librarian", kind: Kind::Item, gives: "Psalm Cylinder Librarian", text: "", x: 0.815, y: 0.755 },
-    P { scene: "Library_09", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Psalm Cylinder Library Roof", text: "", x: 0.16, y: 0.115 },
+    P { scene: "Library_08", id: "Collectable Item Pickup Librarian", kind: Kind::Item, gives: "Psalm Cylinder Librarian", text: "INV_NAME_R_PSALM_CYL", x: 0.815, y: 0.755 },
+    P { scene: "Library_09", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Psalm Cylinder Library Roof", text: "INV_NAME_R_PSALM_CYL", x: 0.16, y: 0.115 },
     P { scene: "Library_09", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Rosary_Set_Large", text: "INV_NAME_COIN_SET_M2", x: 0.088, y: 0.344 },
-    P { scene: "Library_10", id: "Collectable Item Pickup - Melody", kind: Kind::Item, gives: "Librarian Melody Cylinder", text: "", x: 0.095, y: 0.129 },
+    P { scene: "Library_10", id: "Collectable Item Pickup - Melody", kind: Kind::Item, gives: "Librarian Melody Cylinder", text: "INV_NAME_R_PSALM_CYL_MELODY", x: 0.095, y: 0.129 },
     P { scene: "Library_11b", id: "Shell Shard Fossil Tiny Bumpy", kind: Kind::Fossil, gives: "", text: "", x: 0.364, y: 0.893 },
     P { scene: "Library_11b", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.26, y: 0.88 },
     P { scene: "Library_11b", id: "Shell Shard Fossil Tiny Egg (2)", kind: Kind::Fossil, gives: "", text: "", x: 0.363, y: 0.909 },
@@ -335,7 +335,7 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Library_13", id: "Collectable Item Pickup", kind: Kind::Tool, gives: "Dazzle Bind", text: "DAZZLE_BIND_NAME", x: 0.595, y: 0.245 },
     P { scene: "Library_13b", id: "Collectable Item Pickup - Quill Purple", kind: Kind::Item, gives: "Trobbio Quill Purple", text: "", x: 0.318, y: 0.283 },
     P { scene: "Library_13b", id: "Collectable Item Pickup - Quill Red", kind: Kind::Item, gives: "Trobbio Quill Red", text: "", x: 0.318, y: 0.283 },
-    P { scene: "Library_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cog Heart Pieces", text: "", x: 0.737, y: 0.184 },
+    P { scene: "Library_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cog Heart Pieces", text: "INV_NAME_COG_HEART_PIECE", x: 0.737, y: 0.184 },
     P { scene: "Mosstown_01", id: "Geo Small Persistent", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.92, y: 0.742 },
     P { scene: "Mosstown_01", id: "Geo Small Persistent (1)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.912, y: 0.742 },
     P { scene: "Mosstown_01", id: "Geo Small Persistent (2)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.907, y: 0.742 },
@@ -401,7 +401,7 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Shellwood_11b", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Flower Heart", text: "INV_NAME_HEART_BLOOM", x: 0.183, y: 0.877 },
     P { scene: "Shellwood_13", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Shard Pouch", text: "INV_NAME_SHARD_POUCH", x: 0.584, y: 0.84 },
     P { scene: "Shellwood_14", id: "Heart Piece", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.947, y: 0.667 },
-    P { scene: "Shellwood_25", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Totem Witch", text: "", x: 0.971, y: 0.66 },
+    P { scene: "Shellwood_25", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Totem Witch", text: "INV_NAME_R_WEAVER_TOTEM", x: 0.971, y: 0.66 },
     P { scene: "Shellwood_25", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Rosary_Set_Small", text: "INV_NAME_COIN_SET_S", x: 0.287, y: 0.635 },
     P { scene: "Shellwood_25", id: "Shell Shard Fossil Tiny Egg (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.108, y: 0.291 },
     P { scene: "Shellwood_26", id: "Geo Rock 3", kind: Kind::Rock, gives: "", text: "", x: 0.73, y: 0.579 },
@@ -412,13 +412,13 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Slab_05", id: "Shell Shard Fossil Tiny Front", kind: Kind::Fossil, gives: "", text: "", x: 0.523, y: 0.882 },
     P { scene: "Slab_05", id: "Shell Shard Fossil Tiny Front (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.558, y: 0.792 },
     P { scene: "Slab_06", id: "Geo Small Persistent", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.879, y: 0.751 },
-    P { scene: "Slab_12", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Totem Slab_Bottom", text: "", x: 0.896, y: 0.688 },
+    P { scene: "Slab_12", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Totem Slab_Bottom", text: "INV_NAME_R_WEAVER_TOTEM", x: 0.896, y: 0.688 },
     P { scene: "Slab_12", id: "Shell Shard Fossil Tiny Bumpy", kind: Kind::Fossil, gives: "", text: "", x: 0.224, y: 0.459 },
     P { scene: "Slab_12", id: "Shell Shard Fossil Tiny Egg", kind: Kind::Fossil, gives: "", text: "", x: 0.213, y: 0.402 },
-    P { scene: "Slab_14", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Slab Key A", text: "", x: 0.129, y: 0.238 },
-    P { scene: "Slab_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Slab Key B", text: "", x: 0.255, y: 0.296 },
-    P { scene: "Slab_16", id: "Collectable Item Pickup Return", kind: Kind::Item, gives: "Slab Key B", text: "", x: 0.255, y: 0.228 },
-    P { scene: "Slab_16b", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Slab Key C", text: "", x: 0.75, y: 0.476 },
+    P { scene: "Slab_14", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Slab Key A", text: "INV_NAME_SLAB_KEY_A", x: 0.129, y: 0.238 },
+    P { scene: "Slab_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Slab Key B", text: "INV_NAME_SLAB_KEY_B", x: 0.255, y: 0.296 },
+    P { scene: "Slab_16", id: "Collectable Item Pickup Return", kind: Kind::Item, gives: "Slab Key B", text: "INV_NAME_SLAB_KEY_B", x: 0.255, y: 0.228 },
+    P { scene: "Slab_16b", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Slab Key C", text: "INV_NAME_SLAB_KEY_C", x: 0.75, y: 0.476 },
     P { scene: "Slab_16b", id: "Collectable Item Pickup - Broodmother Eye", kind: Kind::Item, gives: "Broodmother Remains", text: "INV_NAME_BROODMOTHER_REMAINS", x: 0.77, y: 0.146 },
     P { scene: "Slab_17", id: "Heart Piece", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.238, y: 0.906 },
     P { scene: "Slab_17", id: "Heart Piece Dummy", kind: Kind::Mask, gives: "", text: "", x: 0.238, y: 0.905 },
@@ -435,9 +435,9 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Song_09", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Medium", text: "INV_NAME_COIN_SET_M", x: 0.788, y: 0.097 },
     P { scene: "Song_09", id: "Heart Piece", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.831, y: 0.516 },
     P { scene: "Song_19_entrance", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.282, y: 0.871 },
-    P { scene: "Song_26", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cog Heart Pieces", text: "", x: 0.444, y: 0.19 },
+    P { scene: "Song_26", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cog Heart Pieces", text: "INV_NAME_COG_HEART_PIECE", x: 0.444, y: 0.19 },
     P { scene: "Song_Enclave", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Ward Key", text: "INV_NAME_WARD_KEY", x: 0.851, y: 0.191 },
-    P { scene: "Tube_Hub", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cradle Map", text: "", x: 0.2, y: 0.203 },
+    P { scene: "Tube_Hub", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Cradle Map", text: "CRADLE_MAP_GET_MSG", x: 0.2, y: 0.203 },
     P { scene: "Tut_01", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Frayed", text: "INV_NAME_COIN_SET_F", x: 0.366, y: 0.17 },
     P { scene: "Tut_01", id: "Shell Shard Fossil Large Uni", kind: Kind::Fossil, gives: "", text: "", x: 0.663, y: 0.082 },
     P { scene: "Tut_01b", id: "Shell Shard Fossil Mid (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.541, y: 0.446 },
@@ -449,31 +449,31 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Under_03", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Shard Pouch", text: "INV_NAME_SHARD_POUCH", x: 0.076, y: 0.249 },
     P { scene: "Under_07c", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Frayed", text: "INV_NAME_COIN_SET_F", x: 0.889, y: 0.718 },
     P { scene: "Under_08", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Crest Socket Unlocker", text: "INV_NAME_CREST_SOCKET", x: 0.452, y: 0.284 },
-    P { scene: "Under_08", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Psalm Cylinder Ward", text: "", x: 0.499, y: 0.819 },
+    P { scene: "Under_08", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Psalm Cylinder Ward", text: "INV_NAME_R_PSALM_CYL", x: 0.499, y: 0.819 },
     P { scene: "Under_10", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.278, y: 0.472 },
     P { scene: "Under_12", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Frayed", text: "INV_NAME_COIN_SET_F", x: 0.828, y: 0.514 },
     P { scene: "Under_14", id: "Collectable Item Pickup", kind: Kind::Tool, gives: "Screw Attack", text: "SCREWATTACK_NAME", x: 0.627, y: 0.269 },
-    P { scene: "Under_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Bone Record Understore_Map_Room", text: "", x: 0.892, y: 0.257 },
+    P { scene: "Under_16", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Bone Record Understore_Map_Room", text: "INV_NAME_R_BONE_RECORD", x: 0.892, y: 0.257 },
     P { scene: "Under_16", id: "Geo Small Persistent", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.407, y: 0.454 },
     P { scene: "Under_16", id: "Geo Small Persistent (2)", kind: Kind::Rosary, gives: "Magnetite Dice", text: "MAGNETITE_DICE_NAME", x: 0.387, y: 0.454 },
     P { scene: "Under_17", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Pristine Core", text: "INV_NAME_PRISTINE_CORE", x: 0.46, y: 0.487 },
     P { scene: "Under_18", id: "Collectable Item Pickup (1)", kind: Kind::Item, gives: "Shard Pouch", text: "INV_NAME_SHARD_POUCH", x: 0.213, y: 0.686 },
     P { scene: "Under_19b", id: "Collectable Item Pickup - Tool Metal", kind: Kind::Item, gives: "Tool Metal", text: "INV_NAME_TOOL_METAL", x: 0.056, y: 0.326 },
     P { scene: "Ward_01", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.383, y: 0.067 },
-    P { scene: "Ward_02b", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Seal Chit Ward Corpse", text: "", x: 0.339, y: 0.126 },
+    P { scene: "Ward_02b", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Seal Chit Ward Corpse", text: "INV_NAME_R_SEAL_CHIT", x: 0.339, y: 0.126 },
     P { scene: "Ward_03", id: "Collectable Item Pickup", kind: Kind::Tool, gives: "Quickbind", text: "QUICKBIND_NAME", x: 0.402, y: 0.63 },
-    P { scene: "Ward_05", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Seal Chit Silk Siphon", text: "", x: 0.95, y: 0.184 },
+    P { scene: "Ward_05", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Seal Chit Silk Siphon", text: "INV_NAME_R_SEAL_CHIT", x: 0.95, y: 0.184 },
     P { scene: "Ward_07", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Ward Boss Key", text: "INV_NAME_WARD_BOSS_KEY", x: 0.101, y: 0.358 },
     P { scene: "Weave_03", id: "Collectable Item Pickup", kind: Kind::Tool, gives: "White Ring", text: "WHITE_RING_NAME", x: 0.051, y: 0.553 },
     P { scene: "Weave_05b", id: "Heart Piece", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.72, y: 0.668 },
-    P { scene: "Weave_08", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Record Weave_08", text: "", x: 0.541, y: 0.808 },
+    P { scene: "Weave_08", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Weaver Record Weave_08", text: "INV_NAME_R_WEAVER_RECORD", x: 0.541, y: 0.808 },
     P { scene: "Weave_11", id: "Silk Spool", kind: Kind::Spool, gives: "Silk Spool", text: "", x: 0.102, y: 0.472 },
     P { scene: "Weave_14", id: "Collectable Item Pickup (1)", kind: Kind::Tool, gives: "Silk Snare", text: "SNARE_NAME", x: 0.875, y: 0.353 },
     P { scene: "Wisp_02", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Medium", text: "INV_NAME_COIN_SET_M", x: 0.484, y: 0.826 },
     P { scene: "Wisp_03", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Rosary_Set_Frayed", text: "INV_NAME_COIN_SET_F", x: 0.351, y: 0.753 },
     P { scene: "Wisp_05", id: "Collectable Item Pickup - Tool Metal", kind: Kind::Item, gives: "Tool Metal", text: "INV_NAME_TOOL_METAL", x: 0.814, y: 0.869 },
     P { scene: "Wisp_07", id: "Heart Piece", kind: Kind::Mask, gives: "Heart Piece", text: "", x: 0.867, y: 0.638 },
-    P { scene: "Wisp_08", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Bone Record Wisp Top", text: "", x: 0.339, y: 0.917 },
+    P { scene: "Wisp_08", id: "Collectable Item Pickup", kind: Kind::Item, gives: "Bone Record Wisp Top", text: "INV_NAME_R_BONE_RECORD", x: 0.339, y: 0.917 },
     P { scene: "Wisp_09", id: "Shell Shard Fossil Mid Variant", kind: Kind::Fossil, gives: "", text: "", x: 0.106, y: 0.637 },
     P { scene: "Wisp_09", id: "Shell Shard Fossil Tiny Bumpy", kind: Kind::Fossil, gives: "", text: "", x: 0.728, y: 0.195 },
     P { scene: "Wisp_09", id: "Shell Shard Fossil Tiny Bumpy (1)", kind: Kind::Fossil, gives: "", text: "", x: 0.077, y: 0.477 },
@@ -521,8 +521,19 @@ pub fn taken(scenes: Option<&Value>, p: &P) -> bool {
     }
 }
 
-/// Every pickup of one kind as an item, named after what it gives.
-pub fn items(kind: Kind, scenes: Option<&Value>, words: &crate::Words, fr: bool, area_of_scene: &dyn Fn(&str) -> Option<String>) -> Vec<Item> {
+/// The save's flag for having a key item got elsewhere than where it lies:
+/// had, every place of it counts as taken (a Slab key is found in one of
+/// two places, the Ward Key is also sold).
+pub const KEY_FLAGS: [(&str, &str); 4] = [
+    ("Slab Key A", "HasSlabKeyA"),
+    ("Slab Key B", "HasSlabKeyB"),
+    ("Slab Key C", "HasSlabKeyC"),
+    ("Ward Key", "collectedWardKey"),
+];
+
+/// Every pickup of one kind as an item, named after what it gives. `has`
+/// reads a flag of the save.
+pub fn items(kind: Kind, scenes: Option<&Value>, has: &dyn Fn(&str) -> bool, words: &crate::Words, fr: bool, area_of_scene: &dyn Fn(&str) -> Option<String>) -> Vec<Item> {
     PICKUPS
         .iter()
         .filter(|p| p.kind == kind)
@@ -533,7 +544,8 @@ pub fn items(kind: Kind, scenes: Option<&Value>, words: &crate::Words, fr: bool,
                 Some(a) => format!("{what} · {a}"),
                 None => what,
             };
-            let mut item = Item::new(item_id(p), title, if taken(scenes, p) { Status::Done } else { Status::Todo });
+            let had = KEY_FLAGS.iter().any(|(gives, flag)| *gives == p.gives && has(flag));
+            let mut item = Item::new(item_id(p), title, if had || taken(scenes, p) { Status::Done } else { Status::Todo });
             // The inventory's own picture of what it gives.
             let picture = match kind {
                 Kind::Rosary => Some("I_rosary_icon_clean"),
@@ -560,4 +572,18 @@ pub fn spot(scene: &str, id: &str) -> Option<&'static P> {
 /// Where a tool lies on the ground, by any of its names.
 pub fn tool_spot(names: &[String]) -> Option<&'static P> {
     PICKUPS.iter().find(|p| p.kind == Kind::Tool && names.iter().any(|n| n == p.gives))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// The save knows a pickup by its scene and name only: two entries alike
+    /// would be one thing counted twice, under one item id.
+    #[test]
+    fn pickups_are_unique() {
+        for (i, p) in PICKUPS.iter().enumerate() {
+            assert!(!PICKUPS[..i].iter().any(|q| q.scene.eq_ignore_ascii_case(p.scene) && q.id == p.id), "{} {}", p.scene, p.id);
+        }
+    }
 }

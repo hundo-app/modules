@@ -192,8 +192,8 @@ const ENTRIES: &[E] = &[
     E { key: "HollowKnightPrime", text: "PURE_VESSEL", image: "bestiary_gg__0008_HK_prime", dlc: Some("godmaster"), areas: &["Godhome"] },
     E { key: "GodseekerMask", text: "GODSEEKER_MASK", image: "bestiary_gg_mask", dlc: Some("godmaster"), areas: &["Godhome"] },
     E { key: "VoidIdol_1", text: "VOID_IDOL_1", image: "bestiary_gg_void_idol", dlc: Some("godmaster"), areas: &["Godhome"] },
-    E { key: "VoidIdol_2", text: "VOID_IDOL_2", image: "bestiary_gg_void_idol", dlc: Some("godmaster"), areas: &["Godhome"] },
-    E { key: "VoidIdol_3", text: "VOID_IDOL_3", image: "bestiary_gg_void_idol", dlc: Some("godmaster"), areas: &["Godhome"] },
+    E { key: "VoidIdol_2", text: "VOID_IDOL_2", image: "bestiary_gg_void_idol_states_0001_2", dlc: Some("godmaster"), areas: &["Godhome"] },
+    E { key: "VoidIdol_3", text: "VOID_IDOL_3", image: "bestiary_gg_void_idol_states_0000_3", dlc: Some("godmaster"), areas: &["Godhome"] },
 ];
 
 impl Analysis<'_> {
@@ -204,6 +204,13 @@ impl Analysis<'_> {
                 let killed = self.bool(&format!("killed{}", e.key))?;
                 let left = self.int(&format!("kills{}", e.key));
                 let name = self.text(&format!("NAME_{}", e.text)).unwrap_or_else(|| spaced(e.key));
+                // The three Void Idols share one name: the Hall of Gods' difficulty tells them apart.
+                let name = match e.key {
+                    "VoidIdol_1" => format!("{name} · {}", self.t("Synchronisé", "Attuned")),
+                    "VoidIdol_2" => format!("{name} · {}", self.t("Transcendé", "Ascended")),
+                    "VoidIdol_3" => format!("{name} · {}", self.t("Radiant", "Radiant")),
+                    _ => name,
+                };
                 let status = match (killed, left) {
                     (true, n) if n <= 0 || !self.full_journal => Status::Done,
                     (true, _) => Status::InProgress,

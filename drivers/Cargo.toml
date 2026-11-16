@@ -6,7 +6,7 @@ members = ["sdk", "hollow-knight", "silksong", "schedule-one", "hades", "expedit
 
 [workspace.package]
 edition = "2024"
-version = "0.1.0"
+version = "0.1.0-alpha"
 
 [workspace.dependencies]
 hundo-sdk = { path = "sdk" }

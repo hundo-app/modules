@@ -1,0 +1,11 @@
+name: Module or SDK problem
+description: Writing a module, the SDK, the contract, `hundo module`, the catalog.
+labels: [modules]
+body:
+  - type: textarea
+    id: report
+    attributes:
+      label: What happened
+      description: What you ran, what happened, what you expected. Include the command's output.
+    validations:
+      required: true

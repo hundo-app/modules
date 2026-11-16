@@ -85,6 +85,20 @@ pub fn ware_for(flags: &[String], tools: &[String]) -> Option<&'static W> {
 }
 
 /// "Grindle · 320 chapelets".
-pub fn price(w: &W, fr: bool) -> String {
-    format!("{} · {} {}", w.merchant, w.geo, if fr { "chapelets" } else { "rosaries" })
+/// Who sells it, as the game titles them, and for how many rosaries.
+pub fn price(w: &W, fr: bool, words: &crate::Words) -> String {
+    let who = MERCHANT_TITLES.iter().find(|(m, _)| *m == w.merchant).and_then(|(_, key)| words.title(key)).unwrap_or_else(|| w.merchant.to_string());
+    format!("{who} · {} {}", w.geo, if fr { "chapelets" } else { "rosaries" })
 }
+
+/// The game's title for each merchant (`ARCHITECT` for SUPER, MAIN and SUB).
+const MERCHANT_TITLES: [(&str, &str); 8] = [
+    ("Ant Merchant", "ANT_MERCHANT"),
+    ("Architect", "ARCHITECT"),
+    ("Bellhart", "BELLHART_SHOPKEEP"),
+    ("Bonebottom", "BB_SHOPKEEP"),
+    ("Citadel", "CITY_MERCHANT"),
+    ("Forge", "FORGEDAUGHTER"),
+    ("Grindle", "GRINDLE"),
+    ("Pilgrim's Rest", "PILGRIM_REST_SHOP"),
+];

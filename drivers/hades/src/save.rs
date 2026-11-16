@@ -65,12 +65,6 @@ impl Lua {
         pairs.iter().filter_map(|(k, v)| Some((k.str()?, v)))
     }
 
-    pub fn len(&self) -> usize {
-        match self {
-            Lua::Table(p) => p.len(),
-            _ => 0,
-        }
-    }
 }
 
 pub fn decode(data: &[u8]) -> Result<Save, DriverError> {
@@ -215,5 +209,33 @@ mod tests {
         assert_eq!(save.runs, 3);
         assert_eq!(save.state.get("GameState").get("CompletedRunsCache").num(), 3.0);
         assert!(matches!(decode(&file[..file.len() - 5]), Err(DriverError::Corrupt(_))));
+    }
+}
+
+#[cfg(test)]
+mod dump {
+    use super::*;
+
+    fn json(v: &Lua) -> String {
+        match v {
+            Lua::Nil => "null".into(),
+            Lua::Bool(b) => b.to_string(),
+            Lua::Num(n) => if n.is_finite() { n.to_string() } else { "null".into() },
+            Lua::Str(s) => format!("{s:?}"),
+            Lua::Table(pairs) => format!("{{{}}}", pairs.iter().map(|(k, v)| {
+                let key = match k { Lua::Str(s) => s.clone(), Lua::Num(n) => n.to_string(), other => format!("{other:?}") };
+                format!("{key:?}:{}", json(v))
+            }).collect::<Vec<_>>().join(",")),
+        }
+    }
+
+    /// The whole save as JSON, for reading what it holds:
+    /// `HADES_SAVE=… HADES_OUT=… cargo test -p driver-hades dump_save -- --ignored`.
+    #[test]
+    #[ignore]
+    fn dump_save() {
+        let path = std::env::var("HADES_SAVE").unwrap();
+        let save = decode(&std::fs::read(path).unwrap()).unwrap();
+        std::fs::write(std::env::var("HADES_OUT").unwrap(), json(&save.state)).unwrap();
     }
 }

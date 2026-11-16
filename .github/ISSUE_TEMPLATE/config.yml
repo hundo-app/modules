@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A bug in the app, an idea, a new game
+    url: https://github.com/hundo-app/releases/issues/new/choose
+    about: The app's own issues and its roadmap live on hundo-app/releases.
+  - name: Question or help
+    url: https://github.com/hundo-app/releases/discussions
+    about: Ask, share a tip, talk about Hundo.

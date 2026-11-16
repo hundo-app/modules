@@ -1049,7 +1049,7 @@
       "items": [
         {
           "id": "lurienDefeated",
-          "title": "Lurien the Watcher",
+          "title": "Lurien le Veilleur",
           "status": "done",
           "progress": null,
           "hint": null,
@@ -1065,7 +1065,7 @@
         },
         {
           "id": "monomonDefeated",
-          "title": "Monomon the Teacher",
+          "title": "Monomon l'Érudite",
           "status": "done",
           "progress": null,
           "hint": null,
@@ -1081,7 +1081,7 @@
         },
         {
           "id": "hegemolDefeated",
-          "title": "Herrah the Beast",
+          "title": "Herrah la Bête",
           "status": "done",
           "progress": null,
           "hint": null,
@@ -1687,7 +1687,7 @@
         },
         {
           "id": "pantheon1",
-          "title": "Pantheon of the Master",
+          "title": "Panthéon du Maître",
           "status": "done",
           "progress": null,
           "hint": null,
@@ -1703,7 +1703,7 @@
         },
         {
           "id": "pantheon2",
-          "title": "Pantheon of the Artist",
+          "title": "Panthéon du Peintre",
           "status": "done",
           "progress": null,
           "hint": null,
@@ -1719,7 +1719,7 @@
         },
         {
           "id": "pantheon3",
-          "title": "Pantheon of the Sage",
+          "title": "Panthéon du Grand Maître",
           "status": "done",
           "progress": null,
           "hint": null,
@@ -1735,7 +1735,7 @@
         },
         {
           "id": "pantheon4",
-          "title": "Pantheon of the Knight",
+          "title": "Panthéon du Chevalier",
           "status": "todo",
           "progress": null,
           "hint": null,
@@ -1796,7 +1796,7 @@
         },
         {
           "id": "pantheon5",
-          "title": "Pantheon of Hallownest",
+          "title": "Panthéon d'Hallownest",
           "status": "locked",
           "progress": null,
           "hint": null,
@@ -1903,7 +1903,7 @@
         },
         {
           "id": "charmNotches",
-          "title": "Encoches de charme",
+          "title": "Emplacements de charme",
           "status": "done",
           "progress": {
             "current": 11,
@@ -4648,7 +4648,7 @@
         },
         {
           "id": "journal-VoidIdol_1",
-          "title": "Void Idol 1",
+          "title": "Void Idol 1 · Synchronisé",
           "status": "todo",
           "progress": null,
           "hint": null,
@@ -4664,7 +4664,7 @@
         },
         {
           "id": "journal-VoidIdol_2",
-          "title": "Void Idol 2",
+          "title": "Void Idol 2 · Transcendé",
           "status": "todo",
           "progress": null,
           "hint": null,
@@ -4672,7 +4672,7 @@
           "spoiler": "major",
           "link": null,
           "dlc": "godmaster",
-          "image": "game:bestiary_gg_void_idol",
+          "image": "game:bestiary_gg_void_idol_states_0001_2",
           "details": null,
           "areas": [
             "Godhome"
@@ -4680,7 +4680,7 @@
         },
         {
           "id": "journal-VoidIdol_3",
-          "title": "Void Idol 3",
+          "title": "Void Idol 3 · Radiant",
           "status": "todo",
           "progress": null,
           "hint": null,
@@ -4688,7 +4688,7 @@
           "spoiler": "major",
           "link": null,
           "dlc": "godmaster",
-          "image": "game:bestiary_gg_void_idol",
+          "image": "game:bestiary_gg_void_idol_states_0000_3",
           "details": null,
           "areas": [
             "Godhome"
@@ -4837,7 +4837,7 @@
         },
         {
           "id": "salubraNotch1",
-          "title": "Encoche de charme",
+          "title": "Emplacement de charme",
           "status": "done",
           "progress": null,
           "hint": "Salubra · 120 géo",
@@ -4853,7 +4853,7 @@
         },
         {
           "id": "salubraNotch2",
-          "title": "Encoche de charme",
+          "title": "Emplacement de charme",
           "status": "done",
           "progress": null,
           "hint": "Salubra · 500 géo",
@@ -4869,7 +4869,7 @@
         },
         {
           "id": "salubraNotch3",
-          "title": "Encoche de charme",
+          "title": "Emplacement de charme",
           "status": "done",
           "progress": null,
           "hint": "Salubra · 900 géo",
@@ -4885,7 +4885,7 @@
         },
         {
           "id": "salubraNotch4",
-          "title": "Encoche de charme",
+          "title": "Emplacement de charme",
           "status": "done",
           "progress": null,
           "hint": "Salubra · 1400 géo",
@@ -5989,7 +5989,7 @@
         },
         {
           "id": "m-salubraNotch1",
-          "label": "Encoche de charme",
+          "label": "Emplacement de charme",
           "x": 699.9303,
           "y": 360.6645,
           "item": "salubraNotch1",
@@ -6000,7 +6000,7 @@
         },
         {
           "id": "m-salubraNotch2",
-          "label": "Encoche de charme",
+          "label": "Emplacement de charme",
           "x": 774.1961,
           "y": 360.6645,
           "item": "salubraNotch2",
@@ -6011,7 +6011,7 @@
         },
         {
           "id": "m-salubraNotch3",
-          "label": "Encoche de charme",
+          "label": "Emplacement de charme",
           "x": 848.4619,
           "y": 360.6645,
           "item": "salubraNotch3",
@@ -6022,7 +6022,7 @@
         },
         {
           "id": "m-salubraNotch4",
-          "label": "Encoche de charme",
+          "label": "Emplacement de charme",
           "x": 922.7277,
           "y": 360.6645,
           "item": "salubraNotch4",
@@ -6363,7 +6363,7 @@
         },
         {
           "id": "m-hegemolDefeated",
-          "label": "Herrah the Beast",
+          "label": "Herrah la Bête",
           "x": 155.54184,
           "y": 1016.62555,
           "item": "hegemolDefeated",
@@ -6638,7 +6638,7 @@
         },
         {
           "id": "m-lurienDefeated",
-          "label": "Lurien the Watcher",
+          "label": "Lurien le Veilleur",
           "x": 1434.5553,
           "y": 431.95224,
           "item": "lurienDefeated",
@@ -6759,7 +6759,7 @@
         },
         {
           "id": "m-monomonDefeated",
-          "label": "Monomon the Teacher",
+          "label": "Monomon l'Érudite",
           "x": 582.4972,
           "y": 470.8324,
           "item": "monomonDefeated",
@@ -6814,7 +6814,7 @@
         },
         {
           "id": "m-pantheon1",
-          "label": "Pantheon of the Master",
+          "label": "Panthéon du Maître",
           "x": 1616.2455,
           "y": 888.7366,
           "item": "pantheon1",
@@ -6825,7 +6825,7 @@
         },
         {
           "id": "m-pantheon2",
-          "label": "Pantheon of the Artist",
+          "label": "Panthéon du Peintre",
           "x": 1761.2277,
           "y": 888.7366,
           "item": "pantheon2",
@@ -6836,7 +6836,7 @@
         },
         {
           "id": "m-pantheon3",
-          "label": "Pantheon of the Sage",
+          "label": "Panthéon du Grand Maître",
           "x": 1906.2098,
           "y": 888.7366,
           "item": "pantheon3",
@@ -6847,7 +6847,7 @@
         },
         {
           "id": "m-pantheon4",
-          "label": "Pantheon of the Knight",
+          "label": "Panthéon du Chevalier",
           "x": 1688.7366,
           "y": 961.2276,
           "item": "pantheon4",
@@ -6858,7 +6858,7 @@
         },
         {
           "id": "m-pantheon5",
-          "label": "Pantheon of Hallownest",
+          "label": "Panthéon d'Hallownest",
           "x": 1833.7188,
           "y": 961.2276,
           "item": "pantheon5",

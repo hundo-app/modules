@@ -1,0 +1,25 @@
+name: An error in a game
+description: A wrong place on the map, a wrong name, a wrong state, something missing.
+labels: [game data]
+body:
+  - type: markdown
+    attributes:
+      value: From the app, **Report** on an item's card or its map marker fills in the game, the module, the item and its place.
+  - type: input
+    id: game
+    attributes:
+      label: Game
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: What is wrong
+      description: Which item, what Hundo shows, what is right (where it really is, what it should say).
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Screenshots or save
+      description: Drag files here. A save helps the most.

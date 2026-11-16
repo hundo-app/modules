@@ -95,7 +95,7 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
     // The game's own words, in the reader's language, English filling the gaps.
     let mut text = HashMap::new();
     for l in ["EN", if fr { "FR" } else { "EN" }] {
-        for sheet in ["Journal", "Map Zones", "Tools", "UI", "Quests", "Belltown"] {
+        for sheet in ["Journal", "Map Zones", "Tools", "UI", "Quests", "Belltown", "Inspect", "Titles"] {
             if let Ok(f) = input.file(&format!("@texts/{l}_{sheet}")) {
                 text.extend(save::sheet(&f.bytes));
             }
@@ -173,7 +173,7 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
                     _ => (Vec::new(), Vec::new()),
                 };
                 if let Some(w) = shops::ware_for(&flags, &tools) {
-                    item.hint = Some(shops::price(w, fr));
+                    item.hint = Some(shops::price(w, fr, &words));
                     if spot.is_none() {
                         spots.push((it.id.clone(), w.scene, w.x, w.y));
                     }
@@ -247,10 +247,12 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
         .enumerate()
         .map(|(n, w)| {
             let bought = if w.flag.is_empty() { s.passes(&Check::Tool { names: vec![w.gives.to_string()] }) } else { s.passes(&Check::Flag { keys: vec![w.flag.to_string()] }) };
+            // A key got elsewhere needs no buying.
+            let bought = bought || pickups::KEY_FLAGS.iter().any(|(gives, flag)| *gives == w.gives && s.passes(&Check::Flag { keys: vec![flag.to_string()] }));
             let id = format!("shop-{}-{n}", w.merchant);
             spots.push((id.clone(), w.scene, w.x, w.y));
             let title = words.get(w.text).unwrap_or_else(|| w.gives.to_string());
-            let mut item = Item::check(id, title, bought).hint(shops::price(w, fr));
+            let mut item = Item::check(id, title, bought).hint(shops::price(w, fr, &words));
             // The picture of what it gives: the tool's own, or a shard's.
             let picture = match w.gives {
                 "Heart Piece" => Some("Inv_0030_inv_health_backboard_mask_1"),
@@ -270,6 +272,27 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
     if let Some(w) = &map_world {
         // Everything else lying in the rooms, on the map for completeness.
         let area_of_scene = |scene: &str| w.rooms.iter().find(|r| r.scene.eq_ignore_ascii_case(scene)).map(|r| words.zone(&r.area));
+        // Lost fleas named as the game names them, with the area they wait
+        // in, by the room their flag is named after (a variant, `_Church`,
+        // is drawn as its room).
+        let flea = words.get("KEY_FLEA").unwrap_or_else(|| t("Puce perdue", "Lost flea").to_string());
+        for item in report.sections.iter_mut().filter(|s| s.id == "flea").flat_map(|s| s.items.iter_mut()) {
+            let mut scene = item.id.strip_prefix("SavedFlea_");
+            let zone = loop {
+                let Some(sc) = scene else { break None };
+                if let Some(z) = area_of_scene(sc) {
+                    break Some(z);
+                }
+                scene = sc.rsplit_once('_').map(|(head, _)| head);
+            };
+            // Fleas met rather than saved keep the list's words for who they are.
+            let who = item.title.split_once(" (").map(|(_, w)| format!(" ({w}"));
+            let zone = zone.or_else(|| PLACES.iter().find(|(place, _)| item.title.starts_with(place)).map(|(_, area)| words.zone(area)));
+            if let Some(zone) = zone {
+                item.title = format!("{flea} · {zone}{}", who.unwrap_or_default());
+                item.location.get_or_insert(zone);
+            }
+        }
         let finds = t("Trouvailles", "Finds");
         for (id, kind, title) in [
             ("items", pickups::Kind::Item, t("Objets au sol", "Items on the ground")),
@@ -277,7 +300,7 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
             ("rocks", pickups::Kind::Rock, t("Rochers de chapelets", "Rosary rocks")),
             ("fossils", pickups::Kind::Fossil, t("Fossiles d'éclats", "Shell shard fossils")),
         ] {
-            let items = pickups::items(kind, scene_data, &words, fr, &area_of_scene);
+            let items = pickups::items(kind, scene_data, &|flag| s.passes(&Check::Flag { keys: vec![flag.to_string()] }), &words, fr, &area_of_scene);
             spots.extend(pickups::PICKUPS.iter().filter(|p| p.kind == kind).map(|p| (pickups::item_id(p), p.scene, p.x, p.y)));
             // Rosaries and shell shards: needed for nothing, shown on demand.
             let section = Section::new(id, title, items).group(finds);
@@ -340,13 +363,22 @@ fn point_of_interest(sprite: &str, fr: bool) -> Option<(&'static str, &'static s
     let kind = sprite.trim_end_matches(|c: char| c.is_ascii_digit() || c == ' ' || c == '(' || c == ')' || c == '_');
     Some(match kind {
         "pin_bench" => (t("Banc", "Bench"), t("Bancs", "Benches")),
-        "pin_stag_station" => ("Bellway", "Bellways"),
+        "pin_stag_station" => (t("Clochevoie", "Bellway"), t("Clochevoies", "Bellways")),
         "pin_tube_station" => ("Ventrica", "Ventrica"),
         "pin_shop" => (t("Marchand", "Merchant"), t("Marchands", "Merchants")),
         "pin_flea" => (t("Caravane des puces", "Flea caravan"), t("Lieux", "Places")),
         _ => return None,
     })
 }
+
+/// The map legend's names for the game's pins, by pin sprite and text key.
+const LEGEND: [(&str, &str); 5] = [
+    ("pin_bench", "KEY_BENCH"),
+    ("pin_stag_station", "KEY_BELLWAY"),
+    ("pin_tube_station", "KEY_TUBE"),
+    ("pin_shop", "KEY_SHOP"),
+    ("pin_flea", "KEY_CARAVAN"),
+];
 
 /// The game's own text by key (`NAME_MOSSBONE_CRAWLER`), when the host could
 /// read it from the installed game.
@@ -366,6 +398,13 @@ impl Words {
         let t = self.text.get(key)?.replace("<br>", " ");
         let t = t.split_whitespace().collect::<Vec<_>>().join(" ");
         (!t.is_empty()).then_some(t)
+    }
+
+    /// A character's title as the game shows it on meeting them: its parts
+    /// above, on and under the line (`ARCHITECT_SUPER`, `_MAIN`, `_SUB`).
+    pub fn title(&self, key: &str) -> Option<String> {
+        let parts: Vec<String> = ["SUPER", "MAIN", "SUB"].iter().filter_map(|p| self.get(&format!("{key}_{p}"))).collect();
+        (!parts.is_empty()).then(|| parts.join(" "))
     }
 
     /// A map area's name as the game words it, from its id (`Bone`).
@@ -410,7 +449,7 @@ const ZONE_KEYS: [(&str, &str); 30] = [
 
 /// The game's map areas for the region names the 100 % list uses, where the
 /// match is sure; other places are left off the map rather than guessed.
-const PLACES: [(&str, &str); 19] = [
+const PLACES: [(&str, &str); 32] = [
     ("The Marrow", "Bone"),
     ("Marrow", "Bone"),
     ("Bone Bottom", "Bonetown"),
@@ -430,6 +469,20 @@ const PLACES: [(&str, &str); 19] = [
     ("Sinner's Road", "Dust"),
     ("Hunter's March", "Ant"),
     ("Blasted Steps", "Blasted_Steps"),
+    // The game's own English names for its areas, sure matches too.
+    ("Putrified Ducts", "Aqueduct"),
+    ("Memorium", "Arborium"),
+    ("Sands of Karak", "Coral_Caves"),
+    ("Far Fields", "Wilds"),
+    ("Whispering Vaults", "Library"),
+    ("High Halls", "Hang"),
+    ("Wisp Thicket", "Wisp"),
+    ("Verdania", "Clover"),
+    ("Grand Gate", "Song_Gate"),
+    ("Moss Grotto", "Tut"),
+    ("The Abyss", "Abyss"),
+    ("Weavenest Atla", "Weavehome"),
+    ("The Citadel", "Song"),
 ];
 
 /// Pharloom from the game's files: areas named, each item at its pin or
@@ -465,6 +518,17 @@ fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots:
         let y1 = rooms.iter().map(|r| r.y + r.h).fold(f32::MIN, f32::max);
         Some((x0, y0, x1 - x0, y1 - y0))
     };
+    // The game's drawing of a room is not to scale: where a smaller room is
+    // drawn over the spot, the spot shows in that room, not in its own.
+    let covered = |scene: &str, (x, y): (f32, f32)| {
+        let Some((_, _, bw, bh)) = scene_box(scene) else { return false };
+        w.rooms.iter().any(|r| {
+            !r.scene.to_ascii_lowercase().starts_with(&scene.to_ascii_lowercase())
+                && r.w * r.h < bw * bh
+                && (r.x..=r.x + r.w).contains(&x)
+                && (r.y..=r.y + r.h).contains(&y)
+        })
+    };
     let mut spread: Vec<(&str, usize)> = Vec::new();
     for section in sections {
         for item in &section.items {
@@ -484,7 +548,8 @@ fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots:
             {
                 // Its room is sure even when its spot in it is not.
                 let (fx, fy) = if *px >= 0.0 { (*px, *py) } else { (0.5, 0.5) };
-                map = map.marker(marker(x + fx * bw, y + (1.0 - fy) * bh, false));
+                let at = (x + fx * bw, y + (1.0 - fy) * bh);
+                map = map.marker(marker(at.0, at.1, covered(scene, at)));
                 continue;
             }
             let scene = scenes.iter().find(|(id, _)| *id == item.id).map(|(_, s)| s.as_str());
@@ -529,6 +594,9 @@ fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots:
     // The game's own places: benches, Bellways, merchants. They never count.
     for (i, p) in w.pins.iter().enumerate() {
         if let Some((label, layer)) = point_of_interest(&p.sprite, fr) {
+            // Named as the game's map legend names it, when it does.
+            let kind = p.sprite.trim_end_matches(|c: char| c.is_ascii_digit() || c == ' ' || c == '(' || c == ')' || c == '_');
+            let label = LEGEND.iter().find(|(s, _)| *s == kind).and_then(|(_, key)| words.get(key)).unwrap_or_else(|| label.to_string());
             // The game's own pin for it.
             map = map.marker(MapMarker::at(format!("poi-{i}"), label, p.x, p.y).category(layer).icon(format!("game:{}", p.sprite)));
         }

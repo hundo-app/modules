@@ -69,7 +69,9 @@
           "dlc": null,
           "image": "game:Crest__0006_wanderer",
           "details": null,
-          "areas": []
+          "areas": [
+            "Tut"
+          ]
         },
         {
           "id": "completedMemory_beast",
@@ -131,7 +133,9 @@
           "dlc": null,
           "image": "game:Crest__0010_spell",
           "details": null,
-          "areas": []
+          "areas": [
+            "Tut"
+          ]
         }
       ],
       "tally": {
@@ -408,7 +412,9 @@
           "dlc": null,
           "image": "game:T_Conch_Drill_Shot",
           "details": null,
-          "areas": []
+          "areas": [
+            "Coral Caves"
+          ]
         },
         {
           "id": "webShot",
@@ -466,7 +472,9 @@
           "dlc": null,
           "image": "game:T_cogwork_flier",
           "details": null,
-          "areas": []
+          "areas": [
+            "Hang"
+          ]
         },
         {
           "id": "rosaryCannon",
@@ -480,7 +488,9 @@
           "dlc": null,
           "image": "game:_0004_T_rosary_cannon_loaded",
           "details": null,
-          "areas": []
+          "areas": [
+            "Hang"
+          ]
         },
         {
           "id": "lightningRod",
@@ -494,7 +504,9 @@
           "dlc": null,
           "image": "game:_0004_T_lightning__0000_1",
           "details": null,
-          "areas": []
+          "areas": [
+            "Arborium"
+          ]
         },
         {
           "id": "flintstone",
@@ -651,7 +663,9 @@
           "dlc": null,
           "image": "game:T_icon_white_ring",
           "details": null,
-          "areas": []
+          "areas": [
+            "Weavehome"
+          ]
         },
         {
           "id": "brollySpike",
@@ -795,7 +809,9 @@
           "dlc": null,
           "image": "game:poultice_pouch_icon",
           "details": null,
-          "areas": []
+          "areas": [
+            "Aqueduct"
+          ]
         },
         {
           "id": "longneedle",
@@ -1024,7 +1040,9 @@
           "dlc": null,
           "image": "game:T_icon_sprintmaster",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wilds"
+          ]
         },
         {
           "id": "thiefCharm",
@@ -1252,7 +1270,9 @@
           "dlc": null,
           "image": "game:Inv_0029_spell_core_outer_icons_0000_1_super_jump",
           "details": null,
-          "areas": []
+          "areas": [
+            "Abyss"
+          ]
         }
       ],
       "tally": {
@@ -1522,7 +1542,9 @@
           "dlc": null,
           "image": "game:Inv_0030_inv_health_backboard_mask_1",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wisp"
+          ]
         },
         {
           "id": "blastedStepsMask",
@@ -1566,7 +1588,9 @@
           "dlc": null,
           "image": "game:Inv_0030_inv_health_backboard_mask_1",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wilds"
+          ]
         },
         {
           "id": "destroyThreadCoresWish",
@@ -1689,7 +1713,9 @@
           "dlc": null,
           "image": "game:Inv_Hornet_Spool_0000_1_half",
           "details": null,
-          "areas": []
+          "areas": [
+            "Weavehome"
+          ]
         },
         {
           "id": "slabSpool",
@@ -1719,7 +1745,9 @@
           "dlc": null,
           "image": "game:Inv_Hornet_Spool_0000_1_half",
           "details": null,
-          "areas": []
+          "areas": [
+            "Song Gate"
+          ]
         },
         {
           "id": "UnderworksSpool1",
@@ -1749,7 +1777,9 @@
           "dlc": null,
           "image": "game:Inv_Hornet_Spool_0000_1_half",
           "details": null,
-          "areas": []
+          "areas": [
+            "Song Gate"
+          ]
         },
         {
           "id": "whitewardSpool",
@@ -1855,7 +1885,9 @@
           "dlc": null,
           "image": "game:Inv_Hornet_Spool_0000_1_half",
           "details": null,
-          "areas": []
+          "areas": [
+            "Hang"
+          ]
         },
         {
           "id": "MemoriumSpool",
@@ -1869,7 +1901,9 @@
           "dlc": null,
           "image": "game:Inv_Hornet_Spool_0000_1_half",
           "details": null,
-          "areas": []
+          "areas": [
+            "Arborium"
+          ]
         },
         {
           "id": "purchasedGrindleSpoolPiece",
@@ -2238,7 +2272,9 @@
           "dlc": null,
           "image": "game:Charm_Notch",
           "details": null,
-          "areas": []
+          "areas": [
+            "Library"
+          ]
         },
         {
           "id": "sandsOfKarakMemoryLocket",
@@ -2252,7 +2288,9 @@
           "dlc": null,
           "image": "game:Charm_Notch",
           "details": null,
-          "areas": []
+          "areas": [
+            "Coral Caves"
+          ]
         },
         {
           "id": "greymoorMemoryLocket02",
@@ -2282,7 +2320,9 @@
           "dlc": null,
           "image": "game:Charm_Notch",
           "details": null,
-          "areas": []
+          "areas": [
+            "Arborium"
+          ]
         },
         {
           "id": "slabMemoryLocket",
@@ -2342,7 +2382,9 @@
           "dlc": null,
           "image": "game:Charm_Notch",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wilds"
+          ]
         }
       ],
       "tally": {
@@ -2445,7 +2487,9 @@
           "dlc": null,
           "image": "game:Hornet_Tool_Metal",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wisp"
+          ]
         },
         {
           "id": "underworksCraftmetal",
@@ -2475,7 +2519,9 @@
           "dlc": null,
           "image": "game:Hornet_Tool_Metal",
           "details": null,
-          "areas": []
+          "areas": [
+            "Aqueduct"
+          ]
         }
       ],
       "tally": {
@@ -2546,7 +2592,9 @@
           "dlc": null,
           "image": "game:I_token_of_faith",
           "details": null,
-          "areas": []
+          "areas": [
+            "Coral Caves"
+          ]
         },
         {
           "id": "HasSlabKeyA",
@@ -2588,7 +2636,9 @@
           "dlc": null,
           "image": "game:I_slab_key_brass",
           "details": null,
-          "areas": []
+          "areas": [
+            "Aqueduct"
+          ]
         },
         {
           "id": "collectedWardBossKey",
@@ -7849,7 +7899,7 @@
         {
           "id": "shop-Citadel-10",
           "title": "Ward Key",
-          "status": "todo",
+          "status": "done",
           "progress": null,
           "hint": "Citadel · 220 chapelets",
           "location": null,
@@ -7890,7 +7940,7 @@
         }
       ],
       "tally": {
-        "done": 8,
+        "done": 9,
         "total": 13
       }
     }
@@ -7898,7 +7948,7 @@
   "maps": [],
   "warnings": [],
   "tally": {
-    "done": 279,
+    "done": 280,
     "total": 443
   }
 }

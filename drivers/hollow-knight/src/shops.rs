@@ -88,17 +88,19 @@ impl Analysis<'_> {
             .iter()
             .filter(|w| w.what != What::Charm)
             .filter_map(|w| {
-                let (fr, en, image) = match w.what {
-                    What::Mask => ("Fragment de masque", "Mask shard", Some("select_game_HUD_0001_health")),
-                    What::Vessel => ("Fragment de réceptacle", "Vessel fragment", Some("Inv_0031_inv_soul_piece_full")),
-                    What::Notch => ("Encoche de charme", "Charm notch", Some("charm_cost_full")),
-                    What::Blessing => ("Bénédiction de Salubra", "Salubra's Blessing", None),
-                    What::Key => ("Clé simple", "Simple Key", None),
-                    What::Egg => ("Œuf rance", "Rancid Egg", Some("inv_rancid_egg")),
-                    What::Lantern => ("Lanterne lumoucheron", "Lumafly Lantern", None),
+                let (fr, en, image, key) = match w.what {
+                    What::Mask => ("Fragment de masque", "Mask shard", Some("select_game_HUD_0001_health"), None),
+                    What::Vessel => ("Fragment de réceptacle", "Vessel fragment", Some("Inv_0031_inv_soul_piece_full"), None),
+                    What::Notch => ("Emplacement de charme", "Charm notch", Some("charm_cost_full"), Some("INV_NAME_NOTCH")),
+                    What::Blessing => ("Bénédiction de Salubra", "Salubra's Blessing", None, None),
+                    What::Key => ("Clé simple", "Simple Key", None, Some("INV_NAME_SIMPLEKEY")),
+                    What::Egg => ("Œuf rance", "Rancid Egg", Some("inv_rancid_egg"), Some("INV_NAME_RANCIDEGG")),
+                    What::Lantern => ("Lanterne de Lumafly", "Lumafly Lantern", None, Some("INV_NAME_LANTERN")),
                     What::Charm => return None,
                 };
-                let mut item = Item::check(w.key, self.t(fr, en), self.bool(w.key)?).hint(self.price(w));
+                // The game's own name for it, when its text sheets have one.
+                let name = key.and_then(|k| self.text(k)).unwrap_or_else(|| self.t(fr, en).to_string());
+                let mut item = Item::check(w.key, name, self.bool(w.key)?).hint(self.price(w));
                 if let Some(i) = image {
                     item = item.image(format!("game:{i}"));
                 }

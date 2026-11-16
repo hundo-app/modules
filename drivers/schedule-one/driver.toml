@@ -3,7 +3,7 @@ api = 3
 [driver]
 id = "schedule-one"
 name = "Schedule I"
-version = "0.1.0"
+version = "0.1.0-alpha"
 authors = ["Arnaud Michel"]
 license = "MIT OR Apache-2.0"
 description = "Rang, quêtes, territoires, propriétés, commerces et clients."

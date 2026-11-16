@@ -91,8 +91,8 @@ fn point_of_interest(sprite: &str, fr: bool) -> Option<(&'static str, &'static s
     let t = |f: &'static str, e: &'static str| if fr { f } else { e };
     Some(match sprite {
         "pin_bench" => (t("Banc", "Bench"), t("Bancs", "Benches")),
-        "pin_stag_station" => (t("Station de cerf", "Stag station"), t("Stations de cerf", "Stag stations")),
-        "pin_tram_location" => (t("Tramway", "Tram"), t("Tramways", "Trams")),
+        "pin_stag_station" => (t("Station de Coléoptère", "Stag Station"), t("Stations de Coléoptère", "Stag Stations")),
+        "pin_tram_location" => (t("Station de Tramway", "Tram Station"), t("Stations de Tramway", "Tram Stations")),
         "pin_spa" => (t("Source chaude", "Hot spring"), t("Sources chaudes", "Hot springs")),
         "pin_blue_health" => (t("Cocon de vie", "Lifeblood cocoon"), t("Cocons de vie", "Lifeblood cocoons")),
         "pin_shop_sly" => ("Sly", t("Marchands", "Merchants")),
@@ -112,6 +112,15 @@ fn point_of_interest(sprite: &str, fr: bool) -> Option<(&'static str, &'static s
         _ => return None,
     })
 }
+
+/// The map legend's names for the game's pins, by pin sprite and text key.
+const LEGEND: &[(&str, &str)] = &[
+    ("pin_bench", "KEY_BENCH"),
+    ("pin_stag_station", "KEY_STAG"),
+    ("pin_tram_location", "KEY_TRAM"),
+    ("pin_spa", "KEY_SPA"),
+    ("Pin_Black_Egg", "KEY_BLACKEGG"),
+];
 
 /// The language sheets read: creatures, charms, area names.
 const SHEETS: [&str; 3] = ["Journal", "UI", "Map Zones"];
@@ -275,6 +284,14 @@ impl Analysis<'_> {
                     item.title = name;
                 }
             }
+            // An item the game names itself: its inventory name, in the reader's language.
+            if let Some(name) = ITEM_TEXT.iter().find(|(id, _)| *id == item.id).and_then(|(_, key)| self.text(key)) {
+                item.title = name;
+            } else if self.fr
+                && let Some((_, name)) = FRENCH_NAMES.iter().find(|(id, _)| *id == item.id)
+            {
+                item.title = (*name).to_string();
+            }
             if item.id.starts_with("pantheon") && item.image.is_none() {
                 item.image = Some("game:pin_god_seeker".into());
             }
@@ -285,7 +302,7 @@ impl Analysis<'_> {
             }
         }
         report.maps.push(match world {
-            Some(w) => game_map(w, &report.sections, self.fr),
+            Some(w) => game_map(w, &report.sections, self.fr, &|key| self.text(key)),
             None => hallownest(&report.sections),
         });
         // Areas by the game's own names, now that the map has placed things.
@@ -516,7 +533,8 @@ impl Analysis<'_> {
         items
     }
 
-    fn pantheon(&self, tier: usize, name: &str) -> Option<Item> {
+    /// A pantheon of Godhome, named as the game's achievements name it.
+    fn pantheon(&self, tier: usize, fr: &str, en: &str) -> Option<Item> {
         let door = self.pd.get(&format!("bossDoorStateTier{tier}"))?;
         let done = door.get("completed").and_then(Value::as_bool).unwrap_or(false);
         let unlocked = door.get("unlocked").and_then(Value::as_bool).unwrap_or(false);
@@ -525,13 +543,18 @@ impl Analysis<'_> {
             (false, true) => Status::Todo,
             _ => Status::Locked,
         };
-        Some(Item::new(format!("pantheon{tier}"), name, status).link(wiki(name)).spoiler(Spoiler::Minor))
+        Some(Item::new(format!("pantheon{tier}"), self.t(fr, en), status).link(wiki(en)).spoiler(Spoiler::Minor))
     }
 
     fn godmaster(&self) -> Vec<Item> {
         let mut items = self.flags(&[("hasGodfinder", "Godtuner")]);
-        let names = ["Pantheon of the Master", "Pantheon of the Artist", "Pantheon of the Sage", "Pantheon of the Knight"];
-        items.extend(names.iter().enumerate().filter_map(|(i, n)| self.pantheon(i + 1, n)));
+        let names = [
+            ("Panthéon du Maître", "Pantheon of the Master"),
+            ("Panthéon du Peintre", "Pantheon of the Artist"),
+            ("Panthéon du Grand Maître", "Pantheon of the Sage"),
+            ("Panthéon du Chevalier", "Pantheon of the Knight"),
+        ];
+        items.extend(names.iter().enumerate().filter_map(|(i, (fr, en))| self.pantheon(i + 1, fr, en)));
         items
     }
 
@@ -541,7 +564,7 @@ impl Analysis<'_> {
             .into_iter()
             .map(|i| i.spoiler(Spoiler::Major))
             .collect();
-        items.extend(self.pantheon(5, "Pantheon of Hallownest").map(|i| i.dlc("godmaster")));
+        items.extend(self.pantheon(5, "Panthéon d'Hallownest", "Pantheon of Hallownest").map(|i| i.dlc("godmaster")));
         items
     }
 
@@ -569,7 +592,7 @@ impl Analysis<'_> {
             items.push(Item::count("grubs", self.t("Larves libérées", "Grubs rescued"), self.int("grubsCollected") as u32, 46).link(wiki("Grub")));
         }
         items.extend([
-            Item::count("charmNotches", self.t("Encoches de charme", "Charm notches"), self.int("charmSlots") as u32, 11)
+            Item::count("charmNotches", self.t("Emplacements de charme", "Charm notches"), self.int("charmSlots") as u32, 11)
                 .link(wiki("Charm_Notch")),
         ]);
         items.extend(self.flags(&[("hasLantern", "Lumafly Lantern")]));
@@ -767,10 +790,63 @@ fn scene_of(id: &str) -> Option<&'static str> {
     })
 }
 
+/// Items whose name the game's text sheets hold, by item id and text key.
+const ITEM_TEXT: &[(&str, &str)] = &[
+    ("hasDash", "INV_NAME_DASH"),
+    ("hasWalljump", "INV_NAME_WALLJUMP"),
+    ("hasSuperDash", "INV_NAME_SUPERDASH"),
+    ("hasDoubleJump", "INV_NAME_DOUBLEJUMP"),
+    ("hasAcidArmour", "INV_NAME_ACIDARMOUR"),
+    ("hasKingsBrand", "INV_NAME_KINGSBRAND"),
+    ("hasShadowDash", "INV_NAME_SHADOWDASH"),
+    ("hasCyclone", "INV_NAME_ART_CYCLONE"),
+    ("hasDashSlash", "INV_NAME_ART_DASH"),
+    ("hasUpwardSlash", "INV_NAME_ART_UPPER"),
+    ("hasDreamNail", "INV_NAME_DREAMNAIL_A"),
+    ("dreamNailUpgraded", "INV_NAME_DREAMNAIL_B"),
+    ("hasLantern", "INV_NAME_LANTERN"),
+];
+
+/// French names the game's sheets hold only inside sentences (its
+/// achievements'): the Dreamers. Their links stay on the English wiki.
+const FRENCH_NAMES: &[(&str, &str)] = &[
+    ("lurienDefeated", "Lurien le Veilleur"),
+    ("monomonDefeated", "Monomon l'Érudite"),
+    ("hegemolDefeated", "Herrah la Bête"),
+];
+
+/// Things the game's own map marks, by item id, pin sprite and, for pins
+/// alike, the room the pin is in.
+const PIN_OF: &[(&str, &str, Option<&str>)] = &[
+    ("mothDeparted", "pin_shop_dream_moth", None),
+    // The Dreamers' pins, shown in the game once the Seer adds them.
+    ("lurienDefeated", "Pin_Watcher", None),
+    ("monomonDefeated", "Pin_Teacher", None),
+    ("hegemolDefeated", "Pin_Beast", None),
+    // The warriors' graves.
+    ("aladarSlugDefeated", "pin_backer_ghost", Some("Cliffs_02")),
+    ("markothDefeated", "pin_backer_ghost", Some("Deepnest_East_10")),
+    ("noEyesDefeated", "pin_backer_ghost", Some("Fungus1_34")),
+    ("elderHuDefeated", "pin_backer_ghost", Some("Fungus2_32")),
+    ("mumCaterpillarDefeated", "pin_backer_ghost", Some("Fungus3_40")),
+    ("galienDefeated", "pin_backer_ghost", Some("Deepnest_40")),
+    ("xeroDefeated", "pin_backer_ghost", Some("RestingGrounds_02")),
+];
+
+/// Where a few things are, as fractions of a drawn room (from its left, from
+/// its bottom), read off the game's map: for rooms the map does not draw, the
+/// place one enters them, approximate.
+const SPOTS: &[(&str, &str, f32, f32, bool)] = &[
+    // Uumuu, in the Teacher's Archives, entered by the dome of Fog Canyon's east room.
+    ("defeatedMegaJelly", "Fungus3_47", 0.54, 0.44, true),
+    // The Cast-Off Shell, through the shell drawn beside Hornet's arena.
+    ("hasKingsBrand", "Deepnest_East_Hornet", 0.37, 0.1, false),
+];
+
 /// The map from the game's files: its areas named, the rooms that hold
 /// something coloured, and every item in its room, or in its area when only
 /// the area is known.
-fn game_map(w: &World, sections: &[Section], fr: bool) -> GameMap {
+fn game_map(w: &World, sections: &[Section], fr: bool, text: &dyn Fn(&str) -> Option<String>) -> GameMap {
     let mut map = GameMap::new("hallownest", "Hallownest", w.width, w.height);
     // Area names, each over the box of its rooms: regions without items draw as labels.
     for (game, name) in GAME_AREAS {
@@ -804,6 +880,14 @@ fn game_map(w: &World, sections: &[Section], fr: bool) -> GameMap {
     };
     // A place in a scene, as fractions from its left and its bottom.
     let at = |scene: &str, fx: f32, fy: f32| scene_box(scene).map(|(x, y, bw, bh)| (x + fx * bw, y + (1.0 - fy) * bh));
+    // The game's drawing of a room is not to scale: where a smaller room is
+    // drawn over the spot, the spot shows in that room, not in its own.
+    let covered = |scene: &str, (x, y): (f32, f32)| {
+        let Some((_, _, bw, bh)) = scene_box(scene) else { return false };
+        w.rooms.iter().any(|r| {
+            !r.scene.starts_with(scene) && r.w * r.h < bw * bh && (r.x..=r.x + r.w).contains(&x) && (r.y..=r.y + r.h).contains(&y)
+        })
+    };
     let minor: Vec<&str> = ["chests", "rocks", "shinies", "journal"].to_vec();
     let mut per_area: Vec<(&str, usize)> = Vec::new();
     let grub_pins: Vec<&Pin> = w.pins.iter().filter(|p| p.sprite == "pin_grub_location").collect();
@@ -831,6 +915,22 @@ fn game_map(w: &World, sections: &[Section], fr: bool) -> GameMap {
                 }
                 continue;
             }
+            // Its own pin on the game's map: the Seer, the Dreamers, the warriors' graves.
+            if let Some(p) = PIN_OF
+                .iter()
+                .find(|(id, ..)| *id == item.id)
+                .and_then(|(_, sprite, room)| w.pins.iter().find(|p| p.sprite == *sprite && room.is_none_or(|r| p.room == r)))
+            {
+                map = map.marker(marker(p.x, p.y, false));
+                continue;
+            }
+            // A known spot in a room the map draws.
+            if let Some(&(_, scene, fx, fy, approx)) = SPOTS.iter().find(|s| s.0 == item.id)
+                && let Some((x, y)) = at(scene, fx, fy)
+            {
+                map = map.marker(marker(x, y, approx));
+                continue;
+            }
             // Bought: at the merchant's pin.
             if let Some(p) = shops::ware(&item.id).and_then(|ware| w.pins.iter().find(|p| p.sprite == ware.pin)) {
                 map = map.marker(marker(p.x, p.y, false));
@@ -842,8 +942,8 @@ fn game_map(w: &World, sections: &[Section], fr: bool) -> GameMap {
                 .find(|p| pickups::item_id(p) == item.id)
                 .map(|p| (p.scene, p.x, p.y))
                 .or_else(|| pickups::item_spot(&item.id));
-            if let Some((x, y)) = spot.and_then(|(scene, fx, fy)| at(scene, fx, fy)) {
-                map = map.marker(marker(x, y, false));
+            if let Some((scene, x, y)) = spot.and_then(|(scene, fx, fy)| at(scene, fx, fy).map(|(x, y)| (scene, x, y))) {
+                map = map.marker(marker(x, y, covered(scene, (x, y))));
                 continue;
             }
             // A room the map does not draw: at the door that leads to it.
@@ -911,6 +1011,8 @@ fn game_map(w: &World, sections: &[Section], fr: bool) -> GameMap {
     // so they carry no item and never count.
     for (i, p) in w.pins.iter().enumerate() {
         if let Some((label, layer)) = point_of_interest(&p.sprite, fr) {
+            // Named as the game's map legend names it, when it does.
+            let label = LEGEND.iter().find(|(s, _)| *s == p.sprite).and_then(|(_, key)| text(key)).unwrap_or_else(|| label.to_string());
             // The game's own pin for it.
             map = map.marker(MapMarker::at(format!("poi-{i}"), label, p.x, p.y).category(layer).icon(format!("game:{}", p.sprite)));
         }

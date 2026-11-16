@@ -1,6 +1,6 @@
 # Hundo — game modules
 
-[Hundo](https://github.com/MrArnaudMichel/hundo) tells you what is left to do
+[Hundo](https://github.com/hundo-app/releases/releases/latest) tells you what is left to do
 in your games, read from your own save files. It learns each game through a
 **game module**: a small WebAssembly program that reads a save and reports
 what is done. This repository holds everything to write one, free and open:
@@ -33,7 +33,7 @@ To use the SDK from your own repository:
 
 ```toml
 [dependencies]
-hundo-sdk = { git = "https://github.com/MrArnaudMichel/hundo-modules" }
+hundo-sdk = { git = "https://github.com/hundo-app/modules" }
 ```
 
 ## Get a module into Hundo

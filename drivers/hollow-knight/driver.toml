@@ -3,7 +3,7 @@ api = 3
 [driver]
 id = "hollow-knight"
 name = "Hollow Knight"
-version = "0.1.0"
+version = "0.1.0-alpha"
 authors = ["Arnaud Michel"]
 license = "MIT OR Apache-2.0"
 description = "Complétion 112 %, charmes, boss, rêves de guerriers et panthéons."
@@ -59,7 +59,7 @@ id = "hallownest"
 kind = "unity-sprite-map"
 file = "hollow_knight_Data/resources.assets"
 root = "Game_Map"
-skip = ["Dream_Gate_Pin", "Compass Icon", "Shade Pos", "Flame Pins", "Dreamer Pins", "Map Markers"]
+skip = ["Dream_Gate_Pin", "Compass Icon", "Shade Pos", "Flame Pins", "Map Markers"]
 skip-prefixes = ["Map_Arrow", "Map Arrow", "Shade", "pop_up"]
 # Every pin the game can show: grubs, benches, stags, roots, shops…
 pin-sprites = ["pin_", "Pin_"]
@@ -71,10 +71,10 @@ rough-suffix = "_Cornifer"
 file = "hollow_knight_Data/resources.assets"
 names = ["{lang}_Journal", "{lang}_UI", "{lang}_Map Zones"]
 
-# Pictures (the Hunter's Journal portraits, the charms), drawn by the host
-# from the installed game.
+# Pictures (the Hunter's Journal portraits, the charms, the geo chest), drawn
+# by the host from the installed game.
 [images]
-files = ["hollow_knight_Data/resources.assets"]
+files = ["hollow_knight_Data/resources.assets", "hollow_knight_Data/sharedassets6.assets"]
 
 # Choices offered to the reader, in the menu of the page's panel they concern.
 [[options]]

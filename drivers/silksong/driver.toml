@@ -3,7 +3,7 @@ api = 3
 [driver]
 id = "silksong"
 name = "Hollow Knight: Silksong"
-version = "0.1.0"
+version = "0.1.0-alpha"
 authors = ["Arnaud Michel"]
 license = "GPL-3.0-or-later"
 description = "Complétion 100 % : emblèmes, outils, compétences, fragments, améliorations ; puces, médaillons et clés."
@@ -47,7 +47,7 @@ pin-sprites = ["pin_", "Pin_", "quest_map_icon"]
 # installed game in the reader's language; the driver decrypts them.
 [texts]
 file = "Hollow Knight Silksong_Data/resources.assets"
-names = ["{lang}_Journal", "{lang}_Map Zones", "{lang}_Tools", "{lang}_UI", "{lang}_Quests", "{lang}_Belltown"]
+names = ["{lang}_Journal", "{lang}_Map Zones", "{lang}_Tools", "{lang}_UI", "{lang}_Quests", "{lang}_Belltown", "{lang}_Inspect", "{lang}_Titles"]
 
 # Pictures (the hunting journal, tools, crests), drawn by the host from the
 # installed game.

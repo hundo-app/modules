@@ -26,7 +26,10 @@ pub struct P {
     pub y: f32,
 }
 
-/// Identifiers and positions only, taken from the game's scenes (1.5).
+/// Identifiers and positions only, taken from the game's scenes (1.5). One
+/// entry per room and name, as the save keeps them. Dirtmouth's two charm
+/// notches are left out: the game never hands them out (its eight notches
+/// come from Salubra, the Shrumal Ogres, Fog Canyon, the Colosseum and Grimm).
 // Fractions of a room, not π.
 #[allow(clippy::approx_constant)]
 pub const PICKUPS: &[P] = &[
@@ -39,7 +42,6 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Abyss_02", id: "Shiny Item", kind: Kind::Shiny, x: 0.945, y: 0.125 },
     P { scene: "Abyss_04", id: "Vessel Fragment", kind: Kind::Vessel, x: 0.643, y: 0.688 },
     P { scene: "Abyss_06_Core", id: "Geo Rock Abyss", kind: Kind::Rock, x: 0.637, y: 0.63 },
-    P { scene: "Abyss_06_Core", id: "Geo Rock Abyss", kind: Kind::Rock, x: 0.76, y: 0.685 },
     P { scene: "Abyss_06_Core", id: "Geo Rock Abyss (1)", kind: Kind::Rock, x: 0.42, y: 0.282 },
     P { scene: "Abyss_08", id: "Shiny Item", kind: Kind::Shiny, x: 0.715, y: 0.241 },
     P { scene: "Abyss_08", id: "Shiny Item (1)", kind: Kind::Shiny, x: 0.737, y: 0.045 },
@@ -58,8 +60,10 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Cliffs_01", id: "Geo Rock 2 (4)", kind: Kind::Rock, x: 0.888, y: 0.428 },
     P { scene: "Cliffs_01", id: "Shiny Item", kind: Kind::Shiny, x: 0.258, y: 0.019 },
     P { scene: "Cliffs_01", id: "Shiny Item (1)", kind: Kind::Shiny, x: 0.86, y: 0.178 },
-    P { scene: "Cliffs_02", id: "Geo Rock 1", kind: Kind::Rock, x: 0.21, y: 0.195 },
-    P { scene: "Cliffs_02", id: "Geo Rock 1 (1)", kind: Kind::Rock, x: 0.262, y: 0.195 },
+    // Side by side under Gorb's grave, where a player found them: the room's
+    // drawing is not to scale there, its scene's place lands in another room.
+    P { scene: "Cliffs_02", id: "Geo Rock 1", kind: Kind::Rock, x: 0.264, y: 0.67 },
+    P { scene: "Cliffs_02", id: "Geo Rock 1 (1)", kind: Kind::Rock, x: 0.314, y: 0.67 },
     P { scene: "Cliffs_03", id: "Vessel Fragment Stagnest (1)", kind: Kind::Vessel, x: 0.448, y: 0.107 },
     P { scene: "Cliffs_05", id: "Shiny Item Stand", kind: Kind::Shiny, x: 0.832, y: 0.108 },
     P { scene: "Crossroads_01", id: "Geo Rock 2", kind: Kind::Rock, x: 0.468, y: 0.037 },
@@ -105,7 +109,6 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Crossroads_52", id: "Geo Rock 2", kind: Kind::Rock, x: 0.551, y: 0.383 },
     P { scene: "Crossroads_ShamanTemple", id: "Geo Rock 1", kind: Kind::Rock, x: 0.206, y: 0.607 },
     P { scene: "Crossroads_ShamanTemple", id: "Geo Rock 2", kind: Kind::Rock, x: 0.199, y: 0.796 },
-    P { scene: "Crossroads_ShamanTemple", id: "Geo Rock 2", kind: Kind::Rock, x: 0.242, y: 0.608 },
     P { scene: "Crossroads_ShamanTemple", id: "Geo Rock 2 (1)", kind: Kind::Rock, x: 0.182, y: 0.795 },
     P { scene: "Crossroads_ShamanTemple", id: "Shiny Item", kind: Kind::Shiny, x: 0.266, y: 0.271 },
     P { scene: "Deepnest_01", id: "Geo Rock 1", kind: Kind::Rock, x: 0.375, y: 0.228 },
@@ -213,7 +216,6 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Fungus2_04", id: "Geo Rock Fung 01", kind: Kind::Rock, x: 0.825, y: 0.831 },
     P { scene: "Fungus2_04", id: "Shiny Item", kind: Kind::Shiny, x: 0.61, y: 0.412 },
     P { scene: "Fungus2_05", id: "Shiny Item", kind: Kind::Shiny, x: 0.4, y: 0.747 },
-    P { scene: "Fungus2_05", id: "Shiny Item", kind: Kind::Shiny, x: 0.5, y: 0.405 },
     P { scene: "Fungus2_08", id: "Geo Rock Fung 01", kind: Kind::Rock, x: 0.123, y: 0.468 },
     P { scene: "Fungus2_10", id: "Geo Rock Fung 01", kind: Kind::Rock, x: 0.949, y: 0.891 },
     P { scene: "Fungus2_11", id: "Geo Rock Fung 01", kind: Kind::Rock, x: 0.857, y: 0.885 },
@@ -259,7 +261,8 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Fungus3_39", id: "Shiny Item Stand", kind: Kind::Shiny, x: 0.944, y: 0.653 },
     P { scene: "Fungus3_48", id: "Geo Rock Green Path 02", kind: Kind::Rock, x: 0.441, y: 0.141 },
     P { scene: "Fungus3_48", id: "Shiny Item", kind: Kind::Shiny, x: 0.065, y: 0.197 },
-    P { scene: "Grimm_Main_Tent", id: "Chest Tweener", kind: Kind::Chest, x: 0.416, y: 0.048 },
+    // The save knows it by its persistence id, not by its object's name.
+    P { scene: "Grimm_Main_Tent", id: "Grimm Chest", kind: Kind::Chest, x: 0.416, y: 0.048 },
     P { scene: "Grimm_Main_Tent", id: "Shiny Item", kind: Kind::Shiny, x: 0.416, y: 0.115 },
     P { scene: "Hive_01", id: "Geo Rock Hive", kind: Kind::Rock, x: 0.83, y: 0.584 },
     P { scene: "Hive_02", id: "Geo Rock Hive", kind: Kind::Rock, x: 0.608, y: 0.301 },
@@ -344,8 +347,6 @@ pub const PICKUPS: &[P] = &[
     P { scene: "Ruins_Elevator", id: "Geo Rock City 1", kind: Kind::Rock, x: 0.248, y: 0.327 },
     P { scene: "Ruins_Elevator", id: "Shiny Item", kind: Kind::Shiny, x: 0.589, y: 0.594 },
     P { scene: "Ruins_Elevator", id: "Shiny Item (1)", kind: Kind::Shiny, x: 0.487, y: 0.032 },
-    P { scene: "Town", id: "Shiny Item", kind: Kind::Shiny, x: 0.252, y: 0.107 },
-    P { scene: "Town", id: "Shiny Item", kind: Kind::Shiny, x: 0.287, y: 0.106 },
     P { scene: "Tutorial_01", id: "Chest", kind: Kind::Chest, x: 0.892, y: 0.222 },
     P { scene: "Tutorial_01", id: "Geo Rock 1", kind: Kind::Rock, x: 0.81, y: 0.071 },
     P { scene: "Tutorial_01", id: "Geo Rock 2", kind: Kind::Rock, x: 0.296, y: 0.57 },
@@ -403,7 +404,6 @@ impl Kind {
 /// these name is not listed: Hundo does not show what it cannot name.
 const SHINIES: &[(&str, &str, u8, u8, &str)] = &[
     ("Tutorial_01", "Shiny Item (1)", 0, 6, ""),
-    ("Town", "Shiny Item", 13, 0, ""),
     ("Room_Colosseum_Bronze", "Shiny Item", 13, 0, ""),
     ("Room_Colosseum_Silver", "Shiny Item", 14, 0, ""),
     ("Room_Colosseum_Gold", "Shiny Item", 14, 0, ""),
@@ -506,6 +506,43 @@ const SHINIES: &[(&str, &str, u8, u8, &str)] = &[
     ("GG_Lurker", "Shiny Item", 3, 0, ""),
 ];
 
+/// The game's text key for a shiny thing's name, by its number or what its
+/// scene says it is.
+fn shiny_text(n: u8, special: &str) -> Option<&'static str> {
+    Some(match (n, special) {
+        (_, "huntersMark") => "NAME_HUNTERMARK",
+        (_, "hunterJournal") => "INV_NAME_JOURNAL",
+        (_, s) if !s.is_empty() => return None,
+        (1, _) => "INV_NAME_TRINKET1",
+        (2, _) => "INV_NAME_TRINKET2",
+        (3, _) => "INV_NAME_TRINKET3",
+        (4, _) => "INV_NAME_TRINKET4",
+        (6, _) => "INV_NAME_TRAM_PASS",
+        (8, _) => "INV_NAME_STOREKEY",
+        (9, _) => "INV_NAME_CITYKEY",
+        (10, _) => "INV_NAME_LOVEKEY",
+        (11, _) => "INV_NAME_RANCIDEGG",
+        (12, _) => "INV_NAME_SIMPLEKEY",
+        (13, _) => "INV_NAME_NOTCH",
+        (14, _) => "INV_NAME_ORE",
+        _ => return None,
+    })
+}
+
+/// The save's flag for having a key item, by the game's number for it or
+/// what its scene says it is.
+fn key_item_flag(n: u8, special: &str) -> Option<&'static str> {
+    Some(match (n, special) {
+        (_, "huntersMark") => "hasHuntersMark",
+        (_, "hunterJournal") => "hasJournal",
+        (6, _) => "hasTramPass",
+        (8, _) => "hasSlykey",
+        (9, _) => "hasCityKey",
+        (10, _) => "hasLoveKey",
+        _ => return None,
+    })
+}
+
 /// A shiny thing's name and inventory picture, by the game's number for it,
 /// or by what its scene says it is.
 fn shiny(n: u8, special: &str, fr: bool) -> Option<(&'static str, &'static str)> {
@@ -535,6 +572,12 @@ fn shiny(n: u8, special: &str, fr: bool) -> Option<(&'static str, &'static str)>
         _ => return None,
     })
 }
+
+/// How to reach a pickup that is hard to find, by room and object.
+const HINTS: &[(&str, &str, &str, &str)] = &[
+    ("Cliffs_02", "Geo Rock 1 (1)", "Derrière le décor.", "Behind the scenery."),
+    ("Grimm_Main_Tent", "Grimm Chest", "Dans la tente de la Troupe Grimm, une fois la troupe arrivée à Dirtmouth.", "In the Grimm Troupe's tent, once the troupe has come to Dirtmouth."),
+];
 
 /// Rooms the game's map does not draw, by the room on the map whose door
 /// leads to them (from the scenes' transitions).
@@ -569,6 +612,15 @@ impl Analysis<'_> {
             Kind::Vessel if self.int("MPReserveMax") >= 99 => return true,
             _ => {}
         }
+        // A key item: the game's own flag for having it says it is taken,
+        // whichever room the save files its object under (the Tram Pass lies
+        // in Deepnest_26b, the save remembers it in Deepnest_26).
+        if p.kind == Kind::Shiny
+            && let Some(flag) = SHINIES.iter().find(|x| x.0 == p.scene && x.1 == p.id).and_then(|x| key_item_flag(x.2, x.4))
+            && self.bool(flag) == Some(true)
+        {
+            return true;
+        }
         let list = |key: &str| self.save_scene_data(key).into_iter().flatten();
         if p.kind == Kind::Rock {
             return list("geoRocks").any(|r| r["sceneName"] == p.scene && r["id"] == p.id && r["hitsLeft"].as_i64() == Some(0));
@@ -588,17 +640,27 @@ impl Analysis<'_> {
                 let area = area_of_scene(p.scene);
                 // A shiny thing by what it is, when the game says.
                 let what = SHINIES.iter().find(|x| x.0 == p.scene && x.1 == p.id).and_then(|x| shiny(x.2, x.4, self.fr));
-                let label = what.map_or(kind.label(self.fr), |w| w.0);
+                // Named as the game's inventory names it, when it does.
+                let label = SHINIES
+                    .iter()
+                    .find(|x| x.0 == p.scene && x.1 == p.id)
+                    .and_then(|x| shiny_text(x.2, x.4))
+                    .and_then(|key| self.text(key))
+                    .unwrap_or_else(|| what.map_or(kind.label(self.fr), |w| w.0).to_string());
                 let title = match &area {
                     Some(a) => format!("{label} · {}", self.zone(a)),
                     None => label.to_string(),
                 };
                 let mut item = Item::new(item_id(p), title, if self.taken(p) { Status::Done } else { Status::Todo });
+                if let Some(&(_, _, fr, en)) = HINTS.iter().find(|h| h.0 == p.scene && h.1 == p.id) {
+                    item = item.hint(self.t(fr, en));
+                }
                 if let Some((_, picture)) = what {
                     item = item.image(format!("game:{picture}"));
                 }
                 match kind {
-                    Kind::Chest | Kind::Rock => item = item.image("game:InventoryCoin"),
+                    Kind::Chest => item = item.image("game:chest0000"),
+                    Kind::Rock => item = item.image("game:InventoryCoin"),
                     Kind::Mask => item = item.image("game:select_game_HUD_0001_health"),
                     Kind::Vessel => item = item.image("game:Inv_0031_inv_soul_piece_full"),
                     _ => {}
@@ -609,5 +671,19 @@ impl Analysis<'_> {
                 item
             })
             .collect()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// The save knows a pickup by its room and name only: two entries alike
+    /// would be one thing counted twice, under one item id.
+    #[test]
+    fn pickups_are_unique() {
+        for (i, p) in PICKUPS.iter().enumerate() {
+            assert!(!PICKUPS[..i].iter().any(|q| q.scene == p.scene && q.id == p.id), "{} {}", p.scene, p.id);
+        }
     }
 }
