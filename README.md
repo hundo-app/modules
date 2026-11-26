@@ -8,7 +8,8 @@ what is done. This repository holds everything to write one, free and open:
 - `wit/driver.wit` — the contract between Hundo and a module;
 - `drivers/sdk` — the Rust SDK (`hundo-sdk`) that implements it;
 - `drivers/<game>` — the official modules, as real examples: Clair Obscur:
-  Expedition 33, Hades, Hollow Knight, Hollow Knight: Silksong, Schedule I;
+  Expedition 33, Hades, Hollow Knight, Hollow Knight: Silksong, Nine Sols,
+  Schedule I;
 - `catalog/catalog.json` — the modules Hundo offers to install and update.
 
 A module never touches the disk or the network: Hundo gives it the save's
@@ -24,7 +25,10 @@ hundo module check . --save <a save file>   # try it on a real save
 hundo module pack . -o my-game.hundo        # a package to share
 ```
 
-The `hundo` command comes with Hundo's releases. See
+The `hundo` command ships inside every installer of
+[Hundo](https://github.com/hundo-app/releases/releases/latest); the
+[guide](docs/AUTHORING.md#0-get-the-hundo-command) says how to reach it from
+a terminal on each system. See
 [docs/AUTHORING.md](docs/AUTHORING.md) for the manifest (`driver.toml`), the
 report a module returns, options, the default page layout, and the rules of
 the catalog.

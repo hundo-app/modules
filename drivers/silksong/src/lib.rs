@@ -8,6 +8,7 @@ mod journal;
 mod pickups;
 mod save;
 mod shops;
+mod spawns;
 
 use hundo_sdk::{Completion, DriverError, GameMap, Input, Item, MapMarker, Report, Section, Stat};
 use serde::Deserialize;
@@ -226,9 +227,15 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
         let gallery = matches!(def.id.as_str(), "crests" | "redTools" | "blueTools" | "yellowTools");
         report.sections.push(if gallery { section.gallery() } else { section });
     }
-    report.sections.push(
-        Section::new("journal", t("Journal de chasse", "Hunter's Journal"), journal::items(pd, &words, fr)).group(t("Bestiaire", "Bestiary")).gallery(),
-    );
+    // The journal in two: what completing it asks for, and the rest, on request.
+    let (needed, extra) = journal::items(pd, &words, fr);
+    let bestiary = t("Bestiaire", "Bestiary");
+    report.sections.push(Section::new("journal", t("Journal de chasse", "Hunter's Journal"), needed).group(bestiary).gallery());
+    if !extra.is_empty() {
+        report.sections.push(
+            Section::new("journal-optional", t("Journal de chasse · facultatif", "Hunter's Journal · optional"), extra).group(bestiary).gallery().optional(),
+        );
+    }
     // Each item's area, by the game's name, from where the 100 % list says it is.
     for item in report.sections.iter_mut().flat_map(|s| s.items.iter_mut()) {
         if item.areas.is_empty()
@@ -316,7 +323,7 @@ pub fn analyze(input: &Input) -> Result<Report, DriverError> {
                 _ => None,
             })
             .collect();
-        report.maps.push(pharloom(w, &report.sections, &scenes, &spots, input.is_french(), &words));
+        report.maps.push(pharloom(w, &report.sections, &scenes, &spots, journal::act3(pd), input.is_french(), &words));
     }
     // The list's hints, in French: last, once the English ones placed each item.
     if fr {
@@ -487,7 +494,7 @@ const PLACES: [(&str, &str); 32] = [
 
 /// Pharloom from the game's files: areas named, each item at its pin or
 /// room when the save says where, else spread over its area.
-fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots: &[(String, &str, f32, f32)], fr: bool, words: &Words) -> GameMap {
+fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots: &[(String, &str, f32, f32)], act3: bool, fr: bool, words: &Words) -> GameMap {
     let mut map = GameMap::new("pharloom", "Pharloom", w.width, w.height);
     let mut areas: Vec<&str> = w.rooms.iter().map(|r| r.area.as_str()).collect();
     areas.sort();
@@ -529,6 +536,17 @@ fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots:
                 && (r.y..=r.y + r.h).contains(&y)
         })
     };
+    // The room the map draws for a scene: the scene itself, the room it is
+    // a variant of (`_boss`), or the one it is entered from.
+    let drawn = |scene: &'static str| -> Option<&str> {
+        let mut s = spawns::ENTRANCES.iter().find(|(from, _)| scene.to_ascii_lowercase().starts_with(&from.to_ascii_lowercase())).map_or(scene, |e| e.1);
+        loop {
+            if let Some(r) = w.rooms.iter().find(|r| r.scene.eq_ignore_ascii_case(s)) {
+                return Some(r.scene.as_str());
+            }
+            s = s.rsplit_once('_')?.0;
+        }
+    };
     let mut spread: Vec<(&str, usize)> = Vec::new();
     for section in sections {
         for item in &section.items {
@@ -556,6 +574,30 @@ fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots:
             if let Some(room) = scene.and_then(|s| w.rooms.iter().find(|r| r.scene == s)) {
                 map = map.marker(marker(room.x + room.w / 2.0, room.y + room.h / 2.0, false));
                 continue;
+            }
+            // A creature: the room that holds the most of it as things are
+            // now; or where it is met at another time.
+            if section.id.starts_with("journal") {
+                let key = item.id.strip_prefix("journal-").unwrap_or(&item.id);
+                let busiest = |now: bool| {
+                    let mut rooms: Vec<(&str, u32)> = Vec::new();
+                    for s in spawns::of(key).filter(|s| !now || spawns::present(s.when, act3)) {
+                        let Some(room) = drawn(s.scene) else { continue };
+                        match rooms.iter_mut().find(|(r, _)| *r == room) {
+                            Some((_, n)) => *n += u32::from(s.count),
+                            None => rooms.push((room, u32::from(s.count))),
+                        }
+                    }
+                    // The first of the busiest: the table lists them busiest first.
+                    rooms.iter().fold(None, |best: Option<(&str, u32)>, &(r, n)| match best {
+                        Some((_, m)) if m >= n => best,
+                        _ => Some((r, n)),
+                    })
+                };
+                if let Some((x, y, bw, bh)) = busiest(true).or_else(|| busiest(false)).and_then(|(room, _)| scene_box(room)) {
+                    map = map.marker(marker(x + bw / 2.0, y + bh / 2.0, true));
+                    continue;
+                }
             }
             // The 100 % list names the place: one of its area's rooms in turn.
             let place = item.hint.as_deref().and_then(|hint| PLACES.iter().find(|(place, _)| hint.starts_with(place)));
@@ -588,7 +630,7 @@ fn pharloom(w: &World, sections: &[Section], scenes: &[(String, String)], spots:
         }
     }
     // On the map for completeness, shown on demand.
-    for section in sections.iter().filter(|s| ["items", "rosaries", "rocks", "fossils", "journal"].contains(&s.id.as_str())) {
+    for section in sections.iter().filter(|s| ["items", "rosaries", "rocks", "fossils", "journal", "journal-optional"].contains(&s.id.as_str())) {
         map = map.hide_layer(section.title.clone());
     }
     // The game's own places: benches, Bellways, merchants. They never count.

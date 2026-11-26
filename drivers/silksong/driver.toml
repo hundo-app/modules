@@ -28,7 +28,7 @@ path = "{xdgConfig}/unity3d/Team Cherry/Hollow Knight Silksong"
 [slots]
 kind = "file"
 pattern = '^(?<account>[0-9]+)/user(?<slot>[1-4])\.dat$'
-label = "Emplacement {slot} · compte {account}"
+label = "Slot {slot} · account {account}"
 
 # The world map, drawn by Hundo from the installed game's own files. Silksong
 # keeps it in an Addressables bundle; its sprites are in other bundles.

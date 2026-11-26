@@ -27,9 +27,10 @@ pub struct P {
 }
 
 /// Identifiers and positions only, taken from the game's scenes (1.5). One
-/// entry per room and name, as the save keeps them. Dirtmouth's two charm
-/// notches are left out: the game never hands them out (its eight notches
-/// come from Salubra, the Shrumal Ogres, Fog Canyon, the Colosseum and Grimm).
+/// entry per room and name, as the save keeps them. Left out, as the game
+/// never hands them out: Dirtmouth's two charm notches (its eight notches
+/// come from Salubra, the Shrumal Ogres, Fog Canyon, the Colosseum and Grimm)
+/// and the Pale Ore in the Trial of the Fool's arena (that trial pays in geo).
 // Fractions of a room, not π.
 #[allow(clippy::approx_constant)]
 pub const PICKUPS: &[P] = &[
@@ -315,7 +316,6 @@ pub const PICKUPS: &[P] = &[
     P { scene: "RestingGrounds_17", id: "Shiny Item Stand", kind: Kind::Shiny, x: 0.225, y: 0.301 },
     P { scene: "Room_Bretta", id: "Heart Piece", kind: Kind::Mask, x: 0.565, y: 0.307 },
     P { scene: "Room_Colosseum_Bronze", id: "Shiny Item", kind: Kind::Shiny, x: 0.698, y: 0.66 },
-    P { scene: "Room_Colosseum_Gold", id: "Shiny Item", kind: Kind::Shiny, x: 0.698, y: 0.66 },
     P { scene: "Room_Colosseum_Silver", id: "Shiny Item", kind: Kind::Shiny, x: 0.698, y: 0.66 },
     P { scene: "Room_Fungus_Shaman", id: "Geo Rock Green Path 02", kind: Kind::Rock, x: 0.846, y: 0.741 },
     P { scene: "Room_GG_Shortcut", id: "Geo Rock Fung 01", kind: Kind::Rock, x: 0.07, y: 0.788 },
@@ -406,7 +406,6 @@ const SHINIES: &[(&str, &str, u8, u8, &str)] = &[
     ("Tutorial_01", "Shiny Item (1)", 0, 6, ""),
     ("Room_Colosseum_Bronze", "Shiny Item", 13, 0, ""),
     ("Room_Colosseum_Silver", "Shiny Item", 14, 0, ""),
-    ("Room_Colosseum_Gold", "Shiny Item", 14, 0, ""),
     ("Crossroads_01", "Shiny Item", 2, 0, ""),
     ("Crossroads_10", "Shiny Item", 9, 0, ""),
     ("Crossroads_22", "Shiny Item", 0, 22, ""),

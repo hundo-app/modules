@@ -24,7 +24,7 @@ path = "{appSupport}/Supergiant Games/Hades"
 [slots]
 kind = "file"
 pattern = '^Profile(?<slot>[1-4])\.sav$'
-label = "Profil {slot}"
+label = "Profile {slot}"
 
 # The game's own names for things, read from the installed game in the
 # reader's language: its text files are plain, in a format of their own.

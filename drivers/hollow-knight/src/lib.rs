@@ -7,6 +7,7 @@ mod journal;
 mod pickups;
 mod save;
 mod shops;
+mod spawns;
 
 use hundo_sdk::{Completion, DriverError, GameMap, Input, Item, MapMarker, Report, Section, Spoiler, Stat, Status};
 use serde::Deserialize;
@@ -159,6 +160,12 @@ impl Analysis<'_> {
         self.scenes?.get(key)?.as_array()
     }
 
+    /// Whether the Infection has spread through the Forgotten Crossroads,
+    /// which swaps the creatures met there.
+    fn infected(&self) -> bool {
+        self.bool("crossroadsInfected") == Some(true)
+    }
+
     fn bool(&self, key: &str) -> Option<bool> {
         self.pd.get(key)?.as_bool()
     }
@@ -222,10 +229,18 @@ impl Analysis<'_> {
             Section::new("optional", self.t("Boss optionnels", "Optional bosses"), self.optional_bosses()).group(more),
             Section::new("collection", self.t("Objets", "Items"), self.collection(world.is_none())).group(more),
         ];
-        let journal = self.journal();
+        let (journal, extra) = self.journal();
+        let bestiary = self.t("Bestiaire", "Bestiary");
         if !journal.is_empty() {
+            report.sections.push(Section::new("journal", self.t("Journal du Chasseur", "Hunter's Journal"), journal).group(bestiary).gallery());
+        }
+        // Not needed for the Hunter's Mark: on request, as the other optional parts.
+        if !extra.is_empty() {
             report.sections.push(
-                Section::new("journal", self.t("Journal du Chasseur", "Hunter's Journal"), journal).group(self.t("Bestiaire", "Bestiary")).gallery(),
+                Section::new("journal-optional", self.t("Journal du Chasseur · facultatif", "Hunter's Journal · optional"), extra)
+                    .group(bestiary)
+                    .gallery()
+                    .optional(),
             );
         }
         // With the game's map, each grub is its own item, at its pin, and
@@ -243,7 +258,11 @@ impl Analysis<'_> {
             // Geo: needed for nothing, shown on demand.
             report.sections.push(Section::new("chests", self.t("Coffres de géo", "Geo chests"), self.pickups(pickups::Kind::Chest, &area_of_scene)).group(finds).optional());
             report.sections.push(Section::new("rocks", self.t("Rochers de géo", "Geo rocks"), self.pickups(pickups::Kind::Rock, &area_of_scene)).group(finds).optional());
-            report.sections.push(Section::new("shinies", self.t("Objets au sol", "Items on the ground"), self.pickups(pickups::Kind::Shiny, &area_of_scene)).group(finds));
+            let mut shinies = self.pickups(pickups::Kind::Shiny, &area_of_scene);
+            // The Seer's area, from her pin: her room is not drawn under its own name.
+            let seer = w.pins.iter().find(|p| p.sprite == "pin_shop_dream_moth").map(|p| game_area(&p.area).unwrap_or(&p.area).to_string());
+            shinies.push(self.seer_ore(seer));
+            report.sections.push(Section::new("shinies", self.t("Objets au sol", "Items on the ground"), shinies).group(finds));
             let grubs = self.grubs(w);
             if !grubs.is_empty() {
                 report.sections.push(Section::new("grubs", self.t("Larves", "Grubs"), grubs).group(more));
@@ -302,7 +321,7 @@ impl Analysis<'_> {
             }
         }
         report.maps.push(match world {
-            Some(w) => game_map(w, &report.sections, self.fr, &|key| self.text(key)),
+            Some(w) => game_map(w, &report.sections, self.fr, self.infected(), &|key| self.text(key)),
             None => hallownest(&report.sections),
         });
         // Areas by the game's own names, now that the map has placed things.
@@ -455,6 +474,25 @@ impl Analysis<'_> {
             items.push(seer);
         }
         items
+    }
+
+    /// The Pale Ore the Seer gives for 200 Essence: no room keeps it, the
+    /// save remembers it as her second reward. Listed with the other ores so
+    /// that all six are counted.
+    fn seer_ore(&self, area: Option<String>) -> Item {
+        let label = self.text("INV_NAME_ORE").unwrap_or_else(|| self.t("Minerai pâle", "Pale Ore").to_string());
+        let title = match &area {
+            Some(a) => format!("{label} · {}", self.zone(a)),
+            None => label,
+        };
+        let mut item = Item::check("dreamReward2", title, self.bool("dreamReward2") == Some(true))
+            .hint(self.t("La Voyante, contre 200 essences", "The Seer, for 200 Essence"))
+            .image("game:inv_item__0009_ore")
+            .link(wiki("Seer"));
+        if let Some(a) = area {
+            item = item.location(a);
+        }
+        item
     }
 
     fn dreamers(&self) -> Vec<Item> {
@@ -819,6 +857,11 @@ const FRENCH_NAMES: &[(&str, &str)] = &[
 /// alike, the room the pin is in.
 const PIN_OF: &[(&str, &str, Option<&str>)] = &[
     ("mothDeparted", "pin_shop_dream_moth", None),
+    ("dreamReward2", "pin_shop_dream_moth", None),
+    // The trials' rewards, handed out in arenas the map does not draw: at
+    // the Colosseum's own pin rather than somewhere in the room before it.
+    ("pick-Room_Colosseum_Bronze-Shiny Item", "pin_colosseum", None),
+    ("pick-Room_Colosseum_Silver-Shiny Item", "pin_colosseum", None),
     // The Dreamers' pins, shown in the game once the Seer adds them.
     ("lurienDefeated", "Pin_Watcher", None),
     ("monomonDefeated", "Pin_Teacher", None),
@@ -846,7 +889,7 @@ const SPOTS: &[(&str, &str, f32, f32, bool)] = &[
 /// The map from the game's files: its areas named, the rooms that hold
 /// something coloured, and every item in its room, or in its area when only
 /// the area is known.
-fn game_map(w: &World, sections: &[Section], fr: bool, text: &dyn Fn(&str) -> Option<String>) -> GameMap {
+fn game_map(w: &World, sections: &[Section], fr: bool, infected: bool, text: &dyn Fn(&str) -> Option<String>) -> GameMap {
     let mut map = GameMap::new("hallownest", "Hallownest", w.width, w.height);
     // Area names, each over the box of its rooms: regions without items draw as labels.
     for (game, name) in GAME_AREAS {
@@ -888,7 +931,23 @@ fn game_map(w: &World, sections: &[Section], fr: bool, text: &dyn Fn(&str) -> Op
             !r.scene.starts_with(scene) && r.w * r.h < bw * bh && (r.x..=r.x + r.w).contains(&x) && (r.y..=r.y + r.h).contains(&y)
         })
     };
-    let minor: Vec<&str> = ["chests", "rocks", "shinies", "journal"].to_vec();
+    // The room the map draws for a scene: the scene itself or the room it is
+    // a variant of (`_boss`), or the one it is entered from.
+    let drawn = |scene: &'static str| -> Option<&'static str> {
+        let scene = spawns::ENTRANCES
+            .iter()
+            .find(|(start, _)| scene.starts_with(start))
+            .or_else(|| pickups::DOORS.iter().find(|d| d.0 == scene))
+            .map_or(scene, |d| d.1);
+        let mut s = scene;
+        loop {
+            if w.rooms.iter().any(|r| r.scene == s) {
+                return Some(s);
+            }
+            s = s.rsplit_once('_')?.0;
+        }
+    };
+    let minor: Vec<&str> = ["chests", "rocks", "shinies", "journal", "journal-optional"].to_vec();
     let mut per_area: Vec<(&str, usize)> = Vec::new();
     let grub_pins: Vec<&Pin> = w.pins.iter().filter(|p| p.sprite == "pin_grub_location").collect();
     for section in sections {
@@ -954,8 +1013,29 @@ fn game_map(w: &World, sections: &[Section], fr: bool, text: &dyn Fn(&str) -> Op
                 map = map.marker(marker(x + bw / 2.0, y + bh / 2.0, true));
                 continue;
             }
-            // A creature: the area it is most found in.
-            if section.id == "journal" {
+            // A creature: the room that holds the most of it, as the
+            // Crossroads are now; or where it was, or will be, met.
+            if section.id.starts_with("journal") {
+                let key = item.id.strip_prefix("journal-").unwrap_or(&item.id);
+                let busiest = |now: bool| {
+                    let mut rooms: Vec<(&str, u32)> = Vec::new();
+                    for s in spawns::of(key).filter(|s| !now || spawns::present(s.3, infected)) {
+                        let Some(room) = drawn(s.1) else { continue };
+                        match rooms.iter_mut().find(|(r, _)| *r == room) {
+                            Some((_, n)) => *n += u32::from(s.2),
+                            None => rooms.push((room, u32::from(s.2))),
+                        }
+                    }
+                    // The first of the busiest: the table lists them busiest first.
+                    rooms.iter().fold(None, |best: Option<(&str, u32)>, &(r, n)| match best {
+                        Some((_, m)) if m >= n => best,
+                        _ => Some((r, n)),
+                    })
+                };
+                if let Some((x, y, bw, bh)) = busiest(true).or_else(|| busiest(false)).and_then(|(room, _)| scene_box(room)) {
+                    map = map.marker(marker(x + bw / 2.0, y + bh / 2.0, true));
+                    continue;
+                }
                 let Some(area) = item.areas.first() else { continue };
                 let Some((game, _)) = GAME_AREAS.iter().find(|(_, a)| a == area) else { continue };
                 let rooms: Vec<&Room> = w.rooms.iter().filter(|r| r.area == *game).collect();

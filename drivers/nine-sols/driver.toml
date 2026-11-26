@@ -1,0 +1,46 @@
+api = 3
+
+[driver]
+id = "nine-sols"
+name = "Nine Sols"
+version = "0.1.0-alpha"
+authors = ["Arnaud Michel"]
+license = "MIT OR Apache-2.0"
+description = "Jades, seals, skills, arrows, root nodes, items and the database, named as the game names them."
+
+[game]
+steam-app-id = 1809540
+tested-versions = []
+# The save is rolled back after the credits; the account remembers the end.
+reads-achievements = true
+
+# A Windows game: on Linux, Hundo looks inside its Proton prefix.
+[[locations]]
+platform = "windows"
+path = "{localLow}/RedCandleGames/NineSols"
+
+# One folder per slot; the game also keeps a copy from before the point of no
+# return, `saveslotN_BeforeNoReturnPoint`, which is not a slot of its own.
+[slots]
+kind = "file"
+pattern = '^saveslot(?<slot>[0-9]+)/flags\.sav$'
+label = "Slot {slot}"
+
+# Each thing's picture: the game's own sprite. The inventory's are in the
+# Addressables bundle, named by a hash that changes with the game's builds.
+[images]
+files = [
+    "NineSols_Data/data.unity3d#resources.assets",
+    "NineSols_Data/StreamingAssets/aa/StandaloneWindows64/defaultlocalgroup_assets_all_*.bundle",
+]
+
+# The map: the game's own world map, a block per area tinted by its zone, drawn
+# from the installed game. The layout (which sprite goes where) is made by
+# tools/extract.py; the pictures stay in the reader's copy of the game.
+[[maps]]
+id = "new-kunlun"
+kind = "unity-sprite-collage"
+files = ["NineSols_Data/data.unity3d#resources.assets"]
+layout = "assets/map-layout.json"
+# The panel's own size: its sprites are drawn one texel per pixel.
+max-side = 4800

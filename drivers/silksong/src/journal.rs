@@ -11,6 +11,8 @@ use std::collections::HashMap;
 use hundo_sdk::{Item, Spoiler, Status};
 use serde_json::{Map, Value};
 
+use crate::spawns;
+
 /// One entry, identifiers and numbers only, taken from the game's journal
 /// records: the save's name, the sheet's key, the picture, the kills that
 /// complete it, whether it counts towards completing the journal, and the
@@ -266,7 +268,9 @@ const ENTRIES: &[E] = &[
 ];
 
 /// The game's words for an entry, as `crate::Words` reads them.
-pub fn items(pd: &Map<String, Value>, words: &crate::Words, fr: bool) -> Vec<Item> {
+/// The journal's entries: those completing it needs, then the others.
+pub fn items(pd: &Map<String, Value>, words: &crate::Words, fr: bool) -> (Vec<Item>, Vec<Item>) {
+    let act3 = act3(pd);
     let kills: HashMap<&str, u32> = pd["EnemyJournalKillData"]["list"]
         .as_array()
         .into_iter()
@@ -278,9 +282,12 @@ pub fn items(pd: &Map<String, Value>, words: &crate::Words, fr: bool) -> Vec<Ite
         .map(|e| {
             let name = words.get(&format!("NAME_{}", e.text)).unwrap_or_else(|| e.key.to_string());
             let met = kills.get(e.key).copied();
+            // Act 3 moves some creatures: the areas they are not in as things
+            // are now are left out.
+            let absent = spawns::absent_areas(e.key, act3);
             let mut item = Item::count(format!("journal-{}", e.key), name, met.unwrap_or(0), e.kills)
                 .image(format!("game:{}", e.image))
-                .areas(e.areas.iter().map(|a| words.zone(a)));
+                .areas(areas(e, &absent).into_iter().map(|a| words.zone(a)));
             // Met but not yet killed is still a start.
             if met.is_some() && item.status == Status::Todo {
                 item.status = Status::InProgress;
@@ -290,8 +297,25 @@ pub fn items(pd: &Map<String, Value>, words: &crate::Words, fr: bool) -> Vec<Ite
             if met.is_none() {
                 item = item.spoiler(Spoiler::Major);
             }
+            let mut hints: Vec<String> = Vec::new();
             if !e.required {
-                item = item.hint(if fr { "Ne compte pas pour compléter le journal" } else { "Not needed to complete the journal" });
+                hints.push((if fr { "Ne compte pas pour compléter le journal" } else { "Not needed to complete the journal" }).to_string());
+            }
+
+            // Act 3 is not named before it begins: it is a spoiler of its own.
+            if spawns::elsewhen(e.key, act3) {
+                hints.push(match (act3, fr) {
+                    (false, true) => "N'apparaît que plus tard dans l'aventure".to_string(),
+                    (false, false) => "Only appears later in the story".to_string(),
+                    (true, true) => "N'apparaît plus à l'acte 3".to_string(),
+                    (true, false) => "No longer appears in Act 3".to_string(),
+                });
+            } else if act3 && !absent.is_empty() {
+                let zones = absent.iter().map(|a| words.zone(a)).collect::<Vec<_>>().join(", ");
+                hints.push(if fr { format!("Plus là à l'acte 3 : {zones}") } else { format!("Gone in Act 3 from {zones}") });
+            }
+            if !hints.is_empty() {
+                item = item.hint(hints.join(" · "));
             }
             // What the journal shows: the description, and the notes once complete.
             let mut details: Vec<String> = Vec::new();
@@ -308,5 +332,37 @@ pub fn items(pd: &Map<String, Value>, words: &crate::Words, fr: bool) -> Vec<Ite
             }
             item
         })
-        .collect()
+        .collect::<Vec<_>>()
+        .into_iter()
+        .zip(ENTRIES)
+        .fold((Vec::new(), Vec::new()), |(mut needed, mut extra), (item, e)| {
+            if e.required { needed.push(item) } else { extra.push(item) }
+            (needed, extra)
+        })
+}
+
+/// Whether Act 3 has begun: Pharloom is then the black thread's.
+pub fn act3(pd: &Map<String, Value>) -> bool {
+    pd.get("blackThreadWorld").and_then(Value::as_bool) == Some(true)
+}
+
+/// Whether a save key is one of the journal's entries.
+#[cfg(test)]
+pub fn is_entry(key: &str) -> bool {
+    ENTRIES.iter().any(|e| e.key == key)
+}
+
+/// An entry's areas: the journal's, else those of the scenes it is met in;
+/// either way without those it is not in as things are now.
+fn areas(e: &E, absent: &[&str]) -> Vec<&'static str> {
+    let mut out: Vec<&str> = e.areas.to_vec();
+    if out.is_empty() {
+        for s in spawns::of(e.key).filter(|s| !s.area.is_empty()) {
+            if !out.contains(&s.area) {
+                out.push(s.area);
+            }
+        }
+    }
+    out.retain(|a| !absent.contains(a));
+    out
 }

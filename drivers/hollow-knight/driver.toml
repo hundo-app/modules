@@ -51,7 +51,7 @@ path = "{xdgConfig}/unity3d/Team Cherry/Hollow Knight"
 [slots]
 kind = "file"
 pattern = '^user(?<slot>[1-4])\.dat$'
-label = "Emplacement {slot}"
+label = "Slot {slot}"
 
 # The world map, drawn by Hundo from the installed game's own files.
 [[maps]]

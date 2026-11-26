@@ -1973,7 +1973,10 @@
           "id": "journal-Buzzer",
           "title": "Buzzer",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 45,
+            "total": 45
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -1994,8 +1997,11 @@
           "id": "journal-Bouncer",
           "title": "Bouncer",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 13 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 12,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2010,7 +2016,10 @@
           "id": "journal-Climber",
           "title": "Climber",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 30,
+            "total": 30
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2029,7 +2038,10 @@
           "id": "journal-Hopper",
           "title": "Hopper",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2045,7 +2057,10 @@
           "id": "journal-Worm",
           "title": "Worm",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2062,7 +2077,10 @@
           "id": "journal-Spitter",
           "title": "Spitter",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 20,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2079,7 +2097,10 @@
           "id": "journal-Hatcher",
           "title": "Hatcher",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2095,7 +2116,10 @@
           "id": "journal-Hatchling",
           "title": "Hatchling",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 30,
+            "total": 30
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2111,8 +2135,11 @@
           "id": "journal-ZombieRunner",
           "title": "Zombie Runner",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 30,
+            "total": 35
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2130,7 +2157,10 @@
           "id": "journal-ZombieHornhead",
           "title": "Zombie Hornhead",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 35,
+            "total": 35
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2152,8 +2182,11 @@
           "id": "journal-ZombieLeaper",
           "title": "Zombie Leaper",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 16 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 19,
+            "total": 35
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2171,8 +2204,11 @@
           "id": "journal-ZombieBarger",
           "title": "Zombie Barger",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 10 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 25,
+            "total": 35
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2191,8 +2227,11 @@
           "id": "journal-ZombieShield",
           "title": "Zombie Shield",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 7 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 3,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2207,8 +2246,11 @@
           "id": "journal-ZombieGuard",
           "title": "Zombie Guard",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 4 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 2,
+            "total": 6
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2223,7 +2265,10 @@
           "id": "journal-BigBuzzer",
           "title": "Big Buzzer",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 2,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2240,7 +2285,10 @@
           "id": "journal-BigFly",
           "title": "Big Fly",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 3,
+            "total": 3
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2288,7 +2336,10 @@
           "id": "journal-Roller",
           "title": "Roller",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 20,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2319,7 +2370,10 @@
           "id": "journal-PrayerSlug",
           "title": "Prayer Slug",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -2332,27 +2386,14 @@
           ]
         },
         {
-          "id": "journal-MenderBug",
-          "title": "Mender Bug",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:bestiary_menderbug_f",
-          "details": null,
-          "areas": [
-            "Forgotten Crossroads"
-          ]
-        },
-        {
           "id": "journal-MossmanRunner",
           "title": "Mossman Runner",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 18 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2367,8 +2408,11 @@
           "id": "journal-MossmanShaker",
           "title": "Mossman Shaker",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 14 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 11,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2383,8 +2427,11 @@
           "id": "journal-Mosquito",
           "title": "Mosquito",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 1 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 24,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2399,8 +2446,11 @@
           "id": "journal-BlobFlyer",
           "title": "Blob Flyer",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 14 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 6,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2415,8 +2465,11 @@
           "id": "journal-FungifiedZombie",
           "title": "Fungified Zombie",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 8 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 2,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2431,7 +2484,10 @@
           "id": "journal-PlantShooter",
           "title": "Plant Shooter",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -2447,8 +2503,11 @@
           "id": "journal-MossCharger",
           "title": "Moss Charger",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 12 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 3,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2479,8 +2538,11 @@
           "id": "journal-SnapperTrap",
           "title": "Snapper Trap",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 11 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2496,8 +2558,11 @@
           "id": "journal-MossKnight",
           "title": "Moss Knight",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 3,
+            "total": 8
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2512,8 +2577,11 @@
           "id": "journal-GrassHopper",
           "title": "Grass Hopper",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 4 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 11,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2528,7 +2596,10 @@
           "id": "journal-AcidFlyer",
           "title": "Acid Flyer",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 8
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -2544,7 +2615,10 @@
           "id": "journal-AcidWalker",
           "title": "Acid Walker",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 8
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -2561,7 +2635,10 @@
           "id": "journal-MossFlyer",
           "title": "Moss Flyer",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2578,7 +2655,10 @@
           "id": "journal-MossKnightFat",
           "title": "Moss Knight Fat",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2594,8 +2674,11 @@
           "id": "journal-MossWalker",
           "title": "Moss Walker",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 23 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 30
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2660,7 +2743,10 @@
           "id": "journal-Jellyfish",
           "title": "Jellyfish",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 12,
+            "total": 12
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2676,7 +2762,10 @@
           "id": "journal-JellyCrawler",
           "title": "Jelly Crawler",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 20,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2708,8 +2797,11 @@
           "id": "journal-FungoonBaby",
           "title": "Fungoon Baby",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 6 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 24,
+            "total": 30
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2724,8 +2816,11 @@
           "id": "journal-MushroomTurret",
           "title": "Mushroom Turret",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 16 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2740,8 +2835,11 @@
           "id": "journal-Mantis",
           "title": "Mantis",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 19 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 6,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2756,8 +2854,11 @@
           "id": "journal-MushroomRoller",
           "title": "Mushroom Roller",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 13 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2772,8 +2873,11 @@
           "id": "journal-MushroomBrawler",
           "title": "Mushroom Brawler",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 2 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 6,
+            "total": 8
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2788,8 +2892,11 @@
           "id": "journal-MushroomBaby",
           "title": "Mushroom Baby",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 4 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 16,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2804,8 +2911,11 @@
           "id": "journal-MantisFlyerChild",
           "title": "Mantis Flyer Child",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 18 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2820,8 +2930,11 @@
           "id": "journal-FungusFlyer",
           "title": "Fungus Flyer",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 8 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 12,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2836,7 +2949,10 @@
           "id": "journal-FungCrawler",
           "title": "Fung Crawler",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2868,7 +2984,10 @@
           "id": "journal-BlackKnight",
           "title": "Black Knight",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2884,8 +3003,11 @@
           "id": "journal-ElectricMage",
           "title": "Electric Mage",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 2 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 6
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2900,8 +3022,11 @@
           "id": "journal-Mage",
           "title": "Mage",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 11 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 9,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2917,7 +3042,10 @@
           "id": "journal-MageKnight",
           "title": "Mage Knight",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 2,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2934,8 +3062,11 @@
           "id": "journal-RoyalDandy",
           "title": "Royal Dandy",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 1 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 24,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2950,7 +3081,10 @@
           "id": "journal-RoyalCoward",
           "title": "Royal Coward",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -2966,8 +3100,11 @@
           "id": "journal-RoyalPlumper",
           "title": "Royal Plumper",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 20,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -2982,7 +3119,10 @@
           "id": "journal-FlyingSentrySword",
           "title": "Flying Sentry Sword",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 30,
+            "total": 30
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3000,8 +3140,11 @@
           "id": "journal-FlyingSentryJavelin",
           "title": "Flying Sentry Javelin",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 20,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3017,7 +3160,10 @@
           "id": "journal-Sentry",
           "title": "Sentry",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3035,8 +3181,11 @@
           "id": "journal-SentryFat",
           "title": "Sentry Fat",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 15,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3052,7 +3201,10 @@
           "id": "journal-MageBlob",
           "title": "Mage Blob",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3069,7 +3221,10 @@
           "id": "journal-GreatShieldZombie",
           "title": "Great Shield Zombie",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3102,7 +3257,10 @@
           "id": "journal-MageBalloon",
           "title": "Mage Balloon",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3151,8 +3309,11 @@
           "id": "journal-FlipHopper",
           "title": "Flip Hopper",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 7 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 13,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3167,7 +3328,10 @@
           "id": "journal-Flukeman",
           "title": "Flukeman",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 20,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3183,8 +3347,11 @@
           "id": "journal-Inflater",
           "title": "Inflater",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 4 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 16,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3199,7 +3366,10 @@
           "id": "journal-Flukefly",
           "title": "Flukefly",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3247,8 +3417,11 @@
           "id": "journal-CrystalCrawler",
           "title": "Crystal Crawler",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 6 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 9,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3264,8 +3437,11 @@
           "id": "journal-CrystalFlyer",
           "title": "Crystal Flyer",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 7 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 13,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3280,7 +3456,10 @@
           "id": "journal-LaserBug",
           "title": "Laser Bug",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -3296,8 +3475,11 @@
           "id": "journal-BeamMiner",
           "title": "Beam Miner",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 6 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 9,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3312,8 +3494,11 @@
           "id": "journal-ZombieMiner",
           "title": "Zombie Miner",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 7 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 13,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3329,7 +3514,10 @@
           "id": "journal-MegaBeamMiner",
           "title": "Mega Beam Miner",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 2,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3345,8 +3533,11 @@
           "id": "journal-MinesCrawler",
           "title": "Mines Crawler",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 10,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3361,7 +3552,10 @@
           "id": "journal-AngryBuzzer",
           "title": "Angry Buzzer",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3377,7 +3571,10 @@
           "id": "journal-BurstingBouncer",
           "title": "Bursting Bouncer",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3393,7 +3590,10 @@
           "id": "journal-BurstingZombie",
           "title": "Bursting Zombie",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3409,7 +3609,10 @@
           "id": "journal-SpittingZombie",
           "title": "Spitting Zombie",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3425,7 +3628,10 @@
           "id": "journal-BabyCentipede",
           "title": "Baby Centipede",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 35,
+            "total": 35
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3441,7 +3647,10 @@
           "id": "journal-BigCentipede",
           "title": "Big Centipede",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -3457,7 +3666,10 @@
           "id": "journal-CentipedeHatcher",
           "title": "Centipede Hatcher",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3473,7 +3685,10 @@
           "id": "journal-LesserMawlek",
           "title": "Lesser Mawlek",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3489,8 +3704,11 @@
           "id": "journal-SlashSpider",
           "title": "Slash Spider",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 11 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3505,8 +3723,11 @@
           "id": "journal-SpiderCorpse",
           "title": "Spider Corpse",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 10 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 5,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3521,8 +3742,11 @@
           "id": "journal-ShootSpider",
           "title": "Shoot Spider",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 4 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 16,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3537,8 +3761,11 @@
           "id": "journal-MiniSpider",
           "title": "Mini Spider",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 9 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 16,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3553,8 +3780,11 @@
           "id": "journal-SpiderFlyer",
           "title": "Spider Flyer",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 3 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 17,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3585,7 +3815,10 @@
           "id": "journal-BeeHatchling",
           "title": "Bee Hatchling",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 30,
+            "total": 30
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3601,7 +3834,10 @@
           "id": "journal-BeeStinger",
           "title": "Bee Stinger",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3617,8 +3853,11 @@
           "id": "journal-BigBee",
           "title": "Big Bee",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 8 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 12
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3649,8 +3888,11 @@
           "id": "journal-BlowFly",
           "title": "Blow Fly",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 13 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3665,7 +3907,10 @@
           "id": "journal-CeilingDropper",
           "title": "Ceiling Dropper",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3685,8 +3930,11 @@
           "id": "journal-GiantHopper",
           "title": "Giant Hopper",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 3 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3701,8 +3949,11 @@
           "id": "journal-GrubMimic",
           "title": "Grub Mimic",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 1 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 5
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3718,8 +3969,11 @@
           "id": "journal-MawlekTurret",
           "title": "Mawlek Turret",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 5,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3734,7 +3988,10 @@
           "id": "journal-OrangeScuttler",
           "title": "Orange Scuttler",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -3748,8 +4005,11 @@
           "id": "journal-HealthScuttler",
           "title": "Health Scuttler",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 6 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 4,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3762,8 +4022,11 @@
           "id": "journal-Pigeon",
           "title": "Pigeon",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 9 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 6,
+            "total": 15
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3779,8 +4042,11 @@
           "id": "journal-ZombieHive",
           "title": "Zombie Hive",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 8 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 2,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3795,7 +4061,10 @@
           "id": "journal-Hornet",
           "title": "Hornet",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 2,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3813,7 +4082,10 @@
           "id": "journal-AbyssCrawler",
           "title": "Abyss Crawler",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 20,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3829,7 +4101,10 @@
           "id": "journal-SuperSpitter",
           "title": "Super Spitter",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3845,7 +4120,10 @@
           "id": "journal-Sibling",
           "title": "Sibling",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3861,7 +4139,10 @@
           "id": "journal-PalaceFly",
           "title": "Palace Fly",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3877,8 +4158,11 @@
           "id": "journal-EggSac",
           "title": "Egg Sac",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 3 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 2,
+            "total": 5
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3898,7 +4182,10 @@
           "id": "journal-Mummy",
           "title": "Mummy",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3914,8 +4201,11 @@
           "id": "journal-OrangeBalloon",
           "title": "Orange Balloon",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 5 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 5,
+            "total": 10
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3930,7 +4220,10 @@
           "id": "journal-AbyssTendril",
           "title": "Abyss Tendril",
           "status": "todo",
-          "progress": null,
+          "progress": {
+            "current": 0,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "major",
@@ -3946,7 +4239,10 @@
           "id": "journal-HeavyMantis",
           "title": "Heavy Mantis",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3978,7 +4274,10 @@
           "id": "journal-MantisHeavyFlyer",
           "title": "Mantis Heavy Flyer",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 16,
+            "total": 16
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -3994,7 +4293,10 @@
           "id": "journal-GardenZombie",
           "title": "Garden Zombie",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 20,
+            "total": 20
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4010,7 +4312,10 @@
           "id": "journal-RoyalGuard",
           "title": "Royal Guard",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 2,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4026,7 +4331,10 @@
           "id": "journal-WhiteRoyal",
           "title": "White Royal",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 10,
+            "total": 10
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4042,7 +4350,10 @@
           "id": "journal-Oblobble",
           "title": "Oblobble",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 2,
+            "total": 2
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4055,26 +4366,13 @@
           ]
         },
         {
-          "id": "journal-Zote",
-          "title": "Zote",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:bestiary__0049_zote",
-          "details": null,
-          "areas": [
-            "Godhome"
-          ]
-        },
-        {
           "id": "journal-Blobble",
           "title": "Blobble",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4088,7 +4386,10 @@
           "id": "journal-ColMosquito",
           "title": "Col Mosquito",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4104,8 +4405,11 @@
           "id": "journal-ColRoller",
           "title": "Col Roller",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 3 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 17,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4120,7 +4424,10 @@
           "id": "journal-ColFlyingSentry",
           "title": "Col Flying Sentry",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 25,
+            "total": 25
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4136,8 +4443,11 @@
           "id": "journal-ColMiner",
           "title": "Col Miner",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 10 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 15,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4152,8 +4462,11 @@
           "id": "journal-ColShield",
           "title": "Col Shield",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 10 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 15,
+            "total": 25
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4168,8 +4481,11 @@
           "id": "journal-ColWorm",
           "title": "Col Worm",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 2 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 18,
+            "total": 20
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4184,7 +4500,10 @@
           "id": "journal-ColHopper",
           "title": "Col Hopper",
           "status": "done",
-          "progress": null,
+          "progress": {
+            "current": 15,
+            "total": 15
+          },
           "hint": null,
           "location": null,
           "spoiler": "none",
@@ -4325,117 +4644,14 @@
           ]
         },
         {
-          "id": "journal-WhiteDefender",
-          "title": "White Defender",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": "hidden-dreams",
-          "image": "game:bestiary_White_Defender_full",
-          "details": null,
-          "areas": [
-            "Godhome"
-          ]
-        },
-        {
-          "id": "journal-GreyPrince",
-          "title": "Grey Prince",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": "hidden-dreams",
-          "image": "game:bestiary_mighty_zote_full",
-          "details": null,
-          "areas": [
-            "Godhome"
-          ]
-        },
-        {
-          "id": "journal-ZotelingBalloon",
-          "title": "Zoteling Balloon",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": "hidden-dreams",
-          "image": "game:bestiary_mighty_zote_balloon_full",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-ZotelingHopper",
-          "title": "Zoteling Hopper",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": "hidden-dreams",
-          "image": "game:bestiary_mighty_zote_hopper_full",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-ZotelingBuzzer",
-          "title": "Zoteling Buzzer",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": "hidden-dreams",
-          "image": "game:bestiary_mighty_zoteling_full",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-HollowKnight",
-          "title": "Hollow Knight",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": null,
-          "image": "game:bestiary__0003_hollow-knight",
-          "details": null,
-          "areas": [
-            "Forgotten Crossroads"
-          ]
-        },
-        {
-          "id": "journal-FinalBoss",
-          "title": "Final Boss",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": null,
-          "image": "game:bestiary__0001_radiant_moth",
-          "details": null,
-          "areas": [
-            "Forgotten Crossroads"
-          ]
-        },
-        {
           "id": "journal-HunterMark",
           "title": "Hunter Mark",
           "status": "todo",
-          "progress": null,
-          "hint": null,
+          "progress": {
+            "current": 78,
+            "total": 145
+          },
+          "hint": "Le Chasseur la donne une fois les 145 entrées obligatoires complètes, notes comprises",
           "location": null,
           "spoiler": "major",
           "link": null,
@@ -4445,101 +4661,14 @@
           "areas": []
         },
         {
-          "id": "journal-FlameBearerSmall",
-          "title": "Flame Bearer Small",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": "grimm-troupe",
-          "image": "game:Bestiary_Grimmkin_little",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-FlameBearerMed",
-          "title": "Flame Bearer Med",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": "grimm-troupe",
-          "image": "game:Bestiary_Grimmkin_fat",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-FlameBearerLarge",
-          "title": "Flame Bearer Large",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": "grimm-troupe",
-          "image": "game:Bestiary_Grimmkin_tall",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-Grimm",
-          "title": "Grimm",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": "grimm-troupe",
-          "image": "game:Bestiary_Grimm_boss",
-          "details": null,
-          "areas": [
-            "Dirtmouth"
-          ]
-        },
-        {
-          "id": "journal-NightmareGrimm",
-          "title": "Nightmare Grimm",
-          "status": "done",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": "grimm-troupe",
-          "image": "game:Bestiary_Grimm_Nightmare_boss",
-          "details": null,
-          "areas": [
-            "Dirtmouth"
-          ]
-        },
-        {
-          "id": "journal-BindingSeal",
-          "title": "Binding Seal",
-          "status": "todo",
-          "progress": null,
-          "hint": null,
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:vessel_seal",
-          "details": null,
-          "areas": [
-            "Godhome"
-          ]
-        },
-        {
           "id": "journal-FatFluke",
           "title": "Fat Fluke",
           "status": "in-progress",
-          "progress": null,
-          "hint": "Encore 1 à vaincre pour les notes du Chasseur",
+          "progress": {
+            "current": 7,
+            "total": 8
+          },
+          "hint": null,
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4565,13 +4694,263 @@
           "areas": [
             "Kingdom's Edge"
           ]
+        }
+      ],
+      "tally": {
+        "done": 78,
+        "total": 146
+      }
+    },
+    {
+      "id": "journal-optional",
+      "title": "Journal du Chasseur · facultatif",
+      "group": "Bestiaire",
+      "view": "gallery",
+      "optional": true,
+      "items": [
+        {
+          "id": "journal-MenderBug",
+          "title": "Mender Bug",
+          "status": "todo",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:bestiary_menderbug_f",
+          "details": null,
+          "areas": [
+            "Forgotten Crossroads"
+          ]
+        },
+        {
+          "id": "journal-Zote",
+          "title": "Zote",
+          "status": "todo",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:bestiary__0049_zote",
+          "details": null,
+          "areas": [
+            "Godhome"
+          ]
+        },
+        {
+          "id": "journal-WhiteDefender",
+          "title": "White Defender",
+          "status": "done",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": "hidden-dreams",
+          "image": "game:bestiary_White_Defender_full",
+          "details": null,
+          "areas": [
+            "Godhome"
+          ]
+        },
+        {
+          "id": "journal-GreyPrince",
+          "title": "Grey Prince",
+          "status": "todo",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": "hidden-dreams",
+          "image": "game:bestiary_mighty_zote_full",
+          "details": null,
+          "areas": [
+            "Godhome"
+          ]
+        },
+        {
+          "id": "journal-ZotelingBalloon",
+          "title": "Zoteling Balloon",
+          "status": "todo",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": "hidden-dreams",
+          "image": "game:bestiary_mighty_zote_balloon_full",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-ZotelingHopper",
+          "title": "Zoteling Hopper",
+          "status": "todo",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": "hidden-dreams",
+          "image": "game:bestiary_mighty_zote_hopper_full",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-ZotelingBuzzer",
+          "title": "Zoteling Buzzer",
+          "status": "todo",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": "hidden-dreams",
+          "image": "game:bestiary_mighty_zoteling_full",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-HollowKnight",
+          "title": "Hollow Knight",
+          "status": "done",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": null,
+          "image": "game:bestiary__0003_hollow-knight",
+          "details": null,
+          "areas": [
+            "Forgotten Crossroads"
+          ]
+        },
+        {
+          "id": "journal-FinalBoss",
+          "title": "Final Boss",
+          "status": "done",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": null,
+          "image": "game:bestiary__0001_radiant_moth",
+          "details": null,
+          "areas": [
+            "Forgotten Crossroads"
+          ]
+        },
+        {
+          "id": "journal-FlameBearerSmall",
+          "title": "Flame Bearer Small",
+          "status": "done",
+          "progress": {
+            "current": 3,
+            "total": 3
+          },
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": "grimm-troupe",
+          "image": "game:Bestiary_Grimmkin_little",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-FlameBearerMed",
+          "title": "Flame Bearer Med",
+          "status": "done",
+          "progress": {
+            "current": 4,
+            "total": 4
+          },
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": "grimm-troupe",
+          "image": "game:Bestiary_Grimmkin_fat",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-FlameBearerLarge",
+          "title": "Flame Bearer Large",
+          "status": "done",
+          "progress": {
+            "current": 5,
+            "total": 5
+          },
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": "grimm-troupe",
+          "image": "game:Bestiary_Grimmkin_tall",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-Grimm",
+          "title": "Grimm",
+          "status": "done",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": "grimm-troupe",
+          "image": "game:Bestiary_Grimm_boss",
+          "details": null,
+          "areas": [
+            "Dirtmouth"
+          ]
+        },
+        {
+          "id": "journal-NightmareGrimm",
+          "title": "Nightmare Grimm",
+          "status": "done",
+          "progress": null,
+          "hint": "Facultative pour la Marque du Chasseur",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": "grimm-troupe",
+          "image": "game:Bestiary_Grimm_Nightmare_boss",
+          "details": null,
+          "areas": [
+            "Dirtmouth"
+          ]
+        },
+        {
+          "id": "journal-BindingSeal",
+          "title": "Binding Seal",
+          "status": "todo",
+          "progress": null,
+          "hint": "Hors du décompte du journal",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:vessel_seal",
+          "details": null,
+          "areas": [
+            "Godhome"
+          ]
         },
         {
           "id": "journal-NailBros",
           "title": "Nail Bros",
           "status": "done",
           "progress": null,
-          "hint": null,
+          "hint": "Facultative pour la Marque du Chasseur",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4587,7 +4966,7 @@
           "title": "Paintmaster",
           "status": "done",
           "progress": null,
-          "hint": null,
+          "hint": "Facultative pour la Marque du Chasseur",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4603,7 +4982,7 @@
           "title": "Nailsage",
           "status": "done",
           "progress": null,
-          "hint": null,
+          "hint": "Facultative pour la Marque du Chasseur",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4619,7 +4998,7 @@
           "title": "Hollow Knight Prime",
           "status": "done",
           "progress": null,
-          "hint": null,
+          "hint": "Facultative pour la Marque du Chasseur",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -4635,7 +5014,7 @@
           "title": "Godseeker Mask",
           "status": "todo",
           "progress": null,
-          "hint": null,
+          "hint": "Hors du décompte du journal",
           "location": null,
           "spoiler": "major",
           "link": null,
@@ -4651,7 +5030,7 @@
           "title": "Void Idol 1 · Synchronisé",
           "status": "todo",
           "progress": null,
-          "hint": null,
+          "hint": "Hors du décompte du journal",
           "location": null,
           "spoiler": "major",
           "link": null,
@@ -4667,7 +5046,7 @@
           "title": "Void Idol 2 · Transcendé",
           "status": "todo",
           "progress": null,
-          "hint": null,
+          "hint": "Hors du décompte du journal",
           "location": null,
           "spoiler": "major",
           "link": null,
@@ -4683,7 +5062,7 @@
           "title": "Void Idol 3 · Radiant",
           "status": "todo",
           "progress": null,
-          "hint": null,
+          "hint": "Hors du décompte du journal",
           "location": null,
           "spoiler": "major",
           "link": null,
@@ -4696,8 +5075,8 @@
         }
       ],
       "tally": {
-        "done": 90,
-        "total": 169
+        "done": 12,
+        "total": 23
       }
     },
     {
@@ -6874,7 +7253,7 @@
   ],
   "warnings": [],
   "tally": {
-    "done": 205,
-    "total": 288
+    "done": 193,
+    "total": 265
   }
 }

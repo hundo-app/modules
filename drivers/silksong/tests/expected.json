@@ -3556,25 +3556,6 @@
           ]
         },
         {
-          "id": "journal-Rock Roller",
-          "title": "Rock Roller",
-          "status": "done",
-          "progress": {
-            "current": 3,
-            "total": 3
-          },
-          "hint": "Ne compte pas pour compléter le journal",
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": null,
-          "image": "game:Rock Roller",
-          "details": null,
-          "areas": [
-            "Bone"
-          ]
-        },
-        {
           "id": "journal-Rhino",
           "title": "Rhino",
           "status": "done",
@@ -3659,7 +3640,7 @@
             "current": 23,
             "total": 35
           },
-          "hint": null,
+          "hint": "Plus là à l'acte 3 : Wilds, Blasted Steps",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3669,8 +3650,6 @@
           "areas": [
             "Bonetown",
             "Bone",
-            "Wilds",
-            "Blasted Steps",
             "Greymoor",
             "Shellwood"
           ]
@@ -3683,7 +3662,7 @@
             "current": 34,
             "total": 35
           },
-          "hint": null,
+          "hint": "Plus là à l'acte 3 : Wilds, Greymoor",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3693,9 +3672,7 @@
           "areas": [
             "Bone",
             "Bonetown",
-            "Wilds",
             "Blasted Steps",
-            "Greymoor",
             "Shellwood"
           ]
         },
@@ -3751,7 +3728,7 @@
             "current": 10,
             "total": 10
           },
-          "hint": null,
+          "hint": "Plus là à l'acte 3 : Greymoor",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3761,7 +3738,6 @@
           "areas": [
             "Bonetown",
             "Blasted Steps",
-            "Greymoor",
             "Shellwood"
           ]
         },
@@ -3925,7 +3901,7 @@
             "current": 4,
             "total": 4
           },
-          "hint": null,
+          "hint": "Plus là à l'acte 3 : Song",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -3938,8 +3914,7 @@
             "Blasted Steps",
             "Hang",
             "Swamp",
-            "Slab",
-            "Song"
+            "Slab"
           ]
         },
         {
@@ -4092,7 +4067,9 @@
           "dlc": null,
           "image": "game:Dock Guard Thrower",
           "details": null,
-          "areas": []
+          "areas": [
+            "Dock"
+          ]
         },
         {
           "id": "journal-Small Crab",
@@ -4538,7 +4515,9 @@
           "dlc": null,
           "image": "game:Wisp",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wisp"
+          ]
         },
         {
           "id": "journal-Farmer Wisp",
@@ -4574,7 +4553,9 @@
           "dlc": null,
           "image": "game:Wisp Pyre Effigy",
           "details": null,
-          "areas": []
+          "areas": [
+            "Wisp"
+          ]
         },
         {
           "id": "journal-Crow",
@@ -4983,7 +4964,9 @@
           "dlc": null,
           "image": "game:Swamp Muckman",
           "details": null,
-          "areas": []
+          "areas": [
+            "Swamp"
+          ]
         },
         {
           "id": "journal-Swamp Muckman Tall",
@@ -5019,7 +5002,9 @@
           "dlc": null,
           "image": "game:Swamp Shaman",
           "details": null,
-          "areas": []
+          "areas": [
+            "Swamp"
+          ]
         },
         {
           "id": "journal-Swamp Barnacle",
@@ -5495,7 +5480,9 @@
           "dlc": null,
           "image": "game:Last Judge",
           "details": null,
-          "areas": []
+          "areas": [
+            "Blasted Steps"
+          ]
         },
         {
           "id": "journal-Coral Spike Goomba",
@@ -5604,7 +5591,7 @@
             "current": 2,
             "total": 2
           },
-          "hint": null,
+          "hint": "Plus là à l'acte 3 : Blasted Steps",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -5612,7 +5599,6 @@
           "image": "game:Coral Conch Driller Giant",
           "details": null,
           "areas": [
-            "Blasted Steps",
             "Coral Caves"
           ]
         },
@@ -6519,7 +6505,9 @@
           "dlc": null,
           "image": "game:Conductor Boss",
           "details": null,
-          "areas": []
+          "areas": [
+            "Ward"
+          ]
         },
         {
           "id": "journal-Understore Automaton",
@@ -6801,7 +6789,9 @@
           "dlc": null,
           "image": "game:Trobbio",
           "details": null,
-          "areas": []
+          "areas": [
+            "Library"
+          ]
         },
         {
           "id": "journal-Tormented Trobbio",
@@ -6818,7 +6808,9 @@
           "dlc": null,
           "image": "game:Tormented Trobbio",
           "details": null,
-          "areas": []
+          "areas": [
+            "Library"
+          ]
         },
         {
           "id": "journal-Slab Prisoner Leaper New",
@@ -6923,7 +6915,7 @@
             "current": 8,
             "total": 8
           },
-          "hint": null,
+          "hint": "Plus là à l'acte 3 : Dock",
           "location": null,
           "spoiler": "none",
           "link": null,
@@ -6932,7 +6924,6 @@
           "details": null,
           "areas": [
             "Slab",
-            "Dock",
             "Greymoor",
             "Swamp"
           ]
@@ -7123,7 +7114,9 @@
           "dlc": null,
           "image": "game:Blue Assistant",
           "details": null,
-          "areas": []
+          "areas": [
+            "Crawl"
+          ]
         },
         {
           "id": "journal-Lilypad Fly",
@@ -7235,25 +7228,6 @@
           "link": null,
           "dlc": null,
           "image": "game:Cloverstag",
-          "details": null,
-          "areas": [
-            "Clover"
-          ]
-        },
-        {
-          "id": "journal-Cloverstag White",
-          "title": "Cloverstag White",
-          "status": "todo",
-          "progress": {
-            "current": 0,
-            "total": 1
-          },
-          "hint": "Ne compte pas pour compléter le journal",
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:Cloverstag White",
           "details": null,
           "areas": [
             "Clover"
@@ -7388,7 +7362,9 @@
           "dlc": null,
           "image": "game:Gloomfly",
           "details": null,
-          "areas": []
+          "areas": [
+            "Abyss"
+          ]
         },
         {
           "id": "journal-Gloom Beast",
@@ -7442,25 +7418,6 @@
           "image": "game:Black Thread Core",
           "details": null,
           "areas": []
-        },
-        {
-          "id": "journal-Abyss Mass",
-          "title": "Abyss Mass",
-          "status": "todo",
-          "progress": {
-            "current": 0,
-            "total": 1
-          },
-          "hint": "Ne compte pas pour compléter le journal",
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:Abyss Mass",
-          "details": null,
-          "areas": [
-            "Bonetown"
-          ]
         },
         {
           "id": "journal-White Palace Fly",
@@ -7564,59 +7521,8 @@
           "dlc": null,
           "image": "game:Giant Flea",
           "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-Shakra",
-          "title": "Shakra",
-          "status": "done",
-          "progress": {
-            "current": 1,
-            "total": 1
-          },
-          "hint": "Ne compte pas pour compléter le journal",
-          "location": null,
-          "spoiler": "none",
-          "link": null,
-          "dlc": null,
-          "image": "game:Shakra",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-Garmond_Zaza",
-          "title": "Garmond_Zaza",
-          "status": "todo",
-          "progress": {
-            "current": 0,
-            "total": 1
-          },
-          "hint": "Ne compte pas pour compléter le journal",
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:Garmond_Zaza",
-          "details": null,
-          "areas": []
-        },
-        {
-          "id": "journal-Garmond",
-          "title": "Garmond",
-          "status": "todo",
-          "progress": {
-            "current": 0,
-            "total": 1
-          },
-          "hint": "Ne compte pas pour compléter le journal",
-          "location": null,
-          "spoiler": "major",
-          "link": null,
-          "dlc": null,
-          "image": "game:Garmond",
-          "details": null,
           "areas": [
-            "Blasted Steps"
+            "Aqueduct"
           ]
         },
         {
@@ -7653,7 +7559,9 @@
           "dlc": null,
           "image": "game:Spinner Boss",
           "details": null,
-          "areas": []
+          "areas": [
+            "Belltown"
+          ]
         },
         {
           "id": "journal-First Weaver",
@@ -7724,7 +7632,132 @@
           "dlc": null,
           "image": "game:Silk Boss",
           "details": null,
+          "areas": [
+            "Cradle"
+          ]
+        }
+      ],
+      "tally": {
+        "done": 124,
+        "total": 230
+      }
+    },
+    {
+      "id": "journal-optional",
+      "title": "Journal de chasse · facultatif",
+      "group": "Bestiaire",
+      "view": "gallery",
+      "optional": true,
+      "items": [
+        {
+          "id": "journal-Rock Roller",
+          "title": "Rock Roller",
+          "status": "done",
+          "progress": {
+            "current": 3,
+            "total": 3
+          },
+          "hint": "Ne compte pas pour compléter le journal",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": null,
+          "image": "game:Rock Roller",
+          "details": null,
+          "areas": [
+            "Bone"
+          ]
+        },
+        {
+          "id": "journal-Cloverstag White",
+          "title": "Cloverstag White",
+          "status": "todo",
+          "progress": {
+            "current": 0,
+            "total": 1
+          },
+          "hint": "Ne compte pas pour compléter le journal",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:Cloverstag White",
+          "details": null,
+          "areas": [
+            "Clover"
+          ]
+        },
+        {
+          "id": "journal-Abyss Mass",
+          "title": "Abyss Mass",
+          "status": "todo",
+          "progress": {
+            "current": 0,
+            "total": 1
+          },
+          "hint": "Ne compte pas pour compléter le journal",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:Abyss Mass",
+          "details": null,
+          "areas": [
+            "Bonetown"
+          ]
+        },
+        {
+          "id": "journal-Shakra",
+          "title": "Shakra",
+          "status": "done",
+          "progress": {
+            "current": 1,
+            "total": 1
+          },
+          "hint": "Ne compte pas pour compléter le journal",
+          "location": null,
+          "spoiler": "none",
+          "link": null,
+          "dlc": null,
+          "image": "game:Shakra",
+          "details": null,
           "areas": []
+        },
+        {
+          "id": "journal-Garmond_Zaza",
+          "title": "Garmond_Zaza",
+          "status": "todo",
+          "progress": {
+            "current": 0,
+            "total": 1
+          },
+          "hint": "Ne compte pas pour compléter le journal",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:Garmond_Zaza",
+          "details": null,
+          "areas": []
+        },
+        {
+          "id": "journal-Garmond",
+          "title": "Garmond",
+          "status": "todo",
+          "progress": {
+            "current": 0,
+            "total": 1
+          },
+          "hint": "Ne compte pas pour compléter le journal",
+          "location": null,
+          "spoiler": "major",
+          "link": null,
+          "dlc": null,
+          "image": "game:Garmond",
+          "details": null,
+          "areas": [
+            "Blasted Steps"
+          ]
         },
         {
           "id": "journal-Lost Lace",
@@ -7745,8 +7778,8 @@
         }
       ],
       "tally": {
-        "done": 126,
-        "total": 237
+        "done": 2,
+        "total": 7
       }
     },
     {
@@ -7948,7 +7981,7 @@
   "maps": [],
   "warnings": [],
   "tally": {
-    "done": 280,
-    "total": 443
+    "done": 278,
+    "total": 436
   }
 }

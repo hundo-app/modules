@@ -1,1 +1,107 @@
-{ "format": 1, "modules": [] }
+{
+  "format": 1,
+  "modules": [
+    {
+      "id": "expedition-33",
+      "name": "Clair Obscur: Expedition 33",
+      "version": "0.1.0-alpha",
+      "api": 3,
+      "description": "Armes, pictos, tenues, coiffures et journaux d'expédition, zone par zone.",
+      "authors": [
+        "Arnaud Michel"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/hundo-app/modules/releases/download/modules-20261126-fe00cd9/expedition-33-0.1.0-alpha.hundo",
+      "size": 78224,
+      "sha256": "6defae25184632a362cadc60dea0ecbd8038834bf1c4df957f6272f88d1fec87",
+      "public-key": "RWRYrbbjsgZiAx8n7tamravfA0fWetiNqushALfEDAQGtGqQLozHomfg",
+      "signature": "untrusted comment: signature from rsign secret key\nRURYrbbjsgZiA71QL06rd56oF+I5z7CcHVy4dhkoMa/lydSVhA33ub/md428s0jnHpXu1aT9qQaNY+A/ncAJPhnRQkYI6Gmnqwg=\ntrusted comment: expedition-33 0.1.0-alpha\nVpBEdNmpbbsyIJo+5JOEV1VklzplQJZVTwsQjGAboar6Y1RtQGcDSp1SIXW+fqYh7i+sNIArRl1UiarSO522Bw==\n",
+      "manifest": "api = 3\n\n[driver]\nid = \"expedition-33\"\nname = \"Clair Obscur: Expedition 33\"\nversion = \"0.1.0-alpha\"\nauthors = [\"Arnaud Michel\"]\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"Armes, pictos, tenues, coiffures et journaux d'expédition, zone par zone.\"\n\n# Not yet checked against a real save: see tests/ once one is available.\n[game]\nsteam-app-id = 1903340\ntested-versions = []\n\n# One folder per Steam account; EXPEDITION_N.sav per slot.\n[[locations]]\nplatform = \"windows\"\npath = \"{localAppData}/Sandfall/Saved/SaveGames\"\n\n[slots]\nkind = \"file\"\npattern = '^(?<account>[0-9]+)/EXPEDITION_(?<slot>[0-9]+)\\.sav$'\nlabel = \"Expedition {slot}\"\n\n[[layout]]\npanel = \"progress\"\nspan = 4\n\n[[layout]]\npanel = \"zones\"\nspan = 8\n\n[[layout]]\npanel = \"list\"\nspan = 12\n"
+    },
+    {
+      "id": "hades",
+      "name": "Hades",
+      "version": "0.1.0-alpha",
+      "api": 3,
+      "description": "Armes et Aspects, Liste du destin complète, Miroir de la Nuit, relations, souvenirs et compagnons, Constructeur.",
+      "authors": [
+        "Arnaud Michel"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/hundo-app/modules/releases/download/modules-20261126-fe00cd9/hades-0.1.0-alpha.hundo",
+      "size": 103109,
+      "sha256": "9ed753d69ef4dce16e31ce811e559c0d216e4d5bda95ec325c3bbaefc0acef19",
+      "public-key": "RWRYrbbjsgZiAx8n7tamravfA0fWetiNqushALfEDAQGtGqQLozHomfg",
+      "signature": "untrusted comment: signature from rsign secret key\nRURYrbbjsgZiAxtdZpUPAjdYEv5ERb+OGXr9qOJAOSoo7BDyClDo6vkmpdnX4MYa2oW81bSzsVUzxkxeSehwy9ngu40ZjzzFNQE=\ntrusted comment: hades 0.1.0-alpha\n9FVhXsG4KwGzwFNV6T5CN4WWHnot6eMey8iBq1ofHUg1KSU5LfPmjsC1+EdX4g9I/8txlz+JhBQLuSDIDhCGBQ==\n",
+      "manifest": "api = 3\n\n[driver]\nid = \"hades\"\nname = \"Hades\"\nversion = \"0.1.0-alpha\"\nauthors = [\"Arnaud Michel\"]\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"Armes et Aspects, Liste du destin complète, Miroir de la Nuit, relations, souvenirs et compagnons, Constructeur.\"\n\n[game]\nsteam-app-id = 1145360\ntested-versions = [\"38290\"]\n\n[[locations]]\nplatform = \"windows\"\npath = \"{documents}/Saved Games/Hades\"\n\n[[locations]]\nplatform = \"macos\"\npath = \"{appSupport}/Supergiant Games/Hades\"\n\n# Profile1_Temp.sav and Profile1.v.sav are the game's working copies.\n[slots]\nkind = \"file\"\npattern = '^Profile(?<slot>[1-4])\\.sav$'\nlabel = \"Profile {slot}\"\n\n# The game's own names for things, read from the installed game in the\n# reader's language: its text files are plain, in a format of their own.\n[texts]\nkind = \"files\"\nfiles = [\"Content/Game/Text/{lang}/HelpText.{lang}.sjson\"]\n"
+    },
+    {
+      "id": "hollow-knight",
+      "name": "Hollow Knight",
+      "version": "0.1.0-alpha",
+      "api": 3,
+      "description": "Complétion 112 %, charmes, boss, rêves de guerriers et panthéons.",
+      "authors": [
+        "Arnaud Michel"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/hundo-app/modules/releases/download/modules-20261126-fe00cd9/hollow-knight-0.1.0-alpha.hundo",
+      "size": 130337,
+      "sha256": "73f6079a55e9acec208441756b29c68fb33b846007d5358bec0108d64db7239e",
+      "public-key": "RWRYrbbjsgZiAx8n7tamravfA0fWetiNqushALfEDAQGtGqQLozHomfg",
+      "signature": "untrusted comment: signature from rsign secret key\nRURYrbbjsgZiA0/9ODY7TsdZesTL/QpIBIVA30QMC20IenIBOKJVED05kIDvKe1YitihWB3DiH7lKzzyMYe1lk2AVxlh9xq8mQs=\ntrusted comment: hollow-knight 0.1.0-alpha\njFpDvXR25fzOuFEP8lcIYLXmDw4TdN3/1sMaX790Khq9vgqDW1E1znEZDCOUFGwxnug9kdi9X6SwmOGnVjOVAg==\n",
+      "manifest": "api = 3\n\n[driver]\nid = \"hollow-knight\"\nname = \"Hollow Knight\"\nversion = \"0.1.0-alpha\"\nauthors = [\"Arnaud Michel\"]\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"Complétion 112 %, charmes, boss, rêves de guerriers et panthéons.\"\n\n[game]\nsteam-app-id = 367520\n# Versions the driver was checked against; older saves are read with a warning.\ntested-versions = [\"1.5.12620\"]\n\n# Free content packs, added by updates: each can be left out of the count.\n[[dlc]]\nid = \"hidden-dreams\"\nname = \"Hidden Dreams\"\nfree = true\n\n[[dlc]]\nid = \"grimm-troupe\"\nname = \"The Grimm Troupe\"\nfree = true\n\n[[dlc]]\nid = \"lifeblood\"\nname = \"Lifeblood\"\nfree = true\n\n[[dlc]]\nid = \"godmaster\"\nname = \"Godmaster\"\nfree = true\n\n# Paths use the host's variables (see docs/SPEC.md). On Linux, the Windows\n# entry is also looked up inside the game's Proton prefix.\n[[locations]]\nplatform = \"windows\"\npath = \"{localLow}/Team Cherry/Hollow Knight\"\n\n[[locations]]\nplatform = \"macos\"\npath = \"{home}/Library/Application Support/unity.Team Cherry.Hollow Knight\"\n\n[[locations]]\nplatform = \"linux\"\npath = \"{xdgConfig}/unity3d/Team Cherry/Hollow Knight\"\n\n[slots]\nkind = \"file\"\npattern = '^user(?<slot>[1-4])\\.dat$'\nlabel = \"Slot {slot}\"\n\n# The world map, drawn by Hundo from the installed game's own files.\n[[maps]]\nid = \"hallownest\"\nkind = \"unity-sprite-map\"\nfile = \"hollow_knight_Data/resources.assets\"\nroot = \"Game_Map\"\nskip = [\"Dream_Gate_Pin\", \"Compass Icon\", \"Shade Pos\", \"Flame Pins\", \"Map Markers\"]\nskip-prefixes = [\"Map_Arrow\", \"Map Arrow\", \"Shade\", \"pop_up\"]\n# Every pin the game can show: grubs, benches, stags, roots, shops…\npin-sprites = [\"pin_\", \"Pin_\"]\nrough-suffix = \"_Cornifer\"\n\n# The game's own names for things (the Hunter's Journal), read from the\n# installed game in the reader's language; the driver decrypts them.\n[texts]\nfile = \"hollow_knight_Data/resources.assets\"\nnames = [\"{lang}_Journal\", \"{lang}_UI\", \"{lang}_Map Zones\"]\n\n# Pictures (the Hunter's Journal portraits, the charms, the geo chest), drawn\n# by the host from the installed game.\n[images]\nfiles = [\"hollow_knight_Data/resources.assets\", \"hollow_knight_Data/sharedassets6.assets\"]\n\n# Choices offered to the reader, in the menu of the page's panel they concern.\n[[options]]\nid = \"journal-notes\"\nlabel = \"Journal : viser les notes du Chasseur\"\ndescription = \"Activé, une créature compte quand ses notes du Chasseur sont débloquées (assez d'ennemis vaincus). Désactivé, dès la première rencontre : c'est ce que demandent les 112 %.\"\npanel = \"list\"\ndefault = true\n\n# The game's page as it first opens: a reader's arrangement, kept as the base.\n[[layout]]\npanel = \"progress\"\nspan = 6\n\n[[layout]]\npanel = \"next\"\nspan = 6\nheight = 360\n\n[[layout]]\npanel = \"list\"\nspan = 6\nheight = 320\n\n[[layout]]\npanel = \"map\"\nspan = 6\nheight = 600\n\n[[layout]]\npanel = \"history\"\nspan = 6\nheight = 400\n\n[[layout]]\npanel = \"session\"\nspan = 6\nheight = 400\n\n[[layout]]\npanel = \"achievements\"\nspan = 6\n\n[[layout]]\npanel = \"zones\"\nspan = 12\nheight = 280\n\n[[layout]]\npanel = \"details\"\nspan = 7\nhidden = true\n\n[[layout]]\npanel = \"stats\"\nspan = 6\nheight = 120\n\n[[layout]]\npanel = \"notes\"\nspan = 6\nheight = 320\n"
+    },
+    {
+      "id": "nine-sols",
+      "name": "Nine Sols",
+      "version": "0.1.0-alpha",
+      "api": 3,
+      "description": "Jades, seals, skills, arrows, root nodes, items and the database, named as the game names them.",
+      "authors": [
+        "Arnaud Michel"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/hundo-app/modules/releases/download/modules-20261126-fe00cd9/nine-sols-0.1.0-alpha.hundo",
+      "size": 173930,
+      "sha256": "94dbe2e0e52750216418845f3d971c2ef0afa43349f5076a3fd8c279c71f84fa",
+      "public-key": "RWRYrbbjsgZiAx8n7tamravfA0fWetiNqushALfEDAQGtGqQLozHomfg",
+      "signature": "untrusted comment: signature from rsign secret key\nRURYrbbjsgZiA0eaGcoAfrXMUst5td1ikb0JMqgKtUADA83yNxBM+shmPr80MEUHlHbRqtpOJilDS8RQtZIfLwNo5qoxj93f9gc=\ntrusted comment: nine-sols 0.1.0-alpha\ne1PfmR6F7LBQEHhJR0qszK80ftaT+gXJSkA7AvUzTWbR0zj++eShUqaM6Z7uv/rfYvBrBBB+QHmh4uZ0k4o8DQ==\n",
+      "manifest": "api = 3\n\n[driver]\nid = \"nine-sols\"\nname = \"Nine Sols\"\nversion = \"0.1.0-alpha\"\nauthors = [\"Arnaud Michel\"]\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"Jades, seals, skills, arrows, root nodes, items and the database, named as the game names them.\"\n\n[game]\nsteam-app-id = 1809540\ntested-versions = []\n# The save is rolled back after the credits; the account remembers the end.\nreads-achievements = true\n\n# A Windows game: on Linux, Hundo looks inside its Proton prefix.\n[[locations]]\nplatform = \"windows\"\npath = \"{localLow}/RedCandleGames/NineSols\"\n\n# One folder per slot; the game also keeps a copy from before the point of no\n# return, `saveslotN_BeforeNoReturnPoint`, which is not a slot of its own.\n[slots]\nkind = \"file\"\npattern = '^saveslot(?<slot>[0-9]+)/flags\\.sav$'\nlabel = \"Slot {slot}\"\n\n# Each thing's picture: the game's own sprite. The inventory's are in the\n# Addressables bundle, named by a hash that changes with the game's builds.\n[images]\nfiles = [\n    \"NineSols_Data/data.unity3d#resources.assets\",\n    \"NineSols_Data/StreamingAssets/aa/StandaloneWindows64/defaultlocalgroup_assets_all_*.bundle\",\n]\n\n# The map: the game's own world map, a block per area tinted by its zone, drawn\n# from the installed game. The layout (which sprite goes where) is made by\n# tools/extract.py; the pictures stay in the reader's copy of the game.\n[[maps]]\nid = \"new-kunlun\"\nkind = \"unity-sprite-collage\"\nfiles = [\"NineSols_Data/data.unity3d#resources.assets\"]\nlayout = \"assets/map-layout.json\"\n# The panel's own size: its sprites are drawn one texel per pixel.\nmax-side = 4800\n"
+    },
+    {
+      "id": "schedule-one",
+      "name": "Schedule I",
+      "version": "0.1.0-alpha",
+      "api": 3,
+      "description": "Rang, quêtes, territoires, propriétés, commerces et clients.",
+      "authors": [
+        "Arnaud Michel"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "url": "https://github.com/hundo-app/modules/releases/download/modules-20261126-fe00cd9/schedule-one-0.1.0-alpha.hundo",
+      "size": 61262,
+      "sha256": "2aa8fc6c9e4e124420ba2758af77353a50803af6c8372e1f0524506c190c8098",
+      "public-key": "RWRYrbbjsgZiAx8n7tamravfA0fWetiNqushALfEDAQGtGqQLozHomfg",
+      "signature": "untrusted comment: signature from rsign secret key\nRURYrbbjsgZiA6HNP1wz8qMyBczROTtPNFw2EaJJQybD0YSmH0iiqesM/Rkjf4Uw8AYzcrQ/yQCv1t1xq8rZnpUaihtztAcGqAc=\ntrusted comment: schedule-one 0.1.0-alpha\n2GfgXKwtpO4ZqNmgo8j6EZOo4HJlt9fe05AdNWz3FDKlXqRl+LL1JMRGBOC2h6PKhWDX8OT3jz2KlutvUGfjBA==\n",
+      "manifest": "api = 3\n\n[driver]\nid = \"schedule-one\"\nname = \"Schedule I\"\nversion = \"0.1.0-alpha\"\nauthors = [\"Arnaud Michel\"]\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"Rang, quêtes, territoires, propriétés, commerces et clients.\"\n\n[game]\nsteam-app-id = 3164500\ntested-versions = [\"0.4.7f12\"]\n\n[[locations]]\nplatform = \"windows\"\npath = \"{localLow}/TVGS/Schedule I/Saves\"\n\n# A save is a folder of JSON files, one per Steam account and slot.\n[slots]\nkind = \"dir\"\npattern = '^(?<account>[0-9]+)/SaveGame_(?<slot>[0-9]+)$'\nlabel = \"Save {slot}\"\ninclude = [\"**/*.json\"]\n"
+    },
+    {
+      "id": "silksong",
+      "name": "Hollow Knight: Silksong",
+      "version": "0.1.0-alpha",
+      "api": 3,
+      "description": "Complétion 100 % : emblèmes, outils, compétences, fragments, améliorations ; puces, médaillons et clés.",
+      "authors": [
+        "Arnaud Michel"
+      ],
+      "license": "GPL-3.0-or-later",
+      "url": "https://github.com/hundo-app/modules/releases/download/modules-20261126-fe00cd9/silksong-0.1.0-alpha.hundo",
+      "size": 162686,
+      "sha256": "2dd7500c46222be4c07ab0dc4492f3000b80f816c28fb9a4c62e2d317379d3b1",
+      "public-key": "RWRYrbbjsgZiAx8n7tamravfA0fWetiNqushALfEDAQGtGqQLozHomfg",
+      "signature": "untrusted comment: signature from rsign secret key\nRURYrbbjsgZiA9PeWRYpEqHbDS072ZOD2Rrscd3TUClIWr1i5m1BXyxAugGeLWYtEwcyaeQF2Irm5KKVOwa8YkblaoMMWhXUiwA=\ntrusted comment: silksong 0.1.0-alpha\n9Y0KLNBOXh9IhcTLR8PDl+kJjv+PlddK9MZ+oj4rZKfVKdIqtqSFFKjv6/LYUQ/3oH8mGRMwyb56+27ESKJeCQ==\n",
+      "manifest": "api = 3\n\n[driver]\nid = \"silksong\"\nname = \"Hollow Knight: Silksong\"\nversion = \"0.1.0-alpha\"\nauthors = [\"Arnaud Michel\"]\nlicense = \"GPL-3.0-or-later\"\ndescription = \"Complétion 100 % : emblèmes, outils, compétences, fragments, améliorations ; puces, médaillons et clés.\"\n\n[game]\nsteam-app-id = 1030300\ntested-versions = [\"1.0.30000\"]\n\n[[locations]]\nplatform = \"windows\"\npath = \"{localLow}/Team Cherry/Hollow Knight Silksong\"\n\n[[locations]]\nplatform = \"macos\"\npath = \"{appSupport}/unity.Team Cherry.Hollow Knight Silksong\"\n\n[[locations]]\nplatform = \"linux\"\npath = \"{xdgConfig}/unity3d/Team Cherry/Hollow Knight Silksong\"\n\n# One folder per Steam account, then userN.dat as in Hollow Knight.\n[slots]\nkind = \"file\"\npattern = '^(?<account>[0-9]+)/user(?<slot>[1-4])\\.dat$'\nlabel = \"Slot {slot} · account {account}\"\n\n# The world map, drawn by Hundo from the installed game's own files. Silksong\n# keeps it in an Addressables bundle; its sprites are in other bundles.\n[[maps]]\nid = \"pharloom\"\nkind = \"unity-sprite-map\"\nfile = \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/maps_assets_all.bundle\"\nbundles = \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64\"\nroot = \"Game_Map_Hornet\"\nskip = [\"Main Quest Pins\", \"Map Markers\", \"Shade Pos\"]\nskip-prefixes = [\"Map_Arrow\", \"Map Arrow\", \"Compass\", \"Shade\", \"Map_Title\", \"Drop_Shadow\"]\n# Benches, lost fleas and quest marks are pins: placed, not drawn.\npin-sprites = [\"pin_\", \"Pin_\", \"quest_map_icon\"]\n\n# The game's own names for things (the hunting journal), read from the\n# installed game in the reader's language; the driver decrypts them.\n[texts]\nfile = \"Hollow Knight Silksong_Data/resources.assets\"\nnames = [\"{lang}_Journal\", \"{lang}_Map Zones\", \"{lang}_Tools\", \"{lang}_UI\", \"{lang}_Quests\", \"{lang}_Belltown\", \"{lang}_Inspect\", \"{lang}_Titles\"]\n\n# Pictures (the hunting journal, tools, crests), drawn by the host from the\n# installed game.\n[images]\nfiles = [\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/journal_enemy_images.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/inventory.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/crest.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/hornet_map.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/inventory_furniture_items.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/inventory_patch.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/atlases_assets_assets/sprites/_atlases/inventory_needles.spriteatlas.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/dataassets_assets_assets/dataassets/collectables/collectableitems.bundle\",\n    \"Hollow Knight Silksong_Data/StreamingAssets/aa/StandaloneLinux64/dataassets_assets_assets/dataassets/tools/toolitems.bundle\",\n]\n"
+    }
+  ]
+}

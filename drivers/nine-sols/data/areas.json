@@ -1,0 +1,174 @@
+{
+ "A10_S3_HistoryTomb_Right": {
+  "en": "Grotto of Scriptures (East)",
+  "fr": "Grotte des Saintes Écritures (Est)"
+ },
+ "A10_S4_HistoryTomb_Left": {
+  "en": "Grotto of Scriptures (West)",
+  "fr": "Grotte des Saintes Écritures (Ouest)"
+ },
+ "A10_S1_TombEntrance_remake": {
+  "en": "Grotto of Scriptures (Entry)",
+  "fr": "Grotte des Saintes Écritures (entrée)"
+ },
+ "A10_S5_Boss_Jee": {
+  "en": "Ancient Stone Pillar",
+  "fr": "Menhir ancien"
+ },
+ "A11_S1_Hospital_remake": {
+  "en": "Tiandao Research Center",
+  "fr": "Centre de Recherche Tiandao"
+ },
+ "A11_S2_Laboratory_remake": {
+  "en": "Tianhuo Research Institute",
+  "fr": "Institut de Recherche Tianhuo"
+ },
+ "A9_S4": {
+  "en": "Sky Tower",
+  "fr": "Tour du Ciel"
+ },
+ "A9_S1_Remake_4wei": {
+  "en": "Empyrean Dist. (Passages)",
+  "fr": "Quartier Empyréen (passages)"
+ },
+ "A9_S2_Remake_4wei": {
+  "en": "Empyrean Dist. (Living Area)",
+  "fr": "Quartier Empyréen (zone habitée)"
+ },
+ "A9_S3": {
+  "en": "Empyrean Dist. (Sanctum)",
+  "fr": "Quartier Empyréen (sanctuaire)"
+ },
+ "A9_S5_風氏": {
+  "en": "Nobility Hall",
+  "fr": "Salle de la Noblesse"
+ },
+ "A7_S1_BrainRoom_Remake": {
+  "en": "Cortex Center",
+  "fr": "Centre du Cortex"
+ },
+ "A6_S1_AbandonMine_Remake_4wei": {
+  "en": "Factory (Underground)",
+  "fr": "Usine (sous-sol)"
+ },
+ "A6_S3_Tutorial_And_SecretBoss_Remake": {
+  "en": "Abandoned Mines",
+  "fr": "Mines Abandonnées"
+ },
+ "A5_S1_CastleHub_remake": {
+  "en": "Factory (Great Hall)",
+  "fr": "Usine (grande salle)"
+ },
+ "A5_S2_Jail_Remake_Final": {
+  "en": "Prison",
+  "fr": "Prison"
+ },
+ "A5_S3_UnderCastle_Remake_4wei": {
+  "en": "Factory (Machine Room)",
+  "fr": "Usine (salle des machines)"
+ },
+ "A5_S4_CastleMid_Remake_5wei": {
+  "en": "Factory (Production Area)",
+  "fr": "Usine (zone de production)"
+ },
+ "A5_S5_JieChuanHall": {
+  "en": "Shengwu Hall",
+  "fr": "Salle Shengwu"
+ },
+ "A4_S1_NewBridgeToWarehouse_Final": {
+  "en": "Outer Warehouse",
+  "fr": "Entrepôt Extérieur"
+ },
+ "A4_S2_RouteToControlRoom_Final": {
+  "en": "Inner Warehouse",
+  "fr": "Entrepôt Intérieur"
+ },
+ "A4_S3_ControlRoom_Final": {
+  "en": "Boundless Repository",
+  "fr": "Archives Infinies"
+ },
+ "A4_S6_DaoBase_Final": {
+  "en": "Yangu Hall",
+  "fr": "Salle Yangu"
+ },
+ "AG_S1_SenateHall": {
+  "en": "New Kunlun Central Hall",
+  "fr": "Salle Centrale de La Nouvelle-Kunlun"
+ },
+ "AG_S2_YiBase": {
+  "en": "Four Seasons Pavilion",
+  "fr": "Pavillon des Quatre Saisons"
+ },
+ "AG_ST_Hub": {
+  "en": "New Kunlun Control Hub",
+  "fr": "Pôle de Contrôle de La Nouvelle-Kunlun"
+ },
+ "A3_S1_GardenRuins_Final": {
+  "en": "Lake Yaochi Ruins",
+  "fr": "Ruines du lac Yaochi"
+ },
+ "A3_S2_GreenHouse_Final": {
+  "en": "Greenhouse",
+  "fr": "Serre"
+ },
+ "A3_S3_OxygenChamber_Final": {
+  "en": "Water & Oxygen Synthesis",
+  "fr": "Zone de Synthèse de l’Eau et de l’Oxygène"
+ },
+ "A3_S7_DragonWay_Final": {
+  "en": "Yinglong Canal",
+  "fr": "Canal Yinglong"
+ },
+ "A3_S5_BossGouMang_Final": {
+  "en": "Agrarian Hall",
+  "fr": "Salle Agraire"
+ },
+ "A2_S1_ReactorMiddle_Final": {
+  "en": "Power Reservoir (Central)",
+  "fr": "Réservoir d’Énergie (centre)"
+ },
+ "A2_S2_ReactorRight_Final": {
+  "en": "Power Reservoir (East)",
+  "fr": "Réservoir d’Énergie (Est)"
+ },
+ "A2_S3_ReactorLeft_Final": {
+  "en": "Power Reservoir (West)",
+  "fr": "Réservoir d’Énergie (Ouest)"
+ },
+ "A2_S5_BossHorseman_Final": {
+  "en": "Radiant Pagoda",
+  "fr": "Pagode Radieuse"
+ },
+ "A2_S6_LogisticCenter_Final": {
+  "en": "Central Transport Hub",
+  "fr": "Pôle de Transport Central"
+ },
+ "A1_S1_HumanDisposal_Final": {
+  "en": "Apeman Facility (Monitoring)",
+  "fr": "Installations des Hommes-singes (surveillance)"
+ },
+ "A1_S2_ConnectionToElevator_Final": {
+  "en": "Apeman Facility (Elevator)",
+  "fr": "Installations des Hommes-singes (ascenseur)"
+ },
+ "A1_S3_InnerHumanDisposal_Final": {
+  "en": "Apeman Facility (Depths)",
+  "fr": "Installations des Hommes-singes (profondeurs)"
+ },
+ "A0_S7_CaveReturned": {
+  "en": "Underground Cave",
+  "fr": "Grotte Souterraine"
+ },
+ "A0_S8_VillageReturned": {
+  "en": "95th Livestock Pen",
+  "fr": "Enclos à bétail nº 95"
+ },
+ "A0_S9_AltarReturned": {
+  "en": "Livestock Harvesting Platform",
+  "fr": "Plateforme de moissonnage"
+ },
+ "A0_S10_SpaceshipYard": {
+  "en": "Galactic Dock",
+  "fr": "Quai Galactique"
+ }
+}

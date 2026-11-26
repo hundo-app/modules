@@ -21,7 +21,7 @@ path = "{localAppData}/Sandfall/Saved/SaveGames"
 [slots]
 kind = "file"
 pattern = '^(?<account>[0-9]+)/EXPEDITION_(?<slot>[0-9]+)\.sav$'
-label = "Expédition {slot}"
+label = "Expedition {slot}"
 
 [[layout]]
 panel = "progress"

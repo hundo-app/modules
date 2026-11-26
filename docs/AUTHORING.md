@@ -8,6 +8,29 @@ sandbox — no disk, no network, bounded time and memory.
 The official modules in `drivers/` are complete, real examples: start from
 the one closest to your game.
 
+## 0. Get the `hundo` command
+
+It ships inside every installer of
+[Hundo](https://github.com/hundo-app/releases/releases/latest), beside the
+app. Hundo's settings, under *Game modules → Writing a module*, show where
+it is on your machine and the exact line to run; by hand:
+
+| Hundo installed from | Where `hundo` is | To run it from a terminal |
+| --- | --- | --- |
+| `.deb`, `.rpm` | `/usr/bin/hundo` | nothing to do |
+| Windows installer | Hundo's install folder, beside `Hundo.exe` | add that folder to your `PATH` (PowerShell below), then open a new terminal |
+| macOS `.dmg` | `Hundo.app/Contents/MacOS/hundo` | `sudo ln -sf /Applications/Hundo.app/Contents/MacOS/hundo /usr/local/bin/hundo` |
+| AppImage, Flatpak | inside the image or the sandbox, out of a terminal's reach | install the `.deb` or `.rpm` to write modules |
+
+```powershell
+# Windows, once: Hundo's install folder in your PATH (adjust it if you chose another).
+$dir = "$env:LOCALAPPDATA\Hundo"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$dir", "User")
+```
+
+`hundo --version` then answers. You also need Rust, from
+[rustup.rs](https://rustup.rs), and its WebAssembly target (below).
+
 ## 1. Start
 
 ```sh
@@ -20,6 +43,13 @@ hundo module check . --save path/to/a/save   # the report, section by section
 
 `hundo module new` writes `Cargo.toml`, `.cargo/config.toml` (the WebAssembly
 target), `driver.toml` and `src/lib.rs`.
+
+To see it in Hundo itself, install what you built — again after each build;
+it replaces the copy before:
+
+```sh
+hundo module install .
+```
 
 ## 2. The manifest: `driver.toml`
 

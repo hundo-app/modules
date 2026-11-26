@@ -20,5 +20,5 @@ path = "{localLow}/TVGS/Schedule I/Saves"
 [slots]
 kind = "dir"
 pattern = '^(?<account>[0-9]+)/SaveGame_(?<slot>[0-9]+)$'
-label = "Partie {slot}"
+label = "Save {slot}"
 include = ["**/*.json"]
